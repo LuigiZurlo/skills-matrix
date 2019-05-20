@@ -1,5 +1,4 @@
 import * as mongoose from "mongoose";
-import Competency from '../competencies/competency.model';
 const Schema = mongoose.Schema;
 
 const ResourceSchema = new Schema(
