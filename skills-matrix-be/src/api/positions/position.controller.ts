@@ -48,8 +48,10 @@ export default class PositionController {
   public addPosition = async (req: Request, res: Response): Promise<any> => {
     try {
 
+      // ToDo: Validate competencies
       const position = new Position({
         name: req.body.name,
+        display_name: req.body.name,
         project: req.body.project,
         competencies: req.body.competencies
       });
