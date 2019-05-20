@@ -14,7 +14,7 @@ const PositionSchema = new Schema(
     },
     competencies: [{
       type: Schema.Types.ObjectId,
-      ref: 'Competency0'
+      ref: 'Competency'
     }]
   },
   {
