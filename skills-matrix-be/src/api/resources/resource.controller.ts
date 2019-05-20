@@ -6,13 +6,7 @@ export default class ResourceController {
   public getAll = async (req: Request, res: Response): Promise<any> => {
     try {
 
-      const resources = await Resource.find().populate({
-        path: 'competencies',
-        populate: {
-          path: 'skill',
-          model: 'Skill'
-        }
-      });
+      const resources = await Resource.find({}, '-competencies');
 
       if (!resources) {
         return res.status(404).send({
