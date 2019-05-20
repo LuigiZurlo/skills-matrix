@@ -11,10 +11,10 @@ export default class CompetencyController {
 
       if (!competencies) {
         return res.status(404).send({
-                                    success: false,
-                                    message: 'Competencies not found',
-                                    data: null
-                                  });
+          success: false,
+          message: "Competencies not found",
+          data: null
+        });
       }
 
       res.status(200).send({
@@ -41,7 +41,7 @@ export default class CompetencyController {
       if (!skill) {
         return res.status(500).send({
           success: false,
-          message: 'Skill not found',
+          message: "Skill with id:" + req.body.skill + " not found; Couldn't add Competency.",
           data: null
         })
       }
@@ -55,7 +55,7 @@ export default class CompetencyController {
 
       res.status(201).send({
         success: true,
-        message: 'Competency successfully created',
+        message: "Competency successfully created",
         data: newCompetency
       });
 

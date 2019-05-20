@@ -1,6 +1,4 @@
 import * as mongoose from "mongoose";
-import Skill from '../skills/skill.model';
-
 const Schema = mongoose.Schema;
 
 const CompetencySchema = new Schema(
