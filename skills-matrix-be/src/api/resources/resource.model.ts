@@ -1,7 +1,16 @@
 import * as mongoose from "mongoose";
-const Schema = mongoose.Schema;
+import { ICompetency } from "../competencies/competency.model";
 
-const ResourceSchema = new Schema(
+export interface IResource extends mongoose.Document {
+  name: {
+    first: string,
+    last: string
+  },
+  employee_id: string,
+  competencies: Array<ICompetency['_id']>
+}
+
+const ResourceSchema: mongoose.Schema = new mongoose.Schema(
   {
     name: {
       first: {
@@ -18,7 +27,7 @@ const ResourceSchema = new Schema(
       required: true
     },
     competencies: [{
-      type: Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: 'Competency'
     }]
   },
@@ -28,4 +37,4 @@ const ResourceSchema = new Schema(
   }
 );
 
-export default mongoose.model("Resource", ResourceSchema);
+export default mongoose.model<IResource>("Resource", ResourceSchema);

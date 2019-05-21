@@ -1,7 +1,10 @@
 import * as mongoose from "mongoose";
-const Schema = mongoose.Schema;
 
-const ProjectSchema = new Schema(
+export interface IProject extends mongoose.Document {
+  name: string
+}
+
+const ProjectSchema: mongoose.Schema = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -14,4 +17,4 @@ const ProjectSchema = new Schema(
   }
 );
 
-export default mongoose.model("Project", ProjectSchema);
+export default mongoose.model<IProject>("Project", ProjectSchema);

@@ -1,7 +1,15 @@
 import * as mongoose from "mongoose";
-const Schema = mongoose.Schema;
+import { IProject } from "../projects/project.model";
+import { ICompetency } from "../competencies/competency.model";
 
-const PositionSchema = new Schema(
+export interface IPosition extends mongoose.Document {
+  name: string,
+  display_name: string,
+  project: IProject['_id'],
+  competencies: Array<ICompetency['_id']>
+}
+
+const PositionSchema: mongoose.Schema = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -13,12 +21,12 @@ const PositionSchema = new Schema(
       required: true
     },
     project: {
-      type: Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: 'Project',
       required: true
     },
     competencies: [{
-      type: Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: 'Competency'
     }]
   },
@@ -30,4 +38,4 @@ const PositionSchema = new Schema(
 
 PositionSchema.index({name: 1, project: 1}, {unique: true});
 
-export default mongoose.model("Position", PositionSchema);
+export default mongoose.model<IPosition>("Position", PositionSchema);

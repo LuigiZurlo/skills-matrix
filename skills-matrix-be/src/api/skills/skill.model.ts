@@ -1,7 +1,11 @@
 import * as mongoose from "mongoose";
-const Schema = mongoose.Schema;
 
-const SkillSchema = new Schema(
+export interface ISkill extends mongoose.Document {
+  name: string;
+  display_name: string;
+}
+
+const SkillSchema: mongoose.Schema = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -20,4 +24,4 @@ const SkillSchema = new Schema(
   }
 );
 
-export default mongoose.model("Skill", SkillSchema);
+export default mongoose.model<ISkill>("Skill", SkillSchema);
