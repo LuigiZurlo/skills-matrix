@@ -1,7 +1,6 @@
 import * as mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
-// ToDo: Add Index based on (name, project)
 const PositionSchema = new Schema(
   {
     name: {
@@ -28,5 +27,7 @@ const PositionSchema = new Schema(
     useNestedStrict: true
   }
 );
+
+PositionSchema.index({name: 1, project: 1}, {unique: true});
 
 export default mongoose.model("Position", PositionSchema);
