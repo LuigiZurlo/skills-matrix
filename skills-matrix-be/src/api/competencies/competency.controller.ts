@@ -125,4 +125,43 @@ export default class CompetencyController {
     }
   };
 
+  public updateCompetency = async (req: Request, res: Response): Promise<any> => {
+    try {
+
+      const competencyUpdated = await Competency.findByIdAndUpdate(
+        req.params.id,
+        {
+          $set: {
+            name: req.body.name.toLowerCase(),
+            display_name: req.body.name
+          }
+        },
+        { new: true }
+      );
+
+      if (!competencyUpdated) {
+        return res.status(404).send({
+          success: false,
+          message: 'Competency to update not found!',
+          data: null
+        });
+      }
+
+      res.status(200).send({
+        success: true,
+        message: 'Competency successfully updated.',
+        data: competencyUpdated
+      });
+
+    } catch(err) {
+
+      res.status(500).send({
+        success: false,
+        message: err.toString(),
+        data: null
+      });
+
+    }
+  };
+
 }

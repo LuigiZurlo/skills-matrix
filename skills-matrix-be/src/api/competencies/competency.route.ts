@@ -9,5 +9,6 @@ competency.post('/add', competencyController.addCompetency);
 
 competency.get('/:id', competencyController.getCompetencyById);
 competency.delete('/:id', competencyController.removeCompetency);
+competency.put('/:id', competencyController.updateCompetency);
 
 export default competency;
