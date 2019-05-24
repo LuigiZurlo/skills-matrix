@@ -13,6 +13,7 @@ import { ProjectsEditComponent } from './components/projects/projects-edit/proje
 import { ResourcesListComponent } from './components/resources/resources-list/resources-list.component';
 import { ResourcesCreateComponent } from './components/resources/resources-create/resources-create.component';
 import { ResourcesEditComponent } from './components/resources/resources-edit/resources-edit.component';
+import { ResourcesViewComponent } from './components/resources/resources-view/resources-view.component';
 
 import { PositionsListComponent } from './components/positions/positions-list/positions-list.component';
 import { PositionsCreateComponent } from './components/positions/positions-create/positions-create.component';
@@ -32,6 +33,7 @@ const routes: Routes = [
   { path: 'resources/create', component: ResourcesCreateComponent },
   { path: 'resources/:id/edit', component: ResourcesEditComponent },
   { path: 'resources', component: ResourcesListComponent },
+  { path: 'resources/:id', component: ResourcesViewComponent },
 
   { path: 'positions/create', component: PositionsCreateComponent },
   { path: 'positions/:id/edit', component: PositionsEditComponent },

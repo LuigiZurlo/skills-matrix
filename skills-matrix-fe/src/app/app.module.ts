@@ -30,6 +30,8 @@ import { PositionsEditComponent } from './components/positions/positions-edit/po
 import { PositionsDeleteComponent } from './components/positions/positions-delete/positions-delete.component';
 
 import { SkillService } from './services/skill/skill.service';
+import { ResourceService } from './services/resource/resource.service';
+import { ResourcesViewComponent } from './components/resources/resources-view/resources-view.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +57,7 @@ import { SkillService } from './services/skill/skill.service';
     PositionsCreateComponent,
     PositionsEditComponent,
     PositionsDeleteComponent,
+    ResourcesViewComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,7 +67,8 @@ import { SkillService } from './services/skill/skill.service';
     MaterialModule
   ],
   providers: [
-    SkillService
+    SkillService,
+    ResourceService
   ],
   bootstrap: [AppComponent]
 })

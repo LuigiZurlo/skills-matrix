@@ -1,39 +1,42 @@
 <div>
-  <br>
-  <mat-card>
-    <button mat-raised-button color="primary" routerLink="/skills-create">Create New Skill</button>
-    <br><br>
-    <mat-divider></mat-divider>
-    <br>
-    <table mat-table [dataSource]="skills">
-      <ng-container matColumnDef="_id">
-        <th mat-header-cell *matHeaderCellDef> ID </th>
-        <td mat-cell *matCellDef="let element"> {{element._id}} </td>
-      </ng-container>
-      <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef> Lowercase Name </th>
-        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-      </ng-container>
-      <ng-container matColumnDef="display_name">
-        <th mat-header-cell *matHeaderCellDef> Name </th>
-        <td mat-cell *matCellDef="let element"> {{element.display_name}} </td>
-      </ng-container>
-      <ng-container matColumnDef="version">
-        <th mat-header-cell *matHeaderCellDef> Version </th>
-        <td mat-cell *matCellDef="let element"> {{element.__v}} </td>
-      </ng-container>
 
-      <ng-container matColumnDef="actions">
-        <th mat-header-cell *matHeaderCellDef class="mat-column-right"> Actions </th>
-        <td mat-cell *matCellDef="let element" class="mat-column-right">
-          <button mat-button color="primary" (click)="viewSkill(element._id)">View</button>
-          <button mat-button color="primary" (click)="editSkill(element._id)">Edit</button>
-          <button mat-button color="warn" (click)="deleteSkill(element._id)">Delete</button>
-        </td>
-      </ng-container>
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <h2>Skills</h2>
+      <div class="flex-spacer"></div>
+      <button mat-raised-button color="primary" routerLink="/skills/create">CREATE</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
 
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
-  </mat-card>
+  <table mat-table [dataSource]="skills">
+    <ng-container matColumnDef="_id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let element"> {{element._id}} </td>
+    </ng-container>
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Lowercase Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+    <ng-container matColumnDef="display_name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.display_name}} </td>
+    </ng-container>
+    <ng-container matColumnDef="version">
+      <th mat-header-cell *matHeaderCellDef> Version </th>
+      <td mat-cell *matCellDef="let element"> {{element.__v}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef class="mat-column-right"> Actions </th>
+      <td mat-cell *matCellDef="let element" class="mat-column-right">
+        <button mat-button color="primary" (click)="viewSkill(element._id)">VIEW</button>
+        <button mat-button color="primary" (click)="editSkill(element._id)">EDIT</button>
+        <button mat-button color="warn" (click)="deleteSkill(element._id)">DELETE</button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
 </div>
