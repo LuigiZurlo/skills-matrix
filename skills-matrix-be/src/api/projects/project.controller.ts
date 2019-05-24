@@ -113,4 +113,42 @@ export default class ProjectController {
     }
   };
 
+  public updateProject = async (req: Request, res: Response): Promise<any> => {
+    try {
+
+      const projectUpdated = await Project.findByIdAndUpdate(
+        req.params.id,
+        {
+          $set: {
+            name: req.body.name,
+          }
+        },
+        { new: true }
+      );
+
+      if (!projectUpdated) {
+        return res.status(404).send({
+          success: false,
+          message: 'Project to update not found!',
+          data: null
+        });
+      }
+
+      res.status(200).send({
+        success: true,
+        message: 'Project successfully updated.',
+        data: projectUpdated
+      });
+
+    } catch(err) {
+
+      res.status(500).send({
+        success: false,
+        message: err.toString(),
+        data: null
+      });
+
+    }
+  };
+
 }

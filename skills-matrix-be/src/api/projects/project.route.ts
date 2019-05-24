@@ -10,6 +10,7 @@ project.get('/', projectController.getAll);
 project.post('/add', projectController.addProject);
 
 project.get('/:id', projectController.getProjectById);
+project.put('/:id', projectController.updateProject);
 project.delete('/:id', projectController.removeProject);
 
 export default project;
