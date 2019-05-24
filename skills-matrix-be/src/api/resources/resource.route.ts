@@ -7,6 +7,7 @@ const resourceController = new ResourceController();
 resource.get('/', resourceController.getAll);
 
 resource.post('/add', resourceController.addResource);
+resource.post('/import', resourceController.importResources);
 
 resource.get('/:id', resourceController.getResourceById);
 resource.put('/:id', resourceController.updateResource);

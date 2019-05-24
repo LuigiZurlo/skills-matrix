@@ -159,4 +159,26 @@ export default class ResourceController {
     }
   };
 
+  public importResources = async (req: Request, res: Response): Promise<any> => {
+    try {
+
+      const newResources = await Resource.insertMany(req.body);
+
+      res.status(201).send({
+        success: true,
+        message: 'Resources successfully created',
+        data: newResources
+      });
+
+    } catch (err) {
+
+      res.status(500).send({
+        success: false,
+        message: err.toString(),
+        data: null
+      });
+
+    }
+  };
+
 }
