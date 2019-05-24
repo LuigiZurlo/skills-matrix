@@ -75,4 +75,99 @@ export default class PositionController {
     }
   };
 
+  public removePosition = async (req: Request, res: Response): Promise<any> => {
+    try {
+
+      const position = await Position.findByIdAndRemove(req.params.id);
+
+      if (!position) {
+        return res.status(404).send({
+          success: false,
+          message: 'Position not found',
+          data: null
+        });
+      }
+
+      res.status(204).send();
+
+    } catch (err) {
+
+      res.status(500).send({
+        success: false,
+        message: err.toString(),
+        data: null
+      });
+
+    }
+  };
+
+  public getPositionById = async (req: Request, res: Response): Promise<any> => {
+    try {
+
+      const position = await Position.findById(req.params.id);
+
+      if (!position) {
+        return res.status(404).send({
+          success: false,
+          message: 'Position not found',
+          data: null
+        });
+      }
+
+      res.status(200).send({
+        success: true,
+        data: position
+      });
+
+    } catch (err) {
+
+      res.status(500).send({
+        success: false,
+        message: err.toString(),
+        data: null
+      });
+
+    }
+  };
+
+  public updatePosition = async (req: Request, res: Response): Promise<any> => {
+    try {
+
+      const positionUpdated = await Position.findByIdAndUpdate(
+        req.params.id,
+        {
+          $set: {
+            name: req.body.name,
+            project: req.body.project,
+            competencies: req.body.competencies
+          }
+        },
+        { new: true }
+      );
+
+      if (!positionUpdated) {
+        return res.status(404).send({
+          success: false,
+          message: 'Position to update not found!',
+          data: null
+        });
+      }
+
+      res.status(200).send({
+        success: true,
+        message: 'Position successfully updated.',
+        data: positionUpdated
+      });
+
+    } catch(err) {
+
+      res.status(500).send({
+        success: false,
+        message: err.toString(),
+        data: null
+      });
+
+    }
+  };
+
 }
