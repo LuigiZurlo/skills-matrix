@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +12,7 @@ import { SkillsListComponent } from './components/skills/skills-list/skills-list
 import { SkillsCreateComponent } from './components/skills/skills-create/skills-create.component';
 import { SkillsEditComponent } from './components/skills/skills-edit/skills-edit.component';
 import { SkillsDeleteComponent } from './components/skills/skills-delete/skills-delete.component';
+import { SkillsViewComponent } from './components/skills/skills-view/skills-view.component';
 
 import { ResourcesListComponent } from './components/resources/resources-list/resources-list.component';
 import { ResourcesEditComponent } from './components/resources/resources-edit/resources-edit.component';
@@ -39,6 +39,7 @@ import { SkillService } from './services/skill/skill.service';
     SkillsCreateComponent,
     SkillsEditComponent,
     SkillsDeleteComponent,
+    SkillsViewComponent,
 
     ResourcesListComponent,
     ResourcesEditComponent,
@@ -53,7 +54,7 @@ import { SkillService } from './services/skill/skill.service';
     PositionsListComponent,
     PositionsCreateComponent,
     PositionsEditComponent,
-    PositionsDeleteComponent
+    PositionsDeleteComponent,
   ],
   imports: [
     BrowserModule,

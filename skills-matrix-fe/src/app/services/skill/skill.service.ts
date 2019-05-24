@@ -14,10 +14,10 @@ export class SkillService {
       return this.http.get(`${this.uri}/skills`);
     }
 
-    // getSkillById (id) {
-    //   return this.http.get(`${this.uri}/skills/${id}`)
-    // }
-    //
+    getSkillById(id) {
+       return this.http.get(`${this.uri}/skills/${id}`);
+    }
+
     // addSkill (name) {
     //   const skill = {
     //     name: name,

@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SkillsListComponent } from './components/skills/skills-list/skills-list.component';
 import { SkillsCreateComponent } from './components/skills/skills-create/skills-create.component';
 import { SkillsEditComponent } from './components/skills/skills-edit/skills-edit.component';
+import { SkillsViewComponent } from './components/skills/skills-view/skills-view.component';
 
 import { ProjectsListComponent } from './components/projects/projects-list/projects-list.component';
 import { ProjectsCreateComponent } from './components/projects/projects-create/projects-create.component';
@@ -20,7 +21,8 @@ import { PositionsEditComponent } from './components/positions/positions-edit/po
 const routes: Routes = [
 
   { path: 'skills/create', component: SkillsCreateComponent },
-  { path: 'skills/:id/edit/', component: SkillsEditComponent },
+  { path: 'skills/:id', component: SkillsViewComponent },
+  { path: 'skills/:id/edit', component: SkillsEditComponent },
   { path: 'skills', component: SkillsListComponent },
 
   { path: 'projects/create', component: ProjectsCreateComponent },

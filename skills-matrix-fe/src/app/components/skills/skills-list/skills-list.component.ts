@@ -42,4 +42,8 @@ export class SkillsListComponent implements OnInit {
       });
   }
 
+  viewSkill(id) {
+    this.router.navigate([`/skills/${id}`]);
+  }
+
 }
