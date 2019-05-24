@@ -87,4 +87,30 @@ export default class ProjectController {
     }
   };
 
+  public removeProject = async (req: Request, res: Response): Promise<any> => {
+    try {
+
+      const project = await Project.findByIdAndRemove(req.params.id);
+
+      if (!project) {
+        return res.status(404).send({
+          success: false,
+          message: 'Project not found',
+          data: null
+        });
+      }
+
+      res.status(204).send();
+
+    } catch (err) {
+
+      res.status(500).send({
+        success: false,
+        message: err.toString(),
+        data: null
+      });
+
+    }
+  };
+
 }
