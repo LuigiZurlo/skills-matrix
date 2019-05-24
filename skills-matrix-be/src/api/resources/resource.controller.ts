@@ -133,4 +133,30 @@ export default class ResourceController {
     }
   };
 
+  public removeResource = async (req: Request, res: Response): Promise<any> => {
+    try {
+
+      const resource = await Resource.findByIdAndRemove(req.params.id);
+
+      if (!resource) {
+        return res.status(404).send({
+          success: false,
+          message: 'Resource not found',
+          data: null
+        });
+      }
+
+      res.status(204).send();
+
+    } catch (err) {
+
+      res.status(500).send({
+        success: false,
+        message: err.toString(),
+        data: null
+      });
+
+    }
+  };
+
 }

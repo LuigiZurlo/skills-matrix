@@ -10,5 +10,6 @@ resource.post('/add', resourceController.addResource);
 
 resource.get('/:id', resourceController.getResourceById);
 resource.put('/:id', resourceController.updateResource);
+resource.delete('/:id', resourceController.removeResource);
 
 export default resource;
