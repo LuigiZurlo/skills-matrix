@@ -104,4 +104,33 @@ export default class ResourceController {
     }
   };
 
+  public getResourceById = async (req: Request, res: Response): Promise<any> => {
+    try {
+
+      const resource = await Resource.findById(req.params.id);
+
+      if (!resource) {
+        return res.status(404).send({
+          success: false,
+          message: 'Resource not found',
+          data: null
+        });
+      }
+
+      res.status(200).send({
+        success: true,
+        data: resource
+      });
+
+    } catch (err) {
+
+      res.status(500).send({
+        success: false,
+        message: err.toString(),
+        data: null
+      });
+
+    }
+  };
+
 }
