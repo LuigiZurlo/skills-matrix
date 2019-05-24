@@ -70,4 +70,59 @@ export default class CompetencyController {
     }
   };
 
+  public removeCompetency = async (req: Request, res: Response): Promise<any> => {
+    try {
+
+      const competency = await Competency.findByIdAndRemove(req.params.id);
+
+      if (!competency) {
+        return res.status(404).send({
+          success: false,
+          message: 'Competency not found',
+          data: null
+        });
+      }
+
+      res.status(204).send();
+
+    } catch (err) {
+
+      res.status(500).send({
+        success: false,
+        message: err.toString(),
+        data: null
+      });
+
+    }
+  };
+
+  public getCompetencyById = async (req: Request, res: Response): Promise<any> => {
+    try {
+
+      const competency = await Competency.findById(req.params.id);
+
+      if (!competency) {
+        return res.status(404).send({
+          success: false,
+          message: 'Competency not found',
+          data: null
+        });
+      }
+
+      res.status(200).send({
+        success: true,
+        data: competency
+      });
+
+    } catch (err) {
+
+      res.status(500).send({
+        success: false,
+        message: err.toString(),
+        data: null
+      });
+
+    }
+  };
+
 }

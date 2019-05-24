@@ -7,4 +7,7 @@ const competencyController = new CompetencyController();
 competency.get('/', competencyController.getAll);
 competency.post('/add', competencyController.addCompetency);
 
+competency.get('/:id', competencyController.getCompetencyById);
+competency.delete('/:id', competencyController.removeCompetency);
+
 export default competency;
