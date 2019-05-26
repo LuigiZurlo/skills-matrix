@@ -66,7 +66,9 @@ export default class SkillController {
 
       const skill = new Skill({
         name: req.body.name,
-        display_name: req.body.name
+        display_name: req.body.name,
+        scope: req.body.scope,
+        category: req.body.category
       });
 
       const newSkill = await skill.save();
@@ -96,7 +98,9 @@ export default class SkillController {
         {
           $set: {
             name: req.body.name.toLowerCase(),
-            display_name: req.body.name
+            display_name: req.body.name,
+            scope: req.body.scope,
+            category: req.body.category
           }
         },
         { new: true }
@@ -141,6 +145,28 @@ export default class SkillController {
       }
 
       res.status(204).send();
+
+    } catch (err) {
+
+      res.status(500).send({
+        success: false,
+        message: err.toString(),
+        data: null
+      });
+
+    }
+  };
+
+  public importSkills = async (req: Request, res: Response): Promise<any> => {
+    try {
+
+      const newSkills = await Skill.insertMany(req.body);
+
+      res.status(201).send({
+        success: true,
+        message: 'Skills successfully created',
+        data: newSkills
+      });
 
     } catch (err) {
 

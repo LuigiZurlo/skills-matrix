@@ -1,74 +1,44 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { HttpClientModule } from '@angular/common/http';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {AppComponent} from './app.component';
+import {AppRoutingModule} from './app-routing.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {HttpClientModule} from '@angular/common/http';
 
-import { MaterialModule } from './material.module';
+import {MaterialModule} from './material.module';
 
-import { SkillsListComponent } from './components/skills/skills-list/skills-list.component';
-import { SkillsCreateComponent } from './components/skills/skills-create/skills-create.component';
-import { SkillsEditComponent } from './components/skills/skills-edit/skills-edit.component';
-import { SkillsDeleteComponent } from './components/skills/skills-delete/skills-delete.component';
-import { SkillsViewComponent } from './components/skills/skills-view/skills-view.component';
+// Modules
+import {PositionsModule} from './positions/positions.module';
+import {ProjectsModule} from './projects/projects.module';
+import {ResourcesModule} from './resources/resources.module';
+import {SkillsModule} from './skills/skills.module';
 
-import { ResourcesListComponent } from './components/resources/resources-list/resources-list.component';
-import { ResourcesEditComponent } from './components/resources/resources-edit/resources-edit.component';
-import { ResourcesCreateComponent } from './components/resources/resources-create/resources-create.component';
-import { ResourcesDeleteComponent } from './components/resources/resources-delete/resources-delete.component';
-
-import { ProjectsListComponent } from './components/projects/projects-list/projects-list.component';
-import { ProjectsEditComponent } from './components/projects/projects-edit/projects-edit.component';
-import { ProjectsCreateComponent } from './components/projects/projects-create/projects-create.component';
-import { ProjectsDeleteComponent } from './components/projects/projects-delete/projects-delete.component';
-
-import { PositionsListComponent } from './components/positions/positions-list/positions-list.component';
-import { PositionsCreateComponent } from './components/positions/positions-create/positions-create.component';
-import { PositionsEditComponent } from './components/positions/positions-edit/positions-edit.component';
-import { PositionsDeleteComponent } from './components/positions/positions-delete/positions-delete.component';
-
-import { SkillService } from './services/skill/skill.service';
-import { ResourceService } from './services/resource/resource.service';
-import { ResourcesViewComponent } from './components/resources/resources-view/resources-view.component';
+// Services
+import {ProjectService} from "./services/project/project.service";
+import {ResourceService} from './services/resource/resource.service';
+import {SkillService} from './services/skill/skill.service';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-
-    SkillsListComponent,
-    SkillsCreateComponent,
-    SkillsEditComponent,
-    SkillsDeleteComponent,
-    SkillsViewComponent,
-
-    ResourcesListComponent,
-    ResourcesEditComponent,
-    ResourcesCreateComponent,
-    ResourcesDeleteComponent,
-
-    ProjectsListComponent,
-    ProjectsEditComponent,
-    ProjectsCreateComponent,
-    ProjectsDeleteComponent,
-
-    PositionsListComponent,
-    PositionsCreateComponent,
-    PositionsEditComponent,
-    PositionsDeleteComponent,
-    ResourcesViewComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+
+    PositionsModule,
+    ProjectsModule,
+    ResourcesModule,
+    SkillsModule,
+
+    // AppRoutingModule *MUST* be imported last:
+    AppRoutingModule
   ],
   providers: [
     SkillService,
-    ResourceService
+    ResourceService,
+    ProjectService
   ],
   bootstrap: [AppComponent]
 })

@@ -65,7 +65,10 @@ export default class ProjectController {
     try {
 
       const project = new Project({
-        name: req.body.name
+        name: req.body.name,
+        display_name: req.body.name,
+        start_date: req.body.start_date,
+        end_date: req.body.end_date
       });
 
       const newProject = await project.save();
@@ -121,6 +124,9 @@ export default class ProjectController {
         {
           $set: {
             name: req.body.name,
+            display_name: req.body.name,
+            start_date: req.body.start_date,
+            end_date: req.body.end_date
           }
         },
         { new: true }

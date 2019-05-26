@@ -1,0 +1,16 @@
+.flex-spacer {
+  flex-grow: 1;
+}
+
+#position-create-form-container {
+  width: 66%;
+  margin: 28px auto;
+}
+
+#position-create-form {
+  margin: 28px;
+}
+
+.position-create-form-field {
+  width: 100%;
+}

@@ -3,6 +3,8 @@ import * as mongoose from "mongoose";
 export interface ISkill extends mongoose.Document {
   name: string;
   display_name: string;
+  scope: string;
+  category: string;
 }
 
 const SkillSchema: mongoose.Schema = new mongoose.Schema(
@@ -14,6 +16,14 @@ const SkillSchema: mongoose.Schema = new mongoose.Schema(
       index: true
     },
     display_name: {
+      type: String,
+      required: true
+    },
+    scope: {
+      type: String,
+      required: true
+    },
+    category: {
       type: String,
       required: true
     }

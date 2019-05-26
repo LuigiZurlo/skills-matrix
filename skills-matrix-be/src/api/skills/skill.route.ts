@@ -7,6 +7,7 @@ const skillController = new SkillController();
 skill.get('/', skillController.getAll);
 
 skill.post('/add', skillController.addSkill);
+skill.post('/import', skillController.importSkills);
 
 skill.get('/:id', skillController.getSkillById);
 skill.put("/:id", skillController.updateSkill);
