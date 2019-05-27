@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {GetProjectsServiceResponse, Project} from "../../models/project/project.model";
+import {GetProjectsServiceResponse, Project} from "../../../models/project/project.model";
 import {ActivatedRoute, Router} from "@angular/router";
-import {ProjectService} from "../../services/project/project.service";
+import {ProjectService} from "../../../services/project/project.service";
 
 @Component({
   selector: 'app-projects-view',

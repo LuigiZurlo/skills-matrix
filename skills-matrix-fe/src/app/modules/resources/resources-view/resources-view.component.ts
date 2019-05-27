@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {GetResourcesServiceResponse, Resource} from '../../models/resource/resource.model';
-import {ResourceService} from '../../services/resource/resource.service';
+import {GetResourcesServiceResponse, Resource} from '../../../models/resource/resource.model';
+import {ResourceService} from '../../../services/resource/resource.service';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({

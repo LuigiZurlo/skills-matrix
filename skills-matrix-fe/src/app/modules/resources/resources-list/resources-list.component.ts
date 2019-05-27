@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import {GetResourcesServiceResponse, Resource} from '../../models/resource/resource.model';
-import {ResourceService} from '../../services/resource/resource.service';
+import {GetResourcesServiceResponse, Resource} from '../../../models/resource/resource.model';
+import {ResourceService} from '../../../services/resource/resource.service';
 
 @Component({
   selector: 'app-resources-list',

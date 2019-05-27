@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ProjectService } from "../../services/project/project.service";
+import { ProjectService } from "../../../services/project/project.service";
 
 @Component({
   selector: 'app-projects-create',

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import {Skill, GetSkillsServiceResponse} from '../../models/skill/skill.model';
-import {SkillService} from '../../services/skill/skill.service';
+import {Skill, GetSkillsServiceResponse} from '../../../models/skill/skill.model';
+import {SkillService} from '../../../services/skill/skill.service';
 
 @Component({
   selector: 'app-skills-list',

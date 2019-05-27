@@ -9,10 +9,10 @@ import {HttpClientModule} from '@angular/common/http';
 import {MaterialModule} from './material.module';
 
 // Modules
-import {PositionsModule} from './positions/positions.module';
-import {ProjectsModule} from './projects/projects.module';
-import {ResourcesModule} from './resources/resources.module';
-import {SkillsModule} from './skills/skills.module';
+import {PositionsModule} from './modules/positions/positions.module';
+import {ProjectsModule} from './modules/projects/projects.module';
+import {ResourcesModule} from './modules/resources/resources.module';
+import {SkillsModule} from './modules/skills/skills.module';
 
 // Services
 import {ProjectService} from "./services/project/project.service";

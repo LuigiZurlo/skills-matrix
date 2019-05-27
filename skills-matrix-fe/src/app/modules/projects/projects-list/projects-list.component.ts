@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import {GetProjectsServiceResponse, Project} from '../../models/project/project.model';
-import {ProjectService} from '../../services/project/project.service';
+import {GetProjectsServiceResponse, Project} from '../../../models/project/project.model';
+import {ProjectService} from '../../../services/project/project.service';
 
 @Component({
   selector: 'app-projects-list',

@@ -1,0 +1,36 @@
+<div>
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <h2>Create Position</h2>
+      <div class="flex-spacer"></div>
+      <button mat-raised-button color="primary" routerLink="/positions">CANCEL</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+
+<div class="mat-elevation-z3" id="position-create-form-container">
+
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <h3>Create New Position</h3>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <form [formGroup]="positionCreateForm" id="position-create-form">
+
+    <mat-form-field>
+      <input matInput placeholder="Skill" formControlName="skill"/>
+    </mat-form-field>
+
+<!--    <mat-form-field >
+      <mat-radio-group matInput aria-label="Skill Level required" formControlName="level">
+        <mat-radio-button  [value]="1">Information level</mat-radio-button>
+        <mat-radio-button [value]="2">Accompanied execution level</mat-radio-button>
+        <mat-radio-button [value]="3">Autonomous execution level</mat-radio-button>
+        <mat-radio-button [value]="4">Expert</mat-radio-button>
+      </mat-radio-group>
+    </mat-form-field>-->
+
+  </form>
+
+</div>

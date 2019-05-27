@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 
-import {MaterialModule} from '../material.module';
+import {MaterialModule} from '../../material.module';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 import {PositionsRoutingModule} from './positions-routing.module';
@@ -20,9 +20,9 @@ import {PositionsListComponent} from './positions-list/positions-list.component'
   ],
   imports: [
     CommonModule,
-    MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    MaterialModule,
 
     PositionsRoutingModule
   ]

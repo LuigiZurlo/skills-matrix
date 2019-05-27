@@ -52,6 +52,7 @@ export default class PositionController {
       const position = new Position({
         name: req.body.name,
         display_name: req.body.name,
+        team: req.body.team,
         project: req.body.project,
         competencies: req.body.competencies
       });
@@ -139,6 +140,7 @@ export default class PositionController {
           $set: {
             name: req.body.name,
             project: req.body.project,
+            team: req.body.team,
             competencies: req.body.competencies
           }
         },

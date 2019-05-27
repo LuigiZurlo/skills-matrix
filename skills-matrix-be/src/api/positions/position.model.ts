@@ -5,6 +5,7 @@ import { ICompetency } from "../competencies/competency.model";
 export interface IPosition extends mongoose.Document {
   name: string,
   display_name: string,
+  team: string,
   project: IProject['_id'],
   competencies: Array<ICompetency['_id']>
 }
@@ -19,6 +20,9 @@ const PositionSchema: mongoose.Schema = new mongoose.Schema(
     display_name: {
       type: String,
       required: true
+    },
+    team: {
+      type: String
     },
     project: {
       type: mongoose.Schema.Types.ObjectId,
@@ -36,6 +40,6 @@ const PositionSchema: mongoose.Schema = new mongoose.Schema(
   }
 );
 
-PositionSchema.index({name: 1, project: 1}, {unique: true});
+PositionSchema.index({name: 1, team: 1, project: 1}, {unique: true});
 
 export default mongoose.model<IPosition>("Position", PositionSchema);

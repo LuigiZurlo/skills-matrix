@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {GetSkillsServiceResponse, Skill} from '../../models/skill/skill.model';
-import {SkillService} from '../../services/skill/skill.service';
+import {GetSkillsServiceResponse, Skill} from '../../../models/skill/skill.model';
+import {SkillService} from '../../../services/skill/skill.service';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({

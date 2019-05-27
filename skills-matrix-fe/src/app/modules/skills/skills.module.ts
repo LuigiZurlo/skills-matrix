@@ -1,7 +1,7 @@
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 
-import {MaterialModule} from "../material.module";
+import {MaterialModule} from "../../material.module";
 
 import {SkillsCreateComponent} from './skills-create/skills-create.component';
 import {SkillsDeleteComponent} from './skills-delete/skills-delete.component';
