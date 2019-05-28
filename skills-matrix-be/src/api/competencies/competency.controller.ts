@@ -7,7 +7,8 @@ export default class CompetencyController {
   public getAll = async (req: Request, res: Response): Promise<any> => {
     try {
 
-      const competencies = await Competency.find().populate('skill');
+      const competencies = await Competency.find();
+      const numberOfCompetencies = await Competency.count({});
 
       if (!competencies) {
         return res.status(404).send({
@@ -19,7 +20,10 @@ export default class CompetencyController {
 
       res.status(200).send({
         success: true,
-        data: competencies
+        data: {
+          competencies: competencies,
+          numberOfCompetencies: numberOfCompetencies
+        }
       });
 
     } catch (err) {
@@ -30,6 +34,32 @@ export default class CompetencyController {
         data: null
       });
     
+    }
+  };
+
+  public removeAll = async (req: Request, res: Response): Promise<any> => {
+    try {
+
+      const competency = await Competency.deleteMany({});
+
+      if (!competency) {
+        return res.status(404).send({
+          success: false,
+          message: 'Competencies not found',
+          data: null
+        });
+      }
+
+      res.status(204).send();
+
+    } catch (err) {
+
+      res.status(500).send({
+        success: false,
+        message: err.toString(),
+        data: null
+      });
+
     }
   };
 
@@ -154,6 +184,28 @@ export default class CompetencyController {
       });
 
     } catch(err) {
+
+      res.status(500).send({
+        success: false,
+        message: err.toString(),
+        data: null
+      });
+
+    }
+  };
+
+  public importCompetencies = async (req: Request, res: Response): Promise<any> => {
+    try {
+
+      const newCompetencies = await Competency.insertMany(req.body);
+
+      res.status(201).send({
+        success: true,
+        message: 'Competencies successfully created',
+        data: newCompetencies
+      });
+
+    } catch (err) {
 
       res.status(500).send({
         success: false,

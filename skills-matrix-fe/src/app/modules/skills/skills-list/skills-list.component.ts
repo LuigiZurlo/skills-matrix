@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 import {Skill, GetSkillsServiceResponse} from '../../../models/skill/skill.model';
 import {SkillService} from '../../../services/skill/skill.service';
@@ -14,7 +14,8 @@ export class SkillsListComponent implements OnInit {
   skills: Skill[];
   displayedColumns = ['display_name', 'category', 'scope', 'actions'];
 
-  constructor(private skillService: SkillService, private router: Router) { }
+  constructor(private skillService: SkillService, private router: Router) {
+  }
 
   ngOnInit() {
     this.fetchSkills();
@@ -25,13 +26,7 @@ export class SkillsListComponent implements OnInit {
       .getSkills()
       .subscribe((getSkillsServiceResponse: GetSkillsServiceResponse) => {
         this.skills = getSkillsServiceResponse.data;
-        console.log('Data requested ...');
-        console.log(this.skills);
       });
-  }
-
-  editSkill(id) {
-    this.router.navigate([`/skills-edit/${id}`]);
   }
 
   deleteSkill(id) {
@@ -42,8 +37,13 @@ export class SkillsListComponent implements OnInit {
       });
   }
 
-  viewSkill(id) {
-    this.router.navigate([`/skills/${id}`]);
+  async editSkill(id) {
+    await this.router.navigate([`/skills-edit/${id}`]);
+  }
+
+
+  async viewSkill(id) {
+    await this.router.navigate([`/skills/${id}`]);
   }
 
 }

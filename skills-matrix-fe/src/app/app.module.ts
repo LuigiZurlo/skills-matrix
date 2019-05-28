@@ -7,15 +7,14 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 
 import {MaterialModule} from './material.module';
-
 // Modules
+import {MatricesModule} from './modules/matrices/matrices.module';
 import {PositionsModule} from './modules/positions/positions.module';
 import {ProjectsModule} from './modules/projects/projects.module';
 import {ResourcesModule} from './modules/resources/resources.module';
 import {SkillsModule} from './modules/skills/skills.module';
-
 // Services
-import {ProjectService} from "./services/project/project.service";
+import {ProjectService} from './services/project/project.service';
 import {ResourceService} from './services/resource/resource.service';
 import {SkillService} from './services/skill/skill.service';
 
@@ -27,6 +26,7 @@ import {SkillService} from './services/skill/skill.service';
     BrowserAnimationsModule,
     MaterialModule,
 
+    MatricesModule,
     PositionsModule,
     ProjectsModule,
     ResourcesModule,

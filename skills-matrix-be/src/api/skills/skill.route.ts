@@ -5,6 +5,7 @@ const skill: Router = Router();
 const skillController = new SkillController();
 
 skill.get('/', skillController.getAll);
+skill.delete('/', skillController.removeAll);
 
 skill.post('/add', skillController.addSkill);
 skill.post('/import', skillController.importSkills);

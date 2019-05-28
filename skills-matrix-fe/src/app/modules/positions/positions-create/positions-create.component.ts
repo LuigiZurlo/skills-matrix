@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
-import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder} from '@angular/forms';
 
 @Component({
   selector: 'app-positions-create',
@@ -9,13 +9,35 @@ import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 })
 export class PositionsCreateComponent implements OnInit {
 
-  positionCreateForm: FormGroup;
+  myData = [
+    {
+      skill: "skill_1",
+      level: 1
+    },
+    {
+      skill: "skill_2",
+      level: 2
+    },
+    {
+      skill: "skill_3",
+      level: 3
+    },
+    {
+      skill: "skill_4",
+      level: 4
+    }
+  ];
+
+  skillLevels = [
+    { value: 0, viewValue: 0 },
+    { value: 1, viewValue: 1 },
+    { value: 2, viewValue: 2 },
+    { value: 3, viewValue: 3 }
+  ];
+
+  displayedColumns = ['skill', 'level'];
 
   constructor(private _formBuilder: FormBuilder) {
-      this.positionCreateForm = new FormGroup({
-        skill: new FormControl(),
-        level: new FormControl()
-      });
   }
 
   ngOnInit() {

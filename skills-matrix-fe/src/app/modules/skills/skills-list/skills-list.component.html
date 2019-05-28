@@ -8,29 +8,6 @@
     </mat-toolbar-row>
   </mat-toolbar>
 
-  <div class="info-section">
-
-    <mat-card class="info-container">
-      <mat-card-title><span class="big-number">{{skills.length}}</span> Skills</mat-card-title>
-      <mat-card-subtitle>used in projects</mat-card-subtitle>
-    </mat-card>
-
-    <mat-card class="info-container">
-      <mat-card-title>## Categories</mat-card-title>
-    </mat-card>
-
-    <mat-card class="info-container">
-      <mat-card-title>## Scopes</mat-card-title>
-    </mat-card>
-  </div>
-
-  <mat-toolbar>
-    <mat-toolbar-row>
-      <h2>All Skills</h2>
-      <div class="flex-spacer"></div>
-      <button mat-raised-button color="primary" routerLink="/skills/create">CREATE</button>
-    </mat-toolbar-row>
-  </mat-toolbar>
   <table mat-table [dataSource]="skills">
     <ng-container matColumnDef="_id">
       <th mat-header-cell *matHeaderCellDef> ID </th>
