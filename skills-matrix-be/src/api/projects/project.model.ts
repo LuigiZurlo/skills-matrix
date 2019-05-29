@@ -1,6 +1,6 @@
 import * as mongoose from "mongoose";
 
-export interface IProject extends mongoose.Document {
+export interface Project extends mongoose.Document {
   name: string,
   display_name: string,
   start_date: Date,
@@ -33,4 +33,4 @@ const ProjectSchema: mongoose.Schema = new mongoose.Schema(
   }
 );
 
-export default mongoose.model<IProject>("Project", ProjectSchema);
+export default mongoose.model<Project>("Project", ProjectSchema);

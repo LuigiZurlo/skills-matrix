@@ -1,13 +1,13 @@
 import * as mongoose from "mongoose";
-import { ICompetency } from "../competencies/competency.model";
+import { Competency } from "../competencies/competency.model";
 
-export interface IResource extends mongoose.Document {
+export interface Resource extends mongoose.Document {
   name: {
     first: string,
     last: string
   },
   employee_id: string,
-  competencies: Array<ICompetency['_id']>
+  competencies: Array<Competency['_id']>
 }
 
 const ResourceSchema: mongoose.Schema = new mongoose.Schema(
@@ -37,4 +37,4 @@ const ResourceSchema: mongoose.Schema = new mongoose.Schema(
   }
 );
 
-export default mongoose.model<IResource>("Resource", ResourceSchema);
+export default mongoose.model<Resource>("Resource", ResourceSchema);

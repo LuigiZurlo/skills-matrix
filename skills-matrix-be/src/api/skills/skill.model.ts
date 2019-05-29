@@ -1,6 +1,6 @@
 import * as mongoose from "mongoose";
 
-export interface ISkill extends mongoose.Document {
+export interface Skill extends mongoose.Document {
   name: string;
   display_name: string;
   scope: string;
@@ -34,4 +34,4 @@ const SkillSchema: mongoose.Schema = new mongoose.Schema(
   }
 );
 
-export default mongoose.model<ISkill>("Skill", SkillSchema);
+export default mongoose.model<Skill>("Skill", SkillSchema);

@@ -1,10 +1,13 @@
-export interface Resource {
-  id: string;
-  name: {
-    first: string;
-    last: string
-  };
-  employee_id: string;
+export class Resource {
+
+  constructor(
+    public id: number,
+    public name: {
+      first: string,
+      last: string},
+    public employeeId: string
+  ) { }
+
 }
 
 export interface GetResourcesServiceResponse {

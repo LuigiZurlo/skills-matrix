@@ -1,13 +1,13 @@
 import * as mongoose from "mongoose";
-import {IProject} from "../projects/project.model";
-import {IResource} from "../resources/resource.model";
-import {IPosition} from "../positions/position.model";
+import {Project} from "../projects/project.model";
+import {Resource} from "../resources/resource.model";
+import {Position} from "../positions/position.model";
 
 
-export interface IMission extends mongoose.Document {
-  project: IProject['_id'],
-  resource: IResource['_id'],
-  position: IPosition['_id'],
+export interface Mission extends mongoose.Document {
+  project: Project['_id'],
+  resource: Resource['_id'],
+  position: Position['_id'],
   start_date: Date,
   end_date: Date
 }
@@ -46,4 +46,4 @@ const MissionSchema: mongoose.Schema = new mongoose.Schema(
 
 MissionSchema.index({project: 1, resource: 1, position: 1, start_date: 1, end_date: 1}, {unique: true});
 
-export default mongoose.model<IMission>("Mission", MissionSchema);
+export default mongoose.model<Mission>("Mission", MissionSchema);

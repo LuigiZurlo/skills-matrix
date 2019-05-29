@@ -1,3 +1,24 @@
-table {
-  width: 100%;
+/*table {*/
+/*  width: 100%;*/
+/*}*/
+
+.level {
+  display: block;
+  text-align: center;
+}
+.level-header {
+  text-align: center;
+  font-weight: bold;
+}
+
+.green {
+  background-color: lightgreen;
+}
+
+.red {
+  background-color: red;
+}
+
+table.matrix td {
+
 }

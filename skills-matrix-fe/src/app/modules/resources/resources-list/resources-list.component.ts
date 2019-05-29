@@ -12,7 +12,7 @@ import {ResourceService} from '../../../services/resource/resource.service';
 export class ResourcesListComponent implements OnInit {
 
   resources: Resource[];
-  displayedColumns = ['employee_id', 'last_name', 'first_name', 'actions'];
+  displayedColumns = ['employee_id', 'trigram', 'last_name', 'first_name', 'actions'];
 
   constructor(private resourceService: ResourceService, private router: Router) { }
 
@@ -39,6 +39,12 @@ export class ResourcesListComponent implements OnInit {
       .subscribe(() => {
         this.fetchResources();
       });
+  }
+
+  getTrigram(element: Resource): string {
+    let trigram: string;
+    trigram = element.name.first.substr(0, 1) + element.name.last.substr(0, 2);
+    return trigram.toUpperCase();
   }
 
 }

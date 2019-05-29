@@ -1,8 +1,8 @@
 import * as mongoose from "mongoose";
-import { ISkill } from "../skills/skill.model";
+import { Skill } from "../skills/skill.model";
 
-export interface ICompetency extends mongoose.Document {
-  skill: ISkill['_id'],
+export interface Competency extends mongoose.Document {
+  skill: Skill['_id'],
   level: number
 }
 
@@ -26,4 +26,4 @@ const CompetencySchema: mongoose.Schema = new mongoose.Schema(
 
 CompetencySchema.index({skill: 1, levell:1}, {unique: true});
 
-export default mongoose.model<ICompetency>("Competency", CompetencySchema);
+export default mongoose.model<Competency>("Competency", CompetencySchema);

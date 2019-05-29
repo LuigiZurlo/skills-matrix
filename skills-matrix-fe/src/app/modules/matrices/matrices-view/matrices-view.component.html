@@ -5,3 +5,24 @@
     </mat-toolbar-row>
   </mat-toolbar>
 </div>
+
+<table class="matrix" cdk-table [dataSource]="data.matrix">
+
+  <ng-container cdkColumnDef="skill">
+    <th cdk-header-cell *cdkHeaderCellDef> Skill </th>
+    <td cdk-cell *cdkCellDef="let element"> {{element.skill}} </td>
+  </ng-container>
+
+  <ng-container cdkColumnDef="level">
+    <th cdk-header-cell *cdkHeaderCellDef class="level-header"> {{data.resource}} </th>
+    <td cdk-cell *cdkCellDef="let element"
+        [ngClass]="{
+          green: element.resource_level >= element.required_level,
+          red: element.resource_level < element.required_level
+        }"><span class="level">{{element.resource_level}}</span></td>
+  </ng-container>
+
+  <tr cdk-header-row *cdkHeaderRowDef="['skill', 'level']"></tr>
+  <tr cdk-row *cdkRowDef="let row; columns: ['skill', 'level'];"></tr>
+
+</table>
