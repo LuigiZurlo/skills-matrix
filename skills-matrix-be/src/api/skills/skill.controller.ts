@@ -1,18 +1,48 @@
 import { Request, Response } from 'express';
-import Skill from './skill.model';
+import { db } from '../../db/db';
 
 export default class SkillController {
 
   public getAll = async (req: Request, res: Response): Promise<any> => {
     try {
 
-      const skills = await Skill.find();
+      const skills = await db.any('SELECT * FROM skills', []);
 
-      if (!skills) {
+      if (Object.keys(skills).length == 0) {
         return res.status(404).send({
           success: false,
           message: 'Skills not found',
-          data: null
+          data: skills
+        });
+      }
+
+      res.status(200).send({
+        success: true,
+        data_length: skills.length,
+        data: skills
+      });
+
+    } catch (err) {
+
+      res.status(500).send({
+        success: false,
+        message: err,
+        data: null
+      });
+
+    }
+  };
+
+  public getSkillById = async (req: Request, res: Response): Promise<any> => {
+    try {
+
+      const skills = await db.any('SELECT * FROM skills where id = $1', [req.params.id]);
+
+      if (Object.keys(skills).length == 0) {
+        return res.status(404).send({
+          success: false,
+          message: 'Skill not found',
+          data: skills
         });
       }
 
@@ -25,36 +55,7 @@ export default class SkillController {
 
       res.status(500).send({
         success: false,
-        message: err.toString(),
-        data: null
-      });
-
-    }
-  };
-
-  public getSkillById = async (req: Request, res: Response): Promise<any> => {
-    try {
-
-      const skill = await Skill.findById(req.params.id);
-
-      if (!skill) {
-        return res.status(404).send({
-          success: false,
-          message: 'Skill not found',
-          data: null
-        });
-      }
-
-      res.status(200).send({
-        success: true,
-        data: skill
-      });
-
-    } catch (err) {
-
-      res.status(500).send({
-        success: false,
-        message: err.toString(),
+        message: err,
         data: null
       });
 
@@ -64,67 +65,21 @@ export default class SkillController {
   public addSkill = async (req: Request, res: Response): Promise<any> => {
     try {
 
-      const skill = new Skill({
-        name: req.body.name,
-        display_name: req.body.name,
-        scope: req.body.scope,
-        category: req.body.category
-      });
+      const skills = await db.one('INSERT INTO skills (name, display_name) VALUES ($1, $2) RETURNING *', [req.body.name.toLowerCase().replace(/ /gi,'-'), req.body.name]);
 
-      const newSkill = await skill.save();
-
-      res.status(201).send({
+      await res.status(201).send({
         success: true,
         message: 'Skill successfully created',
-        data: newSkill
+        data: {
+          skills: skills
+        }
       });
 
     } catch (err) {
 
       res.status(500).send({
         success: false,
-        message: err.toString(),
-        data: null
-      });
-
-    }
-  };
-
-  public updateSkill = async (req: Request, res: Response): Promise<any> => {
-    try {
-
-      const skillUpdated = await Skill.findByIdAndUpdate(
-        req.params.id,
-        {
-          $set: {
-            name: req.body.name.toLowerCase(),
-            display_name: req.body.name,
-            scope: req.body.scope,
-            category: req.body.category
-          }
-        },
-        { new: true }
-      );
-
-      if (!skillUpdated) {
-        return res.status(404).send({
-          success: false,
-          message: 'Skill to update not found!',
-          data: null
-        });
-      }
-
-      res.status(200).send({
-        success: true,
-        message: 'Skill successfully updated.',
-        data: skillUpdated
-      });
-
-    } catch(err) {
-
-      res.status(500).send({
-        success: false,
-        message: err.toString(),
+        message: err,
         data: null
       });
 
@@ -134,23 +89,19 @@ export default class SkillController {
   public removeSkill = async (req: Request, res: Response): Promise<any> => {
     try {
 
-      const skill = await Skill.findByIdAndRemove(req.params.id);
+      const rows = await db.any('DELETE FROM skills WHERE id = $1 RETURNING *', [req.params.id]);
 
-      if (!skill) {
-        return res.status(404).send({
-          success: false,
-          message: 'Skill not found',
-          data: null
-        });
-      }
-
-      res.status(204).send();
+      res.status(200).send({
+        success: true,
+        message: "Skill successfully deleted",
+        data: rows
+      });
 
     } catch (err) {
 
       res.status(500).send({
         success: false,
-        message: err.toString(),
+        message: err,
         data: null
       });
 
@@ -160,45 +111,19 @@ export default class SkillController {
   public removeAll = async (req: Request, res: Response): Promise<any> => {
     try {
 
-      const skills = await Skill.deleteMany({});
+      const skills = await db.any('DELETE FROM skills RETURNING *', []);
 
-      if (!skills) {
-        return res.status(404).send({
-          success: false,
-          message: 'Skills not found',
-          data: null
-        });
-      }
-
-      res.status(204).send();
-
-    } catch (err) {
-
-      res.status(500).send({
-        success: false,
-        message: err.toString(),
-        data: null
-      });
-
-    }
-  };
-
-  public importSkills = async (req: Request, res: Response): Promise<any> => {
-    try {
-
-      const newSkills = await Skill.insertMany(req.body);
-
-      res.status(201).send({
+      res.status(200).send({
         success: true,
-        message: 'Skills successfully created',
-        data: newSkills
+        message: "Skills successfully deleted",
+        data: skills
       });
 
     } catch (err) {
 
       res.status(500).send({
         success: false,
-        message: err.toString(),
+        message: err,
         data: null
       });
 

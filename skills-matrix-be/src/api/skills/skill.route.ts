@@ -8,10 +8,8 @@ skill.get('/', skillController.getAll);
 skill.delete('/', skillController.removeAll);
 
 skill.post('/add', skillController.addSkill);
-skill.post('/import', skillController.importSkills);
 
 skill.get('/:id', skillController.getSkillById);
-skill.put("/:id", skillController.updateSkill);
 skill.delete('/:id', skillController.removeSkill);
 
 export default skill;

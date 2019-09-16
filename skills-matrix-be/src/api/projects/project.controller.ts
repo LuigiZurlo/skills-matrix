@@ -1,14 +1,14 @@
 import { Request, Response } from 'express';
-import Project from './project.model';
+import { db } from '../../db/db';
 
 export default class ProjectController {
 
   public getAll = async (req: Request, res: Response): Promise<any> => {
     try {
 
-      const projects = await Project.find();
+      const projects = await db.any('SELECT * FROM projects', []);
 
-      if (!projects) {
+      if (Object.keys(projects).length == 0) {
         return res.status(404).send({
           success: false,
           message: "Projects not found",
@@ -18,6 +18,7 @@ export default class ProjectController {
 
       res.status(200).send({
         success: true,
+        data_length: projects.length,
         data: projects
       });
 
@@ -35,9 +36,9 @@ export default class ProjectController {
   public getProjectById = async (req: Request, res: Response): Promise<any> => {
     try {
 
-      const project = await Project.findById(req.params.id);
+      const project = await db.any('SELECT * FROM projects WHERE id = $1', [req.params.id]);
 
-      if (!project) {
+      if (Object.keys(project).length == 0 ) {
         return res.status(404).send({
           success: false,
           message: 'Project not found',
@@ -54,7 +55,7 @@ export default class ProjectController {
 
       res.status(500).send({
         success: false,
-        message: err.toString(),
+        message: err,
         data: null
       });
 
@@ -64,93 +65,19 @@ export default class ProjectController {
   public addProject = async (req: Request, res: Response): Promise<any> => {
     try {
 
-      const project = new Project({
-        name: req.body.name,
-        display_name: req.body.name,
-        start_date: req.body.start_date,
-        end_date: req.body.end_date
-      });
-
-      const newProject = await project.save();
+      const project = await db.one('INSERT INTO projects (name, project_otp_code, start_date, end_date) VALUES ($1, $2, $3, $4) RETURNING *', [req.body.name, req.body.project_otp_code, req.body.start_date, req.body.end_date]);
 
       res.status(201).send({
         success: true,
         message: "Project successfully created",
-        data: newProject
+        data: project
       });
 
     } catch (err) {
 
       res.status(500).send({
         success: false,
-        message: err.toString(),
-        data: null
-      });
-
-    }
-  };
-
-  public removeProject = async (req: Request, res: Response): Promise<any> => {
-    try {
-
-      const project = await Project.findByIdAndRemove(req.params.id);
-
-      if (!project) {
-        return res.status(404).send({
-          success: false,
-          message: 'Project not found',
-          data: null
-        });
-      }
-
-      res.status(204).send();
-
-    } catch (err) {
-
-      res.status(500).send({
-        success: false,
-        message: err.toString(),
-        data: null
-      });
-
-    }
-  };
-
-  public updateProject = async (req: Request, res: Response): Promise<any> => {
-    try {
-
-      const projectUpdated = await Project.findByIdAndUpdate(
-        req.params.id,
-        {
-          $set: {
-            name: req.body.name,
-            display_name: req.body.name,
-            start_date: req.body.start_date,
-            end_date: req.body.end_date
-          }
-        },
-        { new: true }
-      );
-
-      if (!projectUpdated) {
-        return res.status(404).send({
-          success: false,
-          message: 'Project to update not found!',
-          data: null
-        });
-      }
-
-      res.status(200).send({
-        success: true,
-        message: 'Project successfully updated.',
-        data: projectUpdated
-      });
-
-    } catch(err) {
-
-      res.status(500).send({
-        success: false,
-        message: err.toString(),
+        message: err,
         data: null
       });
 
