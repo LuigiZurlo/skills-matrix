@@ -1,6 +1,10 @@
 import * as pgPromise from 'pg-promise';
 
-const initOptions = {};
+const initOptions = {
+  query(e) {
+    console.log(e.query);
+  }
+};
 
 const dbConfig = {
   user: 'admin',

@@ -36,7 +36,13 @@ export default class ResourceController {
   public getResourceById = async (req: Request, res: Response): Promise<any> => {
     try {
 
-      const resource = await db.any('SELECT * FROM resources WHERE id = $1', [req.params.resource_id]);
+      const resource = await db.one('SELECT * FROM resources WHERE id = $1', [req.params.resource_id]);
+      const competencies = await db.any('SELECT c.id "competency_id", c.skill_id, s.display_name, c.level FROM competencies c, skills s WHERE s.id = c.skill_id AND c.id IN ( SELECT competency_id FROM resource_competencies WHERE resource_id = $1)', [req.params.resource_id]);
+      const missions = await db.any('SELECT missions.id "mission_id", projects.name "project_name", positions.display_name "position_name", missions.is_active\n' +
+        'FROM missions\n' +
+        'INNER JOIN projects on projects.id = missions.project_id\n' +
+        'INNER JOIN positions on positions.id = missions.position_id\n' +
+        'WHERE missions.resource_id = $1', [req.params.resource_id]);
 
       if (Object.keys(resource).length == 0 ) {
         return res.status(404).send({
@@ -48,7 +54,11 @@ export default class ResourceController {
 
       res.status(200).send({
         success: true,
-        data: resource
+        data: {
+          resource,
+          competencies,
+          missions
+        }
       });
 
     } catch (err) {

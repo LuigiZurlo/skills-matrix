@@ -1,12 +1,13 @@
 import { Request, Response } from 'express';
-import { db } from '../../../db/db';
+import { db } from '../../db/db';
 
 export default class ResourceCompetencyController {
 
   public getAllByResourceId = async (req: Request, res: Response): Promise<any> => {
     try {
 
-      const resources = await db.any('SELECT * FROM resource_competencies WHERE resource_id = $1', [req.params.resource_id]);
+      const resources = await db.any('SELECT c.id "competency_id", c.skill_id, s.display_name, c.level FROM competencies c, skills s\n' +
+        'WHERE s.id = c.skill_id AND c.id IN ( SELECT competency_id FROM resource_competencies WHERE resource_id = $1)', [req.params.resource_id]);
 
       if (Object.keys(resources).length == 0) {
         return res.status(404).send({
