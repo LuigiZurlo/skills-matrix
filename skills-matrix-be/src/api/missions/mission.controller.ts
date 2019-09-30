@@ -3,7 +3,7 @@ import { db } from '../../db/db';
 
 export default class MissionController {
 
-  public getAll = async (req: Request, res: Response): Promise<any> => {
+  public getMissions = async (req: Request, res: Response): Promise<any> => {
     try {
 
       const missions = await db.any('SELECT * FROM missions', []);
@@ -33,7 +33,7 @@ export default class MissionController {
     }
   };
 
-  public getMissionById = async (req: Request, res: Response): Promise<any> => {
+  public getMission = async (req: Request, res: Response): Promise<any> => {
     try {
 
       const missions = await db.any('SELECT * FROM missions where id = $1', [req.params.mission_id]);
@@ -62,14 +62,14 @@ export default class MissionController {
     }
   };
 
-  public addMission = async (req: Request, res: Response): Promise<any> => {
+  public createMissions = async (req: Request, res: Response): Promise<any> => {
     try {
 
       const missions = await db.one('INSERT INTO missions (resource_id, project_id, position_id, start_date, end_date) VALUES ($1, $2, $3, $4) RETURNING *', [req.body.resource_id, req.body.project_id, req.body.position_id, req.body.start_date, req.body.end_date]);
 
       res.status(201).send({
         success: true,
-        message: 'Mission successfully created',
+        message: 'Missions successfully created',
         data: missions
       });
 
@@ -84,7 +84,7 @@ export default class MissionController {
     }
   };
 
-  public removeMission = async (req: Request, res: Response): Promise<any> => {
+  public deleteMission = async (req: Request, res: Response): Promise<any> => {
     try {
 
       const missions = await db.any('DELETE FROM missions WHERE id = $1 RETURNING *', [req.params.mission_id]);
@@ -106,7 +106,7 @@ export default class MissionController {
     }
   };
 
-  public removeAll = async (req: Request, res: Response): Promise<any> => {
+  public deleteMissions = async (req: Request, res: Response): Promise<any> => {
     try {
 
       const missions = await db.any('DELETE FROM missions RETURNING *', []);

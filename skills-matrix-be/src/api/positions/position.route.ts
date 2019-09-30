@@ -1,17 +1,15 @@
 import { Router } from 'express';
 import PositionController from "./position.controller";
 
-import positionRequirement from './requirements/position.requirement.route';
-
 const position: Router = Router();
 const positionController = new PositionController();
 
-position.get('/', positionController.getAll);
+position.get('/', positionController.getPositions);
 
-position.post('/add', positionController.addPosition);
+position.post('/', positionController.createPositions);
 
-position.get('/:position_id', positionController.getPositionById);
+position.get('/:position_id', positionController.getPosition);
 
-position.use('/:position_id/requirements', positionRequirement);
+position.get('/:position_id/requirements/', positionController.getPositionRequirements);
 
 export default position;

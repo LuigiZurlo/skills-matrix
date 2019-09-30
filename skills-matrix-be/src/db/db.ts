@@ -1,6 +1,7 @@
 import * as pgPromise from 'pg-promise';
 
 const initOptions = {
+  capSQL: true,
   query(e) {
     console.log(e.query);
   }

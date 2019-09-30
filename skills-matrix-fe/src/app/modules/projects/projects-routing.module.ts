@@ -5,6 +5,7 @@ import {ProjectsCreateComponent} from "./projects-create/projects-create.compone
 import {ProjectsEditComponent} from "./projects-edit/projects-edit.component";
 import {ProjectsViewComponent} from "./projects-view/projects-view.component";
 import {ProjectsListComponent} from "./projects-list/projects-list.component";
+import {ProjectsDeleteComponent} from "./projects-delete/projects-delete.component";
 
 const projectsRoutes: Routes = [
   { path: 'projects/create', component: ProjectsCreateComponent },
@@ -17,4 +18,5 @@ const projectsRoutes: Routes = [
   imports: [RouterModule.forChild(projectsRoutes)],
   exports: [RouterModule]
 })
+
 export class ProjectsRoutingModule { }

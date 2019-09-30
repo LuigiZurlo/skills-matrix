@@ -1,14 +1,13 @@
 import { Router } from 'express';
 import ProjectController from "./project.controller";
 
-
 const project: Router = Router();
+
 const projectController = new ProjectController();
+project.get('/', projectController.getProjects);
+project.post('/', projectController.createProjects);
 
-project.get('/', projectController.getAll);
-
-project.post('/add', projectController.addProject);
-
-project.get('/:id', projectController.getProjectById);
+project.get('/:project_id', projectController.getProject);
+project.get('/:project_id/teams', projectController.getProjectTeams);
 
 export default project;

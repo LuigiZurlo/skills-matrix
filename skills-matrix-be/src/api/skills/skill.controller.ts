@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
-import { db } from '../../db/db';
+import { db, pgp } from '../../db/db';
 
 export default class SkillController {
 
-  public getAll = async (req: Request, res: Response): Promise<any> => {
+  public getSkills = async (req: Request, res: Response): Promise<any> => {
     try {
 
       const skills = await db.any('SELECT * FROM skills', []);
@@ -26,14 +26,14 @@ export default class SkillController {
 
       res.status(500).send({
         success: false,
-        message: err,
+        message: err.toString(),
         data: null
       });
 
     }
   };
 
-  public getSkillById = async (req: Request, res: Response): Promise<any> => {
+  public getSkill = async (req: Request, res: Response): Promise<any> => {
     try {
 
       const skills = await db.any('SELECT * FROM skills where id = $1', [req.params.id]);
@@ -55,38 +55,51 @@ export default class SkillController {
 
       res.status(500).send({
         success: false,
-        message: err,
+        message: err.toString(),
         data: null
       });
 
     }
   };
 
-  public addSkill = async (req: Request, res: Response): Promise<any> => {
+  public createSkills = async (req: Request, res: Response): Promise<any> => {
     try {
 
-      const skills = await db.one('INSERT INTO skills (name, display_name) VALUES ($1, $2) RETURNING *', [req.body.name.toLowerCase().replace(/ /gi,'-'), req.body.name]);
+      // Create Skills
+      const skillsColumnSet = new pgp.helpers.ColumnSet(['name'], {table: 'skills'});
+      const skillsValues = req.body;
+      const skillsQuery = pgp.helpers.insert(skillsValues, skillsColumnSet) + ' ON CONFLICT DO NOTHING RETURNING *';
+      const skillsResult = await db.any(skillsQuery);
 
-      await res.status(201).send({
-        success: true,
-        message: 'Skill successfully created',
-        data: {
-          skills: skills
+      // Create Competencies
+      const competenciesColumnSet = new pgp.helpers.ColumnSet(['skill_id', 'level'], {table: 'competencies'});
+      let competenciesValues = [];
+      for (let i = 0; i < skillsResult.length; i++) {
+        for (let j = 0; j < 5; j++) {
+          competenciesValues.push( { skill_id: skillsResult[i].id, level: j });
         }
+      }
+      const competenciesQuery = pgp.helpers.insert(competenciesValues, competenciesColumnSet);
+      await db.none(competenciesQuery);
+
+      res.status(201).send({
+        success: true,
+        message: 'Skill(s) successfully created',
+        data: skillsResult
       });
 
     } catch (err) {
 
       res.status(500).send({
         success: false,
-        message: err,
+        message: err.toString(),
         data: null
       });
 
     }
   };
 
-  public removeSkill = async (req: Request, res: Response): Promise<any> => {
+  public deleteSkill = async (req: Request, res: Response): Promise<any> => {
     try {
 
       const rows = await db.any('DELETE FROM skills WHERE id = $1 RETURNING *', [req.params.id]);
@@ -101,14 +114,14 @@ export default class SkillController {
 
       res.status(500).send({
         success: false,
-        message: err,
+        message: err.toString(),
         data: null
       });
 
     }
   };
 
-  public removeAll = async (req: Request, res: Response): Promise<any> => {
+  public deleteSkills = async (req: Request, res: Response): Promise<any> => {
     try {
 
       const skills = await db.any('DELETE FROM skills RETURNING *', []);
@@ -123,7 +136,7 @@ export default class SkillController {
 
       res.status(500).send({
         success: false,
-        message: err,
+        message: err.toString(),
         data: null
       });
 

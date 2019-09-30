@@ -1,12 +1,20 @@
 import { Request, Response } from 'express';
-import { db } from '../../db/db';
+import {db, pgp} from '../../db/db';
 
 export default class PositionController {
 
-  public getAll = async (req: Request, res: Response): Promise<any> => {
+  public getPositions = async (req: Request, res: Response): Promise<any> => {
     try {
 
-      const positions = await db.any('SELECT * FROM positions', []);
+      const validQueryParams = [ 'project_id' ];
+
+      let positions: any;
+      if(typeof req.query.project_id != 'undefined'){
+        positions = await db.any('SELECT * FROM positions WHERE project_id = $1', [ req.query.project_id ]);
+      }
+      else {
+        positions = await db.any('SELECT * FROM positions', []);
+      }
 
       if (Object.keys(positions).length == 0) {
         return res.status(404).send({
@@ -33,7 +41,7 @@ export default class PositionController {
     }
   };
 
-  public getPositionById = async (req: Request, res: Response): Promise<any> => {
+  public getPosition = async (req: Request, res: Response): Promise<any> => {
     try {
 
       const position = await db.any('SELECT * FROM positions WHERE id = $1', [req.params.position_id]);
@@ -62,15 +70,48 @@ export default class PositionController {
     }
   };
 
-  public addPosition = async (req: Request, res: Response): Promise<any> => {
+  public createPositions = async (req: Request, res: Response): Promise<any> => {
     try {
 
-      const position = await db.one('INSERT INTO positions (project_id, name, display_name, description) VALUES ($1, $2, $3, $4) RETURNING *', [req.body.project_id, req.body.name, req.body.display_name, req.body.description]);
+      // Create Positions
+      const positionsColumnSet = new pgp.helpers.ColumnSet(['project_id', 'name', 'description'], {table: 'positions'});
+      const positionsValues = req.body;
+      const positionsQuery = pgp.helpers.insert(positionsValues, positionsColumnSet) + ' ON CONFLICT DO NOTHING RETURNING *';
+      const positionsResult = await db.any(positionsQuery);
 
       res.status(201).send({
         success: true,
-        message: "Position successfully created",
-        data: position
+        message: "Position(s) successfully created",
+        data: positionsResult
+      });
+
+    } catch (err) {
+
+      res.status(500).send({
+        success: false,
+        message: err,
+        data: null
+      });
+
+    }
+  };
+
+  public getPositionRequirements = async (req: Request, res: Response): Promise<any> => {
+    try {
+
+      const position_requirements = await db.any('SELECT * FROM position_requirements WHERE position_id = $1', [req.params.position_id]);
+
+      if (Object.keys(position_requirements).length == 0 ) {
+        return res.status(404).send({
+          success: false,
+          message: 'PositionRequirement not found',
+          data: null
+        });
+      }
+
+      res.status(200).send({
+        success: true,
+        data: position_requirements
       });
 
     } catch (err) {

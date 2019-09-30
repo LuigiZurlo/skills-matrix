@@ -1,12 +1,16 @@
 <div>
   <mat-toolbar>
     <mat-toolbar-row>
-      <h2>Matrices</h2>
+      <h2>Graphs</h2>
     </mat-toolbar-row>
   </mat-toolbar>
 </div>
 
-<table class="matrix" cdk-table [dataSource]="data.matrix">
+<div [hidden]="!lineChart" style="position: relative; height:30vw; width:30vw">
+<canvas id="lineChart" >{{ lineChart }}</canvas>
+</div>
+
+<!--<table class="matrix" cdk-table [dataSource]="data.matrix">
 
   <ng-container cdkColumnDef="skill">
     <th cdk-header-cell *cdkHeaderCellDef> Skill </th>
@@ -25,4 +29,4 @@
   <tr cdk-header-row *cdkHeaderRowDef="['skill', 'level']"></tr>
   <tr cdk-row *cdkRowDef="let row; columns: ['skill', 'level'];"></tr>
 
-</table>
+</table>-->

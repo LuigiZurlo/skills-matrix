@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {GetResourcesServiceResponse, Resource} from '../../../models/resource/resource.model';
+import {GetResourcesServiceResponse, Resource} from '../../../common/models/resource/resource.model';
 import {ResourceService} from '../../../services/resource/resource.service';
 import {ActivatedRoute, Router} from '@angular/router';
+
+import { Chart } from 'chart.js';
 
 @Component({
   selector: 'app-resources-view',
@@ -11,13 +13,43 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class ResourcesViewComponent implements OnInit {
 
   resourceId: string;
-  resource: Resource;
+  resource: any;
+  lineChart: any;
 
   constructor(private resourceService: ResourceService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.resourceId = this.route.snapshot.paramMap.get('id');
     this.fetchResource(this.resourceId);
+
+    this.lineChart = new Chart('lineChart', {
+      type: 'bar',
+      data: {
+        labels: ['Programming Languages & DB', 'Technologies', 'Amadeus Tools', 'Software & Tools', 'Methodologies & Processes', 'TNT Topics'],
+        datasets: [{
+          label: 'actual',
+          backgroundColor: "rgba(200,0,0,0.2)",
+          lineTension: 0,
+          data: [2, 4, 3, 2, 3.5, 1]
+        }]
+      },
+      options: {
+        responsive: true,
+        legend: {
+          display: true,
+          position: 'bottom'
+        },
+        tooltips: {
+          enabled: true,
+          callbacks: {
+            label: function(tooltipItem, data) {
+              return data.datasets[tooltipItem.datasetIndex].label + ' : ' + data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+            }
+          }
+        }
+      }
+    });
+
   }
 
   fetchResource(id) {

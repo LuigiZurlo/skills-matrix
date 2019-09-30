@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 
-import {Skill, GetSkillsServiceResponse} from '../../../models/skill/skill.model';
+import {Skill, GetSkillsServiceResponse} from '../../../common/models/skill/skill.model';
 import {SkillService} from '../../../services/skill/skill.service';
 
 @Component({
@@ -11,8 +11,8 @@ import {SkillService} from '../../../services/skill/skill.service';
 })
 export class SkillsListComponent implements OnInit {
 
-  skills: Skill[];
-  displayedColumns = ['display_name', 'category', 'scope', 'actions'];
+  skills: any[];
+  displayedColumns = ['id', 'name', 'display_name', 'actions'];
 
   constructor(private skillService: SkillService, private router: Router) {
   }

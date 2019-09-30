@@ -1,0 +1,595 @@
+openapi: 3.0.0
+
+info:
+  version: 0.0.1
+  title: Swagger — Skills Manager Suite
+  description: An API for effective skills management in project teams
+  contact:
+    name: Jaona Ramahaleo
+    email: jaona.ramahaleo@gmail.com
+  license:
+    name: MIT
+    url: http://tldrlegal.com/license/mit-license
+
+servers:
+  - url: http://localhost:3000/v1
+    description: Local Development Server
+
+components:
+  schemas:
+    SkillCategory:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+    Competency:
+      type: object
+      properties:
+        skill_id: integer
+        level: integer
+    CompetencyRequirement:
+      type: object
+      properties:
+        id:
+          type: integer
+        position_id:
+          type: integer
+        competency_id:
+          type: integer
+        description:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+    Mission:
+      type: object
+      properties:
+        id:
+          type: integer
+        resource_id:
+          type: integer
+        project_id:
+          type: integer
+        position_id:
+          type: integer
+        start_date:
+          type: string
+          format: date-time
+        end_date:
+          type: string
+          format: date-time
+        is_active:
+          type: boolean
+    Position:
+      type: object
+      properties:
+        id:
+          type: integer
+        project_id:
+          type: integer
+        name:
+          type: string
+        description:
+          type: string
+    Project:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        project_otp_code:
+          type: string
+        start_date:
+          type: string
+          format: date-time
+        end_date:
+          type: string
+          format: date-time
+    Resource:
+      type: object
+      properties:
+        id:
+          type: integer
+        first_name:
+          type: string
+        last_name:
+          type: string
+        employee_number:
+          type: string
+        email:
+          type: string
+          format: email
+    Skill:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        display_name:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+    ProjectTeam:
+      type: object
+      properties:
+        id:
+          type: string
+        project_id:
+          type: integer
+        name:
+          type: string
+    Assessment:
+      type: object
+      properties:
+        id:
+          type: integer
+        resource_id:
+          type: integer
+        skill_id:
+          type: integer
+        old_level:
+          type: integer
+        new_level:
+          type: integer
+        due_date:
+          type: string
+          format: date-time
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+        submitted_at:
+          type: string
+          format: date-time
+        validated_at:
+          type: string
+          format: date-time
+        is_open:
+          type: boolean
+        is_filled:
+          type: boolean
+        is_submitted:
+          type: boolean
+        is_validated:
+          type: boolean
+
+paths:
+
+  # Projects
+  /projects:
+    get:
+      tags:
+        - Projects
+      summary: List projects
+      operationId: getProjects
+      responses:
+        '200':
+          summary: OK
+    post:
+      tags:
+        - Projects
+      summary: Create project
+      operationId: createProject
+      requestBody:
+        description: Project to add to the database
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Project'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Project'
+  /projects/{project_id}:
+    get:
+      tags:
+        - Projects
+      summary: Retrieve details about one project
+      operationId: getProject
+    put:
+      tags:
+        - Projects
+      summary: Update a project
+      operationId: updateProject
+    delete:
+      tags:
+        - Projects
+      summary: Delete a project
+      operationId: deleteProject
+  /projects/{project_id}/competencies:
+    get:
+      tags:
+        - Project Competencies
+      summary: List project competencies
+      operationId: getProjectCompetencies
+  /projects/{project_id}/positions:
+    get:
+      tags:
+        - Project Positions
+      summary: List project positions
+      operationId: getProjectPositions
+    post:
+      tags:
+        - Project Positions
+      summary: Create project position
+      operationId: createProjectPosition
+    delete:
+      tags:
+        - Project Positions
+      summary: Delete all project positions
+      operationId: deleteProjectPositions
+  /projects/{project_id}/positions/{position_id}:
+    get:
+      tags:
+        - Project Positions
+      summary: Retrieve details about a position
+      operationId: getPosition
+    put:
+      tags:
+        - Project Positions
+      summary: Update details about a position
+      operationId: updatePosition
+    delete:
+      tags:
+        - Project Positions
+      summary: Delete a position
+      operationId: deletePosition
+  /projects/{project_id}/positions/{position_id}/competency_groups/:
+    get:
+      tags:
+        - Project Position Competency Groups
+      summary: List competency groups for a given position
+      operationId: getPositionCompetencyGroups
+    post:
+      tags:
+        - Project Position Competency Groups
+      summary: Create competency group for a given position
+      operationId: createPositionCompetencyGroup
+  /projects/{project_id}/positions/{position_id}/competency_groups/{competency_group_id}:
+    get:
+      tags:
+        - Project Position Competency Groups
+      summary: Retrieve details about a given competency group for a given position
+      operationId: getPositionCompetencyGroup
+    put:
+      tags:
+        - Project Position Competency Groups
+      summary: Update details about a given competency group for a given position
+      operationId: updatePositionCompetencyGroup
+    delete:
+      tags:
+        - Project Position Competency Groups
+      summary: Delete a given competency group for a given position
+      operationId: deletePositionCompetencyGroup
+  /projects/{project_id}/positions/{position_id}/requirements/:
+    get:
+      tags:
+        - Project Position Requirements
+      summary: List competency requirements for a given position
+      operationId: getPositionRequirements
+    post:
+      tags:
+        - Project Position Requirements
+      summary: Create competency requirement for a given position
+      operationId: createPositionRequirement
+    delete:
+      tags:
+        - Project Position Requirements
+      summary: Delete all competency requirements for a given position
+      operationId: deletePositionRequirements
+  /projects/{project_id}/positions/{position_id}/requirements/{requirement_id}:
+    get:
+      tags:
+        - Project Position Requirements
+      summary: Retrieve details about a competeny requirement for a given position
+      operationId: getPositionRequirement
+    put:
+      tags:
+        - Project Position Requirements
+      summary: Update a competency requirement for a given position
+      operationId: updatePositionRequirement
+    delete:
+      tags:
+        - Project Position Requirements
+      summary: Delete a competency requirement for a given position
+      operationId: deletePositionRequirement
+  /projects/{project_id}/teams:
+    get:
+      tags:
+        - Project Teams
+      summary: List project teams
+      operationId: getProjectTeams
+    post:
+      tags:
+        - Project Teams
+      summary: Create project team
+      operationId: createProjectTeam
+    delete:
+      tags:
+        - Project Teams
+      summary: Delete all project teams
+      operationId: deleteProjectTeams
+  /projects/{project_id}/teams/{team_id}:
+    get:
+      tags:
+        - Project Teams
+      summary: Retrieve details about one team
+      operationId: getProjetTeam
+    put:
+      tags:
+        - Project Teams
+      summary: Update project team
+      operationId: updateProjectTeam
+    delete:
+      tags:
+        - Project Teams
+      summary: Delete project team
+      operationId: deleteProjectTeam
+  /projects/{project_id}/assessments:
+    get:
+      tags:
+        - Project Assessments
+      summary: List project assessments
+      operationId: getProjectAssessments
+    post:
+      tags:
+        - Project Assessments
+      summary: Create project assessment
+      operationId: createProjectAssessment
+    delete:
+      tags:
+        - Project Assessments
+      summary: Delete all project assessments
+      operationId: deleteProjectAssessments
+
+  # Resources
+  /resources:
+    get:
+      tags:
+        - Resources
+      summary: List resources
+      operationId: getResources
+    post:
+      tags:
+        - Resources
+      summary: Create a resource
+      operationId: createResource
+  /resources/{resource_id}:
+    get:
+      tags:
+        - Resources
+      summary: Retrieve details about one resource
+      operationId: getResource
+    put:
+      tags:
+        - Resources
+      summary: Update resource
+      operationId: updateResource
+    delete:
+      tags:
+        - Resources
+      summary: Delete a resource
+      operationId: deleteResource
+  /resources/{resource_id}/competencies:
+    get:
+      tags:
+        - Resource Competencies
+      summary: List all competencies for a resource
+      operationId: getResourceCompetencies
+    post:
+      tags:
+        - Resource Competencies
+      summary: Add competencies to a resource
+      operationId: createResourceCompetencies
+    delete:
+      tags:
+        - Resource Competencies
+      summary: Delete all competencies for a resource
+      operationId: deleteResourceCompetencies
+  /resources/{resource_id}/competencies/{competency_id}:
+    get:
+      tags:
+        - Resource Competencies
+      summary: Retrieve details about a resource competency
+      operationId: getResourceCompetency
+    put:
+      tags:
+        - Resource Competencies
+      summary: Update a resource competency
+      operationId: updateResourceCompetency
+    delete:
+      tags:
+        - Resource Competencies
+      summary: Delete a resource competency
+      operationId: deleteResourceCompetency
+  /resources/{resource_id}/assessments:
+    get:
+      tags:
+        - Resource Assessments
+      summary: List all assessments for a resource
+      operationId: getResourceAssessments
+    post:
+      tags:
+        - Resource Assessments
+      summary: Create a resource assessment
+      operationId: createResourceAssessment
+    delete:
+      tags:
+        - Resource Assessments
+      summary: Delete all assessments for a resource
+      operationId: deleteResourceAssessments
+  /resources/{resource_id}/assessments/{assessment_id}:
+    get:
+      tags:
+        - Resource Assessments
+      summary: Retrieve details about a resource assessment
+      operationId: getResourceAssessment
+    put:
+      tags:
+        - Resource Assessments
+      summary: Update a resource assessment
+      operationId: updateResourceAssessment
+    delete:
+      tags:
+        - Resource Assessments
+      summary: Delete a resource assessment
+      operationId: deleteResourceAssessment
+  /resources/{resource_id}/missions:
+    get:
+      tags:
+        - Resource Missions
+      summary: List missions for a given resource
+      operationId: getResourceMissions
+    post:
+      tags:
+        - Resource Missions
+      summary: Create a mission for a given resource
+      operationId: createResourceMission
+  /resources/{resource_id}/missions/{mission_id}:
+    get:
+      tags:
+        - Resource Missions
+      summary: Retrieve details about a mission
+      operationId: getResourceMission
+    put:
+      tags:
+        - Resource Missions
+      summary: Update details about a mission
+      operationId: updateResourceMission
+    delete:
+      tags:
+        - Resource Missions
+      summary: Delete a mission
+      operationId: deleteResourceMission
+
+  # Skills
+  /skills:
+    get:
+      tags:
+        - Skills
+      summary: List skills
+      operationId: getSkills
+    post:
+      tags:
+        - Skills
+      summary: Create a skill
+      operationId: createSkill
+  /skills/{skill_id}:
+    get:
+      tags:
+        - Skills
+      summary: Retrieve details about a given skill
+      operationId: getSkill
+    put:
+      tags:
+        - Skills
+      summary: Update details about a given skill
+      operationId: updateSkill
+    delete:
+      tags:
+        - Skills
+      summary: Delete a skil
+      operationId: deleteSkill
+
+  # Reports per position
+  /reports/positions/{position_id}:
+    get:
+      tags:
+        - Reports for a given Position
+      summary: Retrieve available reports for a given position
+      operationId: getPositionReports
+  /reports/positions/{position_id}/competencies:
+    get:
+      tags:
+        - Reports for a given Position
+      summary: Retrieve a competency report for a given position
+      operationId: getPositionCompetencyReport
+  /reports/positions/{position_id}/competency_groups:
+    get:
+      tags:
+        - Reports for a given Position
+      summary: Retrieve a competency groups report for a given position
+      operationId: getPositionCompetencyGroupReport
+
+  # Reports per resources
+  /reports/resources/{resource_id}:
+    get:
+      tags:
+        - Reports for a given Resource
+      summary: Retrieve available reports for a given resource
+      operationId: getResourceReports
+  /reports/resources/{resource_id}/competencies:
+    get:
+      tags:
+        - Reports for a given Resource
+      summary: Retrieve a competency report for a given resource
+      operationId: getResourceCompetencyReport
+  /reports/resources/{resource_id}/competency_groups:
+    get:
+      tags:
+        - Reports for a given Resource
+      summary: Retrieve a competency groups report for a given resource
+      operationId: getResourceCompetencyGroupReport
+
+  # Reports per projects
+  /reports/projects/{project_id}:
+    get:
+      tags:
+        - Reports for a given Project
+      summary: Retrieve available reports for a given project
+      operationId: getProjectReports
+  /reports/projects/{project_id}/competencies:
+    get:
+      tags:
+        - Reports for a given Project
+      summary: Retrieve a competency report for a given project
+      operationId: getProjectCompetencyReport
+  /reports/projects/{project_id}/competency_groups:
+    get:
+      tags:
+        - Reports for a given Project
+      summary: Retrieve a competency groups report for a given project
+      operationId: getProjectCompetencyGroupReport
+
+  # Reports per project teams
+  /reports/teams/{team_id}:
+    get:
+      tags:
+        - Reports for a given Project Team
+      summary: Retrieve available reports for a given project team
+      operationId: getProjectTeamReports
+  /reports/teams/{team_id}/competencies:
+    get:
+      tags:
+        - Reports for a given Project Team
+      summary: Retrieve a competency report for a given project team
+      operationId: getProjectTeamCompetencyReport
+  /reports/teams/{team_id}/competency_groups:
+    get:
+      tags:
+        - Reports for a given Project Team
+      summary: Retrieve a competency groups report for a given project team
+      operationId: getProjectTeamCompetencyGroupReport

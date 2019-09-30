@@ -4,12 +4,11 @@ import MissionController from './mission.controller';
 const mission: Router = Router();
 const missionController = new MissionController();
 
-mission.get('/', missionController.getAll);
-mission.delete('/', missionController.removeAll);
+mission.get('/', missionController.getMissions);
+mission.delete('/', missionController.deleteMissions);
+mission.post('/', missionController.createMissions);
 
-mission.post('/add', missionController.addMission);
-
-mission.get('/:mission_id', missionController.getMissionById);
-mission.delete('/:mission_id', missionController.removeMission);
+mission.get('/:mission_id', missionController.getMission);
+mission.delete('/:mission_id', missionController.deleteMission);
 
 export default mission;

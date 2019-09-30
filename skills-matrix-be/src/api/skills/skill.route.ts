@@ -4,12 +4,12 @@ import SkillController from './skill.controller';
 const skill: Router = Router();
 const skillController = new SkillController();
 
-skill.get('/', skillController.getAll);
-skill.delete('/', skillController.removeAll);
+skill.get('/', skillController.getSkills);
+skill.delete('/', skillController.deleteSkills);
 
-skill.post('/add', skillController.addSkill);
+skill.post('/', skillController.createSkills);
 
-skill.get('/:id', skillController.getSkillById);
-skill.delete('/:id', skillController.removeSkill);
+skill.get('/:id', skillController.getSkill);
+skill.delete('/:id', skillController.deleteSkill);
 
 export default skill;

@@ -16,6 +16,7 @@ export class ProjectsCreateComponent implements OnInit {
   constructor(private projectService: ProjectService, private router: Router, private formBuilder: FormBuilder) {
     this.createForm = this.formBuilder.group({
       name: ['', Validators.required],
+      project_otp_code: [ '', Validators.required],
       start_date: [ Date , Validators.required],
       end_date: [ Date , Validators.required]
     });
@@ -24,8 +25,8 @@ export class ProjectsCreateComponent implements OnInit {
   ngOnInit() {
   }
 
-  addProject(name, startDate, endDate) {
-    this.projectService.addProject(name, startDate, endDate).subscribe( () => {
+  addProject(name, project_otp_code, start_date, end_date) {
+    this.projectService.createProject(name, project_otp_code, start_date, end_date).subscribe( () => {
         this.router.navigate([`/projects`]);
       })
   }

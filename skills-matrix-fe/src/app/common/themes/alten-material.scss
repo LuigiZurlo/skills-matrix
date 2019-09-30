@@ -1,0 +1,159 @@
+@import '../../../../node_modules/@angular/material/theming';
+
+@include mat-core();
+
+/* color palette */
+$alten-primary-palette: (
+  50 : #e0f1fa,
+  100 : #b3dcf2,
+  200 : #80c5e9,
+  300 : #4daee0,
+  400 : #269cd9,
+  500 : #008bd2,
+  600 : #0083cd,
+  700 : #0078c7,
+  800 : #006ec1,
+  900 : #005bb6,
+  A100 : #dfedff,
+  A200 : #acd0ff,
+  A400 : #79b3ff,
+  A700 : #5fa5ff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+$alten-accent-palette: (
+  50 : #fff7e0,
+  100 : #ffeab3,
+  200 : #ffdd80,
+  300 : #ffcf4d,
+  400 : #ffc426,
+  500 : #ffba00,
+  600 : #ffb300,
+  700 : #ffab00,
+  800 : #ffa300,
+  900 : #ff9400,
+  A100 : #ffffff,
+  A200 : #fff9f2,
+  A400 : #ffe1bf,
+  A700 : #ffd5a6,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+$alten-warn-palette: (
+  50 : #fce1e3,
+  100 : #f7b4b8,
+  200 : #f18289,
+  300 : #eb505a,
+  400 : #e72b36,
+  500 : #e30513,
+  600 : #e00411,
+  700 : #dc040e,
+  800 : #d8030b,
+  900 : #d00106,
+  A100 : #fff8f8,
+  A200 : #ffc5c6,
+  A400 : #ff9293,
+  A700 : #ff7979,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+$alten-background-palette: (
+  50 : #e1e7ec,
+  100 : #b4c4d0,
+  200 : #829cb1,
+  300 : #4f7491,
+  400 : #2a577a,
+  500 : #043962,
+  600 : #03335a,
+  700 : #032c50,
+  800 : #022446,
+  900 : #011734,
+  A100 : #6c9cff,
+  A200 : #3979ff,
+  A400 : #0657ff,
+  A700 : #004ceb,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+$alten-material-primary: mat-palette($alten-primary-palette);
+$alten-material-accent: mat-palette($alten-accent-palette);
+$alten-material-warn: mat-palette($alten-warn-palette);
+
+/* typography */
+$alten-typography: mat-typography-config(
+  $font-family:   'Lato, "Helvetica Neue", sans-serif',
+  $display-4:     mat-typography-level(112px, 112px, 300, 'Raleway'),
+  $display-3:     mat-typography-level(56px, 56px, 400, 'Raleway'),
+  $display-2:     mat-typography-level(45px, 48px, 400, 'Raleway'),
+  $display-1:     mat-typography-level(34px, 40px, 400, 'Raleway'),
+  $headline:      mat-typography-level(24px, 32px, 400, 'Raleway'),
+  $title:         mat-typography-level(20px, 32px, 500, 'Raleway'),
+  $subheading-2:  mat-typography-level(16px, 28px, 400),
+  $subheading-1:  mat-typography-level(15px, 24px, 400),
+  $body-2:        mat-typography-level(14px, 24px, 500),
+  $body-1:        mat-typography-level(14px, 20px, 400),
+  $caption:       mat-typography-level(12px, 20px, 400),
+  $button:        mat-typography-level(14px, 14px, 500),
+  $input:         mat-typography-level(16px, 1.125, 400)
+);
+
+$alten-material-theme: mat-light-theme($alten-material-primary, $alten-material-accent, $alten-material-warn);
+
+@include angular-material-theme($alten-material-theme);
+@include angular-material-typography($alten-typography);

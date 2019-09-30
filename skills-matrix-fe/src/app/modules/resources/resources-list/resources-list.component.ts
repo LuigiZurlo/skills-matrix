@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import {GetResourcesServiceResponse, Resource} from '../../../models/resource/resource.model';
+import {GetResourcesServiceResponse, Resource} from '../../../common/models/resource/resource.model';
 import {ResourceService} from '../../../services/resource/resource.service';
 
 @Component({
@@ -11,8 +11,8 @@ import {ResourceService} from '../../../services/resource/resource.service';
 })
 export class ResourcesListComponent implements OnInit {
 
-  resources: Resource[];
-  displayedColumns = ['employee_id', 'trigram', 'last_name', 'first_name', 'actions'];
+  resources: any[];
+  displayedColumns = ['id', 'employee_number', 'last_name', 'first_name', 'actions'];
 
   constructor(private resourceService: ResourceService, private router: Router) { }
 
@@ -39,12 +39,6 @@ export class ResourcesListComponent implements OnInit {
       .subscribe(() => {
         this.fetchResources();
       });
-  }
-
-  getTrigram(element: Resource): string {
-    let trigram: string;
-    trigram = element.name.first.substr(0, 1) + element.name.last.substr(0, 2);
-    return trigram.toUpperCase();
   }
 
 }

@@ -1,9 +1,9 @@
-import { Request, Response } from 'express';
-import { db } from '../../db/db';
+import {Request, Response} from 'express';
+import {db} from '../../db/db';
 
 export default class CompetencyController {
 
-  public getAll = async (req: Request, res: Response): Promise<any> => {
+  public getCompetencies = async (req: Request, res: Response): Promise<any> => {
     try {
 
       const competencies = await db.any('SELECT * FROM competencies', []);
@@ -33,7 +33,7 @@ export default class CompetencyController {
     }
   };
 
-  public getCompetencyById = async (req: Request, res: Response): Promise<any> => {
+  public getCompetency = async (req: Request, res: Response): Promise<any> => {
     try {
 
       const competencies = await db.any('SELECT * FROM competencies where id = $1', [req.params.competency_id]);
@@ -62,7 +62,7 @@ export default class CompetencyController {
     }
   };
 
-  public addCompetency = async (req: Request, res: Response): Promise<any> => {
+  public createCompetencies = async (req: Request, res: Response): Promise<any> => {
     try {
 
       const competencies = await db.one('INSERT INTO competencies (skill_id, level) VALUES ($1, $2) RETURNING *', [req.body.skill_id, req.body.level]);
@@ -84,7 +84,7 @@ export default class CompetencyController {
     }
   };
 
-  public removeCompetency = async (req: Request, res: Response): Promise<any> => {
+  public deleteCompetency = async (req: Request, res: Response): Promise<any> => {
     try {
 
       const competencies = await db.any('DELETE FROM competencies WHERE id = $1 RETURNING *', [req.params.competency_id]);
@@ -106,7 +106,7 @@ export default class CompetencyController {
     }
   };
 
-  public removeAll = async (req: Request, res: Response): Promise<any> => {
+  public deleteCompetencies = async (req: Request, res: Response): Promise<any> => {
     try {
 
       const competencies = await db.any('DELETE FROM competencies RETURNING *', []);

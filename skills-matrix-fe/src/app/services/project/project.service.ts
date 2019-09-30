@@ -14,15 +14,15 @@ export class ProjectService {
     return this.http.get(`${this.uri}/projects`);
   }
 
-  addProject(name, start_date, end_date) {
+  createProject(name, project_otp_code, start_date, end_date) {
     const project = {
       name: name,
-      display_name: name,
+      project_otp_code: project_otp_code,
       start_date: start_date,
       end_date: end_date
     };
     console.log("added Project", project);
-    return this.http.post(`${this.uri}/projects/add`, project);
+    return this.http.post(`${this.uri}/projects`, project);
   }
 
   getProjectById(id) {

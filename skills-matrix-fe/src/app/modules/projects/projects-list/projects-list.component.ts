@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import {GetProjectsServiceResponse, Project} from '../../../models/project/project.model';
+import {GetProjectsServiceResponse, Project} from '../../../common/models/project/project.model';
 import {ProjectService} from '../../../services/project/project.service';
 
 @Component({
@@ -12,7 +12,7 @@ import {ProjectService} from '../../../services/project/project.service';
 export class ProjectsListComponent implements OnInit {
 
   projects: Project[];
-  displayedColumns = ['name', 'display_name', 'start_date', 'end_date', 'actions'];
+  displayedColumns = ['name', 'start_date', 'end_date', 'actions'];
 
   constructor(private projectService: ProjectService, private router: Router) { }
 
