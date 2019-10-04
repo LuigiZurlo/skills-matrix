@@ -44,7 +44,7 @@ export default class PositionController {
   public getPosition = async (req: Request, res: Response): Promise<any> => {
     try {
 
-      const position = await db.any('SELECT * FROM positions WHERE id = $1', [req.params.position_id]);
+      const position = await db.one('SELECT * FROM positions WHERE id = $1', [req.params.position_id]);
 
       if (Object.keys(position).length == 0 ) {
         return res.status(404).send({

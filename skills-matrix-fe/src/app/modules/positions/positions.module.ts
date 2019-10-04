@@ -10,13 +10,15 @@ import {PositionsCreateComponent} from './positions-create/positions-create.comp
 import {PositionsDeleteComponent} from './positions-delete/positions-delete.component';
 import {PositionsEditComponent} from './positions-edit/positions-edit.component';
 import {PositionsListComponent} from './positions-list/positions-list.component';
+import { PositionsViewComponent } from './positions-view/positions-view.component';
 
 @NgModule({
   declarations: [
     PositionsCreateComponent,
     PositionsDeleteComponent,
     PositionsEditComponent,
-    PositionsListComponent
+    PositionsListComponent,
+    PositionsViewComponent
   ],
   imports: [
     CommonModule,

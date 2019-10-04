@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
+import {Location} from '@angular/common';
 
-import {FormBuilder} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {PositionService} from "../../../services/position/position.service";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-positions-create',
@@ -9,38 +12,39 @@ import {FormBuilder} from '@angular/forms';
 })
 export class PositionsCreateComponent implements OnInit {
 
-  myData = [
-    {
-      skill: "skill_1",
-      level: 1
-    },
-    {
-      skill: "skill_2",
-      level: 2
-    },
-    {
-      skill: "skill_3",
-      level: 3
-    },
-    {
-      skill: "skill_4",
-      level: 4
-    }
-  ];
+  positionCreateForm: FormGroup;
+  projectId: number;
+  sub: any;
 
-  skillLevels = [
-    { value: 0, viewValue: 0 },
-    { value: 1, viewValue: 1 },
-    { value: 2, viewValue: 2 },
-    { value: 3, viewValue: 3 }
-  ];
+  constructor(private _formBuilder: FormBuilder,
+              private _location: Location,
+              private _positionService: PositionService,
+              private _router: Router,
+              private _route: ActivatedRoute) {
+    this.positionCreateForm = this._formBuilder.group({
+      name: ['', Validators.required],
+      description: ['']
+    });
+    this.sub = this._route.queryParams.subscribe(params => {
+      this.projectId = +params['project_id'] || null;
+    });
+  }
 
-  displayedColumns = ['skill', 'level'];
-
-  constructor(private _formBuilder: FormBuilder) {
+  addPosition(name, description) {
+    this._positionService.createPosition(this.projectId, name, description).subscribe( () => {
+      this._router.navigate([`/projects/${this.projectId}`]);
+    })
   }
 
   ngOnInit() {
+  }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
+  }
+
+  goBack() {
+    this._location.back();
   }
 
 }

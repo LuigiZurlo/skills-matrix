@@ -14,6 +14,20 @@ export class PositionService {
     return this.http.get(`${this.uri}/positions`);
   }
 
+  getPositionById(id) {
+    return this.http.get(`${this.uri}/positions/${id}`);
+  }
+
+  createPosition(project_id, name, description) {
+    const position = {
+      name: name,
+      project_id: project_id,
+      description: description
+    };
+    console.log("added Position", position);
+    return this.http.post(`${this.uri}/positions`, position);
+  }
+
   getPositionsByProjectId(project_id) {
     return this.http.get(`${this.uri}/positions?project_id=${project_id}`);
   }

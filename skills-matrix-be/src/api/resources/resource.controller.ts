@@ -6,7 +6,15 @@ export default class ResourceController {
   public getResources = async (req: Request, res: Response): Promise<any> => {
     try {
 
-      const resources = await db.any('SELECT * FROM resources', []);
+      const validQueryParams = [ 'project_id' ];
+
+      let resources: any;
+      if(typeof req.query.project_id != 'undefined'){
+        resources = await db.any('SELECT * FROM resources WHERE project_id = $1', [ req.query.project_id ]);
+      }
+      else {
+        resources = await db.any('SELECT * FROM resources', []);
+      }
 
       if (Object.keys(resources).length == 0) {
         return res.status(404).send({
