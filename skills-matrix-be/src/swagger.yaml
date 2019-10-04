@@ -33,8 +33,10 @@ components:
     Competency:
       type: object
       properties:
-        skill_id: integer
-        level: integer
+        skill_id:
+          type: integer
+        level:
+          type: integer
     CompetencyRequirement:
       type: object
       properties:
@@ -241,81 +243,88 @@ paths:
         - Project Positions
       summary: Delete all project positions
       operationId: deleteProjectPositions
-  /projects/{project_id}/positions/{position_id}:
+
+  # Positions
+  /positions/{position_id}:
     get:
       tags:
-        - Project Positions
+        - Positions
       summary: Retrieve details about a position
       operationId: getPosition
     put:
       tags:
-        - Project Positions
+        - Positions
       summary: Update details about a position
       operationId: updatePosition
     delete:
       tags:
-        - Project Positions
+        - Positions
       summary: Delete a position
       operationId: deletePosition
-  /projects/{project_id}/positions/{position_id}/competency_groups/:
+
+  /positions/{position_id}/competency_groups/:
     get:
       tags:
-        - Project Position Competency Groups
+        - Position Competency Groups
       summary: List competency groups for a given position
       operationId: getPositionCompetencyGroups
     post:
       tags:
-        - Project Position Competency Groups
+        - Position Competency Groups
       summary: Create competency group for a given position
       operationId: createPositionCompetencyGroup
-  /projects/{project_id}/positions/{position_id}/competency_groups/{competency_group_id}:
+
+
+  /competency_groups/{competency_group_id}:
     get:
       tags:
-        - Project Position Competency Groups
+        - Competency Groups
       summary: Retrieve details about a given competency group for a given position
       operationId: getPositionCompetencyGroup
     put:
       tags:
-        - Project Position Competency Groups
+        - Competency Groups
       summary: Update details about a given competency group for a given position
       operationId: updatePositionCompetencyGroup
     delete:
       tags:
-        - Project Position Competency Groups
+        - Competency Groups
       summary: Delete a given competency group for a given position
       operationId: deletePositionCompetencyGroup
-  /projects/{project_id}/positions/{position_id}/requirements/:
+
+  /positions/{position_id}/requirements/:
     get:
       tags:
-        - Project Position Requirements
+        - Position Requirements
       summary: List competency requirements for a given position
       operationId: getPositionRequirements
     post:
       tags:
-        - Project Position Requirements
+        - Position Requirements
       summary: Create competency requirement for a given position
       operationId: createPositionRequirement
     delete:
       tags:
-        - Project Position Requirements
+        - Position Requirements
       summary: Delete all competency requirements for a given position
       operationId: deletePositionRequirements
-  /projects/{project_id}/positions/{position_id}/requirements/{requirement_id}:
+  /positions/{position_id}/requirements/{requirement_id}:
     get:
       tags:
-        - Project Position Requirements
+        - Position Requirements
       summary: Retrieve details about a competeny requirement for a given position
       operationId: getPositionRequirement
     put:
       tags:
-        - Project Position Requirements
+        - Position Requirements
       summary: Update a competency requirement for a given position
       operationId: updatePositionRequirement
     delete:
       tags:
-        - Project Position Requirements
+        - Position Requirements
       summary: Delete a competency requirement for a given position
       operationId: deletePositionRequirement
+
   /projects/{project_id}/teams:
     get:
       tags:
@@ -332,7 +341,8 @@ paths:
         - Project Teams
       summary: Delete all project teams
       operationId: deleteProjectTeams
-  /projects/{project_id}/teams/{team_id}:
+
+  /teams/{team_id}:
     get:
       tags:
         - Project Teams
@@ -409,7 +419,8 @@ paths:
         - Resource Competencies
       summary: Delete all competencies for a resource
       operationId: deleteResourceCompetencies
-  /resources/{resource_id}/competencies/{competency_id}:
+
+  /competencies/{competency_id}:
     get:
       tags:
         - Resource Competencies
@@ -425,6 +436,7 @@ paths:
         - Resource Competencies
       summary: Delete a resource competency
       operationId: deleteResourceCompetency
+
   /resources/{resource_id}/assessments:
     get:
       tags:
@@ -441,7 +453,7 @@ paths:
         - Resource Assessments
       summary: Delete all assessments for a resource
       operationId: deleteResourceAssessments
-  /resources/{resource_id}/assessments/{assessment_id}:
+  /assessments/{assessment_id}:
     get:
       tags:
         - Resource Assessments
@@ -468,7 +480,7 @@ paths:
         - Resource Missions
       summary: Create a mission for a given resource
       operationId: createResourceMission
-  /resources/{resource_id}/missions/{mission_id}:
+  /missions/{mission_id}:
     get:
       tags:
         - Resource Missions
