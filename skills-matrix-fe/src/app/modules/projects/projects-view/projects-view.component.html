@@ -47,6 +47,19 @@
             </mat-toolbar-row>
           </mat-toolbar>
 
+<!--          <div class="container-fluid">
+            <div class="row">
+              <mat-card *ngFor="let element of positions" class="col-md-2">
+                <mat-card-header>
+                  <mat-card-subtitle>{{element.name}}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-actions>
+                  <button mat-button color="primary" (click)="viewPosition(element.id)">VIEW</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+          </div>-->
+
           <table mat-table [dataSource]="positions">
             <ng-container matColumnDef="id">
               <th mat-header-cell *matHeaderCellDef> ID </th>

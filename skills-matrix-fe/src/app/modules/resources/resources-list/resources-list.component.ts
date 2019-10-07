@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 
 import {GetResourcesServiceResponse, Resource} from '../../../common/models/resource/resource.model';

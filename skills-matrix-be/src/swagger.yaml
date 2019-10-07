@@ -308,7 +308,7 @@ paths:
         - Position Requirements
       summary: Delete all competency requirements for a given position
       operationId: deletePositionRequirements
-  /positions/{position_id}/requirements/{requirement_id}:
+  /requirements/{requirement_id}:
     get:
       tags:
         - Position Requirements

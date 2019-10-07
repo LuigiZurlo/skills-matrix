@@ -17,7 +17,7 @@ export class ProjectsViewComponent implements OnInit {
   projectId: string;
 
   project: any;
-  positions: any;
+  positions: any[];
   teams: any;
   // resources: any;
 

@@ -1,11 +1,6 @@
 import * as pgPromise from 'pg-promise';
 
-const initOptions = {
-  capSQL: true,
-  query(e) {
-    console.log(e.query);
-  }
-};
+const initOptions = {};
 
 const dbConfig = {
   user: 'admin',

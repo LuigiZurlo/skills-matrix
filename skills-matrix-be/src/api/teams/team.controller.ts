@@ -44,7 +44,7 @@ export default class TeamController {
   public getTeam = async (req: Request, res: Response): Promise<any> => {
     try {
 
-      const teams = await db.any('SELECT * FROM project_teams where id = $1', [req.params.team_id]);
+      const teams = await db.one('SELECT * FROM project_teams where id = $1', [req.params.team_id]);
 
       if (Object.keys(teams).length == 0) {
         return res.status(404).send({
@@ -147,7 +147,7 @@ export default class TeamController {
       const teamsResourcesColumnSet = new pgp.helpers.ColumnSet(['team_id', 'resource_id'], {table: 'team_memberships'});
       let teamResourcesValues = [];
       for (let i=0; i< req.body.length; i++) {
-        teamResourcesValues.push ( {team_id: req.params.team_id, resource_id: req.body[i].id} );
+        teamResourcesValues.push ( { team_id: req.params.team_id, resource_id: req.body[i].id } );
       }
       const teamResourcesQuery = pgp.helpers.insert(teamResourcesValues, teamsResourcesColumnSet) + ' ON CONFLICT DO NOTHING RETURNING *';
       const teamResourcesResult = await db.any(teamResourcesQuery);

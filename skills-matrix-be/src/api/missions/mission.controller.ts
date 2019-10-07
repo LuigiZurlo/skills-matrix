@@ -69,7 +69,7 @@ export default class MissionController {
 
       res.status(201).send({
         success: true,
-        message: 'Missions successfully created',
+        message: 'Mission successfully created',
         data: missions
       });
 

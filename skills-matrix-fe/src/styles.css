@@ -62,4 +62,10 @@ body {
   background-image: url("/assets/img/icons/1256627-teamwork/png/009-teamwork.png");
 }
 
+mat-sidenav {
+  min-width: 200px !important;
+  width: 85vw !important;
+  max-width: 304px !important;
+}
+
 /*# sourceMappingURL=styles.css.map */

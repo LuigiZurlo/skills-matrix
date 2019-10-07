@@ -27,3 +27,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .assessment-header-image { background-image: url("/assets/img/icons/544498-teamwork/png/012-test.png"); }
 .position-header-image { background-image: url("/assets/img/icons/1039326-strategy-and-management/png/033-strategy.png"); }
 .resources-header-image { background-image: url("/assets/img/icons/1256627-teamwork/png/009-teamwork.png"); }
+
+mat-sidenav {
+  min-width: 200px !important;
+  width: 85vw !important;
+  max-width: 304px !important;
+}

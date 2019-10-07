@@ -1,22 +1,37 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <mat-toolbar color="primary" role="navigation" id="app-navbar">
-  <button mat-icon-button>
-    <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
-  </button>
-  <h1>Skills Management Suite</h1>
+
+  <span>
+    <button mat-button mat-raised-button (click)="sidenav.toggle()" matTooltip="Toggle Menu" id="mainMenuButton">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </span>
+  <span>SKILLS MANAGEMENT SUITE</span>
+  <span class="flex-spacer"></span>
+  <span>
+    <button mat-icon-button mat-raised-button>
+      <mat-icon matTooltip="Help">help</mat-icon>
+    </button>&nbsp;
+    <button mat-icon-button mat-raised-button>
+      <mat-icon matTooltip="Profile">person</mat-icon>
+    </button>
+  </span>
+
 </mat-toolbar>
 
 <mat-sidenav-container>
   <mat-sidenav #sidenav mode="side">
     <mat-nav-list>
-      <h3 mat-subheader>Administration</h3>
-      <a mat-list-item routerLink="/skills">Skills Database</a>
+      <h3 mat-subheader>GENERAL</h3>
       <a mat-list-item routerLink="/projects">Home</a>
+      <mat-divider></mat-divider>
+      <h3 mat-subheader>ADMINISTRATION</h3>
+      <a mat-list-item routerLink="/skills">Skills</a>
       <a mat-list-item routerLink="/resources">Resources</a>
       <a mat-list-item routerLink="/projects">Projects</a>
       <a mat-list-item routerLink="/positions">Positions</a>
       <mat-divider></mat-divider>
-      <h3 mat-subheader>Experiments</h3>
+      <h3 mat-subheader>EXPERIMENTS</h3>
       <a mat-list-item routerLink="/matrices">Graphs</a>
     </mat-nav-list>
   </mat-sidenav>
