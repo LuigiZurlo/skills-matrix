@@ -32,4 +32,8 @@ export class PositionService {
     return this.http.get(`${this.uri}/positions?project_id=${project_id}`);
   }
 
+  deletePosition(id) {
+    return this.http.delete(`${this.uri}/positions/${id}`);
+  }
+
 }

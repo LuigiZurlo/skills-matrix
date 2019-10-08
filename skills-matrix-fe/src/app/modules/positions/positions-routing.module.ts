@@ -3,8 +3,8 @@ import {RouterModule, Routes} from '@angular/router';
 
 import {PositionsCreateComponent} from "./positions-create/positions-create.component";
 import {PositionsEditComponent} from "./positions-edit/positions-edit.component";
-import {PositionsListComponent} from "./positions-list/positions-list.component";
 import {PositionsViewComponent} from "./positions-view/positions-view.component";
+import {PositionsListComponent} from "./positions-list/positions-list.component";
 
 const positionsRoutes: Routes = [
 

@@ -24,7 +24,7 @@ export class ProjectsListComponent implements OnInit {
     this.projectService.getProjects()
       .subscribe( (getProjectsServiceResponse: GetProjectsServiceResponse) => {
         this.projects = getProjectsServiceResponse.data;
-        console.log('Data requested ...');
+        console.log('Projects requested ...');
         console.log(this.projects);
       });
   }

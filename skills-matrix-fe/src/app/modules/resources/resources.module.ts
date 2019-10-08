@@ -22,6 +22,7 @@ import {ResourcesViewComponent} from './resources-view/resources-view.component'
   imports: [
     CommonModule,
     MaterialModule,
+
     ResourcesRoutingModule
   ]
 })

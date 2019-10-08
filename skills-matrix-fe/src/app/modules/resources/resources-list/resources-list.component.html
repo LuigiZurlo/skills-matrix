@@ -7,7 +7,7 @@
     </mat-toolbar-row>
   </mat-toolbar>
 
-  <table mat-table [dataSource]="resources">
+  <table mat-table class="full-width-table" [dataSource]="resources">
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef> ID </th>
       <td mat-cell *matCellDef="let element"> {{element.id}} </td>

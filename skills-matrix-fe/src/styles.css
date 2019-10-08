@@ -68,4 +68,8 @@ mat-sidenav {
   max-width: 304px !important;
 }
 
+.full-width-table {
+  width: 100%;
+}
+
 /*# sourceMappingURL=styles.css.map */

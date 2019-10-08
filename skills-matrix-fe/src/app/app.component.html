@@ -1,43 +1,45 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<mat-toolbar color="primary" role="navigation" id="app-navbar">
-
-  <span>
-    <button mat-button mat-raised-button (click)="sidenav.toggle()" matTooltip="Toggle Menu" id="mainMenuButton">
-      <mat-icon>menu</mat-icon>
-    </button>
-  </span>
-  <span>SKILLS MANAGEMENT SUITE</span>
-  <span class="flex-spacer"></span>
-  <span>
-    <button mat-icon-button mat-raised-button>
-      <mat-icon matTooltip="Help">help</mat-icon>
-    </button>&nbsp;
-    <button mat-icon-button mat-raised-button>
-      <mat-icon matTooltip="Profile">person</mat-icon>
-    </button>
-  </span>
-
-</mat-toolbar>
-
-<mat-sidenav-container>
+<mat-sidenav-container fullscreen>
   <mat-sidenav #sidenav mode="side">
     <mat-nav-list>
       <h3 mat-subheader>GENERAL</h3>
-      <a mat-list-item routerLink="/projects">Home</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item routerLink="/home">Home</a>
       <mat-divider></mat-divider>
       <h3 mat-subheader>ADMINISTRATION</h3>
+      <mat-divider></mat-divider>
       <a mat-list-item routerLink="/skills">Skills</a>
       <a mat-list-item routerLink="/resources">Resources</a>
       <a mat-list-item routerLink="/projects">Projects</a>
       <a mat-list-item routerLink="/positions">Positions</a>
+      <a mat-list-item routerLink="/missions">Missions</a>
       <mat-divider></mat-divider>
       <h3 mat-subheader>EXPERIMENTS</h3>
+      <mat-divider></mat-divider>
       <a mat-list-item routerLink="/matrices">Graphs</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <div style="height: 92vh">
+
+      <mat-toolbar color="primary" role="navigation" id="app-navbar">
+
+        <span>
+          <button mat-icon-button mat-raised-button (click)="sidenav.toggle()" matTooltip="Toggle Menu" id="main-menu-button">
+            <mat-icon>menu</mat-icon>
+          </button>
+        </span>
+            <span>SKILLS MANAGEMENT SUITE</span>
+            <span class="flex-spacer"></span>
+            <span>
+          <button mat-icon-button mat-raised-button>
+            <mat-icon matTooltip="Help">help</mat-icon>
+          </button>&nbsp;
+          <button mat-icon-button mat-raised-button>
+            <mat-icon matTooltip="Profile">person</mat-icon>
+          </button>
+        </span>
+
+      </mat-toolbar>
+
       <router-outlet></router-outlet>
-    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

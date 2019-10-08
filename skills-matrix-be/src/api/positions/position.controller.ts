@@ -13,7 +13,7 @@ export default class PositionController {
         positions = await db.any('SELECT * FROM positions WHERE project_id = $1', [ req.query.project_id ]);
       }
       else {
-        positions = await db.any('SELECT * FROM positions', []);
+        positions = await db.any('SELECT positions.id, positions.project_id, p.name "project_name", positions.name "position_name", positions.description FROM positions JOIN projects p on positions.project_id = p.id;', []);
       }
 
       if (Object.keys(positions).length == 0) {

@@ -14,7 +14,8 @@ export class ResourcesListComponent implements OnInit {
   resources: any[];
   displayedColumns = ['id', 'employee_number', 'last_name', 'first_name', 'actions'];
 
-  constructor(private resourceService: ResourceService, private router: Router) { }
+  constructor(private resourceService: ResourceService,
+              private router: Router) { }
 
   ngOnInit() {
     this.fetchResources();
@@ -22,8 +23,8 @@ export class ResourcesListComponent implements OnInit {
 
   fetchResources() {
     this.resourceService.getResources()
-      .subscribe( (getResourcesServiceResponse: GetResourcesServiceResponse) => {
-        this.resources = getResourcesServiceResponse.data;
+      .subscribe( (response: any) => {
+        this.resources = response.data;
         console.log('Data requested ...');
         console.log(this.resources);
       });
