@@ -5,11 +5,11 @@ import {MaterialModule} from '../../material.module';
 
 import {ResourcesRoutingModule} from './resources-routing.module';
 
-import {ResourcesCreateComponent} from './resources-create/resources-create.component';
-import {ResourcesDeleteComponent} from './resources-delete/resources-delete.component';
-import {ResourcesEditComponent} from './resources-edit/resources-edit.component';
-import {ResourcesListComponent} from './resources-list/resources-list.component';
-import {ResourcesViewComponent} from './resources-view/resources-view.component';
+import {ResourcesCreateComponent} from './pages/resources-create/resources-create.component';
+import {ResourcesDeleteComponent} from './pages/resources-delete/resources-delete.component';
+import {ResourcesEditComponent} from './pages/resources-edit/resources-edit.component';
+import {ResourcesListComponent} from './pages/resources-list/resources-list.component';
+import {ResourcesViewComponent} from './pages/resources-view/resources-view.component';
 
 @NgModule({
   declarations: [

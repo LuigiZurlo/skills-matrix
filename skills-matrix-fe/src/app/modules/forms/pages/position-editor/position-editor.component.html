@@ -1,0 +1,70 @@
+<div class="container">
+
+  <div class="row">
+
+    <div class="col">
+      <form [formGroup]="positionForm">
+
+        <mat-toolbar formGroupName="positionDetails">
+          <mat-form-field>
+            <input matInput aria-label="Position Name" placeholder="Position Name" formControlName="positionName" required>
+          </mat-form-field>
+          <div class="flex-spacer"></div>
+          <button mat-raised-button color="primary" type="button" (click)="addCompetencyGroup()">ADD COMPETENCY GROUP</button>
+        </mat-toolbar>
+
+        <div formArrayName="competencyGroups">
+          <div class="positionRequirements" *ngFor="let competencyGroup of positionForm.get('competencyGroups').controls; let competencyGroupIndex = index;" [formGroupName]="competencyGroupIndex.toString()">
+
+            <mat-card>
+              <mat-card-header>
+                <mat-form-field>
+                  <input matInput aria-label="Competency Group Name" placeholder="Competency Group Name" formControlName="competencyGroupName">
+                </mat-form-field>
+              </mat-card-header>
+              <mat-card-actions>
+                <button mat-button type="button" color="primary" (click)="addCompetency(competencyGroup)">ADD COMPETENCY</button>
+                <button mat-button type="button" color="warn" (click)="deleteCompetencyGroup(competencyGroupIndex)">DELETE</button>
+              </mat-card-actions>
+              <mat-card-content>
+                <div formArrayName="competencies" class="container">
+                  <div class="row competencies" *ngFor="let competency of competencyGroup.get('competencies').controls; let competencyIndex = index;" [formGroupName]="competencyIndex.toString()">
+                    <div class="col">
+                      <mat-form-field>
+                        <input matInput aria-label="Skill Name" placeholder="Skill Name" formControlName="skillName" [matAutocomplete]="auto">
+                        <mat-autocomplete #auto="matAutocomplete">
+                          <mat-option *ngFor="let option of filteredOptions | async" [value]="option.name">
+                            {{ option.name }}
+                          </mat-option>
+                        </mat-autocomplete>
+                      </mat-form-field>
+                    </div>
+                    <div class="col">
+                      <mat-form-field>
+                        <mat-select aria-label="Required Level" placeholder="Required Level" formControlName="requiredLevel">
+                          <mat-option *ngFor="let requiredLevel of requiredLevels" [value]="requiredLevel.value">
+                            {{ requiredLevel.displayValue }}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                    <button mat-icon-button color="warn" type="button" (click)="deleteCompetency(competencyGroup, competencyIndex)"><mat-icon>delete</mat-icon></button>
+                  </div>
+                </div>
+              </mat-card-content>
+            </mat-card>
+
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+    <div class="col"><pre>{{ this.positionForm.value | json }}</pre></div>
+
+  </div>
+
+</div>
+
+
+

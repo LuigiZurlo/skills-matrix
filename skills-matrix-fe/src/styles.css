@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import "./app/common/themes/alten-material.css";
+@import "app/core/themes/alten-material.css";
 html, body {
   height: 100%;
 }
@@ -12,6 +12,10 @@ body {
 /* flex */
 .flex-spacer {
   flex-grow: 1;
+}
+
+.active {
+  background-color: #b3dcf2;
 }
 
 /* mat-card */

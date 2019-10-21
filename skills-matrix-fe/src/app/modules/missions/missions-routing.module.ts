@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {MissionsViewComponent} from "./missions-view/missions-view.component";
-import {MissionsDeleteComponent} from "./missions-delete/missions-delete.component";
-import {MissionsCreateComponent} from "./missions-create/missions-create.component";
+import {MissionsViewComponent} from "./pages/missions-view/missions-view.component";
+import {MissionsDeleteComponent} from "./pages/missions-delete/missions-delete.component";
+import {MissionsCreateComponent} from "./pages/missions-create/missions-create.component";
 
 
 const routes: Routes = [

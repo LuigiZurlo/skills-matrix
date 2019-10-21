@@ -2,4 +2,8 @@
   margin-right: 16px;
 }
 
+#app-navbar {
+  background: linear-gradient(to right, #043962 0%, #1d94c9 100%);
+}
+
 /*# sourceMappingURL=app.component.css.map */

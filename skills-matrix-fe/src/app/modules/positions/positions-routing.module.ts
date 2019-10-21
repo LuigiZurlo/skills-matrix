@@ -1,10 +1,10 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
-import {PositionsCreateComponent} from "./positions-create/positions-create.component";
-import {PositionsEditComponent} from "./positions-edit/positions-edit.component";
-import {PositionsViewComponent} from "./positions-view/positions-view.component";
-import {PositionsListComponent} from "./positions-list/positions-list.component";
+import {PositionsCreateComponent} from "./pages/positions-create/positions-create.component";
+import {PositionsEditComponent} from "./pages/positions-edit/positions-edit.component";
+import {PositionsViewComponent} from "./pages/positions-view/positions-view.component";
+import {PositionsListComponent} from "./pages/positions-list/positions-list.component";
 
 const positionsRoutes: Routes = [
 

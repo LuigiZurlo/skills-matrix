@@ -14,18 +14,13 @@ import {ProjectsModule} from './modules/projects/projects.module';
 import {ResourcesModule} from './modules/resources/resources.module';
 import {SkillsModule} from './modules/skills/skills.module';
 // Services
-import {ProjectService} from './services/project/project.service';
-import {ResourceService} from './services/resource/resource.service';
-import {SkillService} from './services/skill/skill.service';
+import {ProjectService} from './core/services/project/project.service';
+import {ResourceService} from './core/services/resource/resource.service';
+import {SkillService} from './core/services/skill/skill.service';
 import {MissionsModule} from "./modules/missions/missions.module";
-import {PositionService} from "./services/position/position.service";
-import { AppDashboardComponent } from './app-dashboard/app-dashboard.component';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatCardModule } from '@angular/material/card';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { LayoutModule } from '@angular/cdk/layout';
+import {PositionService} from "./core/services/position/position.service";
+import {AppDashboardComponent} from './core/components/app-dashboard/app-dashboard.component';
+import {FormsModule} from "./modules/forms/forms.module";
 
 @NgModule({
   declarations: [AppComponent, AppDashboardComponent],
@@ -41,21 +36,10 @@ import { LayoutModule } from '@angular/cdk/layout';
     ResourcesModule,
     SkillsModule,
     MissionsModule,
+    FormsModule,
 
     // AppRoutingModule *MUST* be imported last:
-    AppRoutingModule,
-
-    MatGridListModule,
-
-    MatCardModule,
-
-    MatMenuModule,
-
-    MatIconModule,
-
-    MatButtonModule,
-
-    LayoutModule
+    AppRoutingModule
   ],
   providers: [
     SkillService,
@@ -65,4 +49,5 @@ import { LayoutModule } from '@angular/cdk/layout';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
