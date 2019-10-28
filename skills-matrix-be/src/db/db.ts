@@ -1,15 +1,15 @@
-import * as pgPromise from 'pg-promise';
+import * as pgPromise from "pg-promise";
 
 const initOptions = {};
 
 const dbConfig = {
-  user: 'admin',
-  database: 'skills_api',
-  password: 'admin',
-  host: 'localhost',
-  port: 5432,
+  database: "skills_api",
+  host: "localhost",
+  idleTimeoutMillis: 30000,
   max: 20,
-  idleTimeoutMillis: 30000
+  password: "admin",
+  port: 5432,
+  user: "admin",
 };
 
 const pgp = pgPromise(initOptions);

@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { db } from '../../db/db';
+import { db } from "../../db/db";
 
 export default class ReportComplianceController {
 
@@ -10,17 +10,17 @@ export default class ReportComplianceController {
       console.log(params);
 
       res.status(200).send({
-        success: true,
+        data: params,
         message: "Report successfully created",
-        data: params
+        success: true,
       });
 
     } catch (err) {
 
       res.status(500).send({
-        success: false,
+        data: null,
         message: err,
-        data: null
+        success: false,
       });
 
     }

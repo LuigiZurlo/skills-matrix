@@ -1,16 +1,15 @@
-import { Router } from 'express';
-import CompetencyController from './competency.controller';
-
+import { Router } from "express";
+import CompetencyController from "./competency.controller";
 
 const competency: Router = Router();
 const competencyController = new CompetencyController();
 
-competency.get('/', competencyController.getCompetencies);
-competency.delete('/', competencyController.deleteCompetencies);
+competency.get("/", competencyController.getCompetencies);
+competency.delete("/", competencyController.deleteCompetencies);
 
-competency.post('/', competencyController.createCompetencies);
+competency.post("/", competencyController.createCompetencies);
 
-competency.get('/:competency_id', competencyController.getCompetency);
-competency.delete('/:competency_id', competencyController.deleteCompetency);
+competency.get("/:competency_id", competencyController.getCompetency);
+competency.delete("/:competency_id", competencyController.deleteCompetency);
 
 export default competency;

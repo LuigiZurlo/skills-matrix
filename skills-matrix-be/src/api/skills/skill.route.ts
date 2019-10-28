@@ -1,15 +1,15 @@
-import { Router } from 'express';
-import SkillController from './skill.controller';
+import { Router } from "express";
+import SkillController from "./skill.controller";
 
 const skill: Router = Router();
 const skillController = new SkillController();
 
-skill.get('/', skillController.getSkills);
-skill.delete('/', skillController.deleteSkills);
+skill.get("/", skillController.getSkills);
+skill.delete("/", skillController.deleteSkills);
 
-skill.post('/', skillController.createSkills);
+skill.post("/", skillController.createSkills);
 
-skill.get('/:id', skillController.getSkill);
-skill.delete('/:id', skillController.deleteSkill);
+skill.get("/:id", skillController.getSkill);
+skill.delete("/:id", skillController.deleteSkill);
 
 export default skill;

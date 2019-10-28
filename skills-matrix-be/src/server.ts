@@ -1,14 +1,14 @@
-import * as bodyParser from 'body-parser';
-import * as cors from 'cors';
-import * as express from 'express';
-// import * as swaggerUi from 'swagger-ui-express';
+import * as bodyParser from "body-parser";
+import * as cors from "cors";
+import * as express from "express";
+import * as swaggerUi from "swagger-ui-express";
 
-import api from './api';
+import api from "./api";
 
 class SkillsMatrixBackend {
 
   public express: express.Application;
-  // public swaggerDoc = require('/Users/jaona/Local/code/skills-matrix/skills-matrix-be/src/swagger.json');
+  public swaggerDoc = require("./config/swagger.json");
 
   constructor() {
     this.express = express();
@@ -23,8 +23,8 @@ class SkillsMatrixBackend {
   }
 
   private setRoutes(): void {
-    this.express.use('/v1', api);
-    // this.express.use('/api-docs', this.swagger, swaggerUi.setup(this.swaggerDoc));
+    this.express.use("/v1", api);
+    this.express.use("/api-docs", swaggerUi.serve, swaggerUi.setup(this.swaggerDoc));
   }
 
 }
