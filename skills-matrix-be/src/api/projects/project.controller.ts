@@ -36,7 +36,7 @@ export default class ProjectController {
   public getProject = async (req: Request, res: Response): Promise<any> => {
     try {
 
-      const infos = await db.one("SELECT * FROM projects WHERE id = $1", [req.params.project_id]);
+      const infos = await db.any("SELECT * FROM projects WHERE id = $1", [req.params.project_id]);
       /*const resources = await db.any(
         'SELECT
           r.id, r.first_name, r.last_name, r.employee_number,

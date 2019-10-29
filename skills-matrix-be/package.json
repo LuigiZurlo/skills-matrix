@@ -4,7 +4,7 @@
   "description": "Skills Matrix Backend",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && cp src/config/swagger.json dist/config/swagger.json",
     "start": "nodemon ./dist/index.js",
     "dev": "npm run docs && nodemon --exec ts-node -- ./src/index.ts",
     "docs": "yaml2json src/config/swagger.yaml > src/config/swagger.json",

@@ -211,16 +211,68 @@ paths:
         - Projects
       summary: Retrieve details about one project
       operationId: getProject
+      parameters:
+        - in: path
+          name: project_id
+          required: true
+          schema:
+            type: integer
+            minimum: 1
+          description: The project ID
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Project not found
+        '500':
+          description: An error occurred
     put:
       tags:
         - Projects
       summary: Update a project
       operationId: updateProject
+      parameters:
+        - in: path
+          name: project_id
+          required: true
+          schema:
+            type: integer
+            minimum: 1
+          description: The ID project
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Project not found
+        '500':
+          description: An error occurred
+      requestBody:
+        description: Project to update to the database
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Project'
     delete:
       tags:
         - Projects
       summary: Delete a project
       operationId: deleteProject
+      parameters:
+        - in: path
+          name: project_id
+          required: true
+          schema:
+            type: integer
+            minimum: 1
+          description: The ID project
+      responses:
+          '200':
+            description: Project deleted
+          '404':
+            description: Project not found
+          '500':
+            description: An error occurred
   /projects/{project_id}/competencies:
     get:
       tags:
