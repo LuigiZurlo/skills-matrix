@@ -106,7 +106,7 @@ export default class ResourceController {
     try {
 
       const resources = await db.any(
-        'SELECT c.id "competency_id", c.skill_id, s.display_name, c.level ' +
+        'SELECT c.id "competency_id", c.skill_id, s.name, c.level ' +
         "FROM competencies c, skills s\n" +
         "WHERE s.id = c.skill_id AND c.id " +
         "IN ( SELECT competency_id FROM resource_competencies WHERE resource_id = $1)", [req.params.resource_id]);
