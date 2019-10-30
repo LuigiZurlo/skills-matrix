@@ -1,9 +1,14 @@
-import { Request, Response } from "express";
-import { db, pgp } from "../../db/db";
+import {Request, Response} from "express";
+
+import {NotFound} from "../../common/api.response.notfound";
+import {ErrorHandler, handleError} from "../../common/Error";
+import {db, pgp} from "../../db/db";
+import {ProjectApiResponse} from "./project.api.response";
 
 export default class ProjectController {
 
   public getProjects = async (req: Request, res: Response): Promise<any> => {
+
     try {
 
       const projects = await db.any("SELECT * FROM projects", []);
@@ -15,13 +20,13 @@ export default class ProjectController {
           success: false,
         });
       }
-
-      res.status(200).send({
+      const projectResponse = new ProjectApiResponse("getProject API", true, "Project(s) found", projects, 200);
+      res.status(200).send(projectResponse,
+        /*{
         data: projects,
         data_length: projects.length,
         success: true,
-      });
-
+      }*/);
     } catch (err) {
 
       res.status(500).send({
@@ -33,7 +38,7 @@ export default class ProjectController {
     }
   }
 
-  public getProject = async (req: Request, res: Response): Promise<any> => {
+  public getProject = async (req: Request, res: Response, next: any): Promise<any> => {
     try {
 
       const infos = await db.any("SELECT * FROM projects WHERE id = $1", [req.params.project_id]);
@@ -53,31 +58,31 @@ export default class ProjectController {
       //   FROM project_teams
       //    WHERE project_id = $1', [req.params.project_id]);
 
-      if (Object.keys(infos).length === 0 ) {
-        return res.status(404).send({
+      if (Object.keys(infos).length === 0) {
+        throw new ErrorHandler(404, "Project not found");
+        /*return res.status(404).send(new NotFound(), {
           data: null,
           message: "Project not found",
           success: false,
-        });
+        });*/
       }
 
       res.status(200).send({
         data:
-          infos,
-          // project_teams
-          // resources,
-          // positions,
+        infos,
+        // project_teams
+        // resources,
+        // positions,
         success: true,
       });
-
+      next();
     } catch (err) {
-
-      res.status(500).send({
+      next(err);
+      /*res.status(500).send({
         data: null,
         message: err.toString(),
         success: false,
-      });
-
+      });*/
     }
   }
 

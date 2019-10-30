@@ -28,5 +28,4 @@ class SkillsMatrixBackend {
   }
 
 }
-
 export default new SkillsMatrixBackend().express;
