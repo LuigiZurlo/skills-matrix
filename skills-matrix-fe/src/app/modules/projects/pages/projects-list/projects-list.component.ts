@@ -12,7 +12,7 @@ import {ProjectService} from '../../../../core/services/project/project.service'
 export class ProjectsListComponent implements OnInit {
 
   projects: Project[];
-  displayedColumns = ['name', 'start_date', 'end_date', 'actions'];
+  displayedColumns = ['id', 'name', 'start_date', 'end_date', 'actions'];
 
   constructor(private projectService: ProjectService, private router: Router) { }
 
