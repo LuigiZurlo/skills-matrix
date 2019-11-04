@@ -7,7 +7,7 @@ declare function require(name: string);
 const winston = require("../config/winston");
 
 export class ErrorHandler extends Error {
-  constructor(public statusCode: any, messages: string) {
+  constructor(public statusCode: any = 500, messages: string = "Internal Server Error") {
     super();
     this.statusCode = statusCode;
     this.message = messages;

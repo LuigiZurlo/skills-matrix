@@ -1,17 +1,28 @@
-{"message":"404 - Project not found - /v1/projects/14 - NaN - ::1","level":"error"}
-{"message":"404 - Project not found - /v1/projects/14 - NaN - ::1","level":"error"}
-{"message":"::1 - - [31/Oct/2019:15:20:37 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:70.0) Gecko/20100101 Firefox/70.0\"\n","level":"info"}
-{"message":"undefined - invalid input syntax for type integer: \"post\" - /v1/projects/post - NaN - ::1","level":"error"}
-{"message":"::1 - - [31/Oct/2019:15:21:21 +0000] \"GET /v1/positions/1/competency_groups/ HTTP/1.1\" 404 172 \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:70.0) Gecko/20100101 Firefox/70.0\"\n","level":"info"}
-{"message":"::1 - - [31/Oct/2019:15:21:22 +0000] \"GET /v1/positions/1/competency_groups/ HTTP/1.1\" 404 172 \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:70.0) Gecko/20100101 Firefox/70.0\"\n","level":"info"}
-{"message":"::ffff:127.0.0.1 - - [31/Oct/2019:15:28:28 +0000] \"GET /v1/projects/1 HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:70.0) Gecko/20100101 Firefox/70.0\"\n","level":"info"}
-{"message":"500 - Project not found - /v1/projects/13 - GET - ::ffff:127.0.0.1","level":"error"}
-{"message":"404 - Project not found - /v1/projects/13 - GET - ::ffff:127.0.0.1","level":"error"}
-{"message":"404 - Project not found - /v1/projects/13 - GET - ::1","level":"error"}
-{"message":"404 - Project not found - /v1/projects/13 - GET - ::ffff:127.0.0.1","level":"error"}
-{"message":"::ffff:127.0.0.1 - - [31/Oct/2019:15:42:51 +0000] \"GET /v1/projects/1 HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:70.0) Gecko/20100101 Firefox/70.0\"\n","level":"info"}
-{"message":"404 - Project not found - /v1/projects/14 - GET - ::ffff:127.0.0.1","level":"error"}
-{"message":"404 - Project not found - /v1/projects/5 - GET - ::1","level":"error"}
-2019-10-31T15:50:22.024Z [Logger:] error: 404 - Project not found - /v1/projects/14 - GET - ::ffff:127.0.0.1
-2019-10-31T15:50:51.276Z [Logger:] info: ::ffff:127.0.0.1 - - [31/Oct/2019:15:50:51 +0000] "GET /v1/projects/1 HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:70.0) Gecko/20100101 Firefox/70.0"
-
+2019-11-04T09:29:39.582Z [Logger:] error: 404 - Project not found - /v1/projects/13 - GET - ::ffff:127.0.0.1
+2019-11-04T09:34:29.929Z [Logger:] error: 404 - Project not found - /v1/projects/13 - GET - ::ffff:127.0.0.1
+{"message":"404 - Project not found - /v1/projects/13 - GET - ::ffff:127.0.0.1","level":"\u001b[31merror\u001b[39m","label":"Logger:","timestamp":"2019-11-04T09:35:45.886Z"}
+{"message":"404 - Project not found - /v1/projects/13 - GET - ::ffff:127.0.0.1","level":"\u001b[31merror\u001b[39m","label":"Logger:","timestamp":"2019-11-04T09:41:37.354Z"}
+{"message":"404 - Project not found - /v1/projects/13 - GET - ::1","level":"\u001b[31merror\u001b[39m","label":"Logger:","timestamp":"2019-11-04T09:42:22.216Z"}
+2019-11-04T09:49:07.286Z [Logger:] [31merror[39m: uncaughtException: logger.exitOnError is not a function
+TypeError: logger.exitOnError is not a function
+    at Object.<anonymous> (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/src/config/winston.js:60:8)
+    at Module._compile (internal/modules/cjs/loader.js:956:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:973:10)
+    at Module.load (internal/modules/cjs/loader.js:812:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:849:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/src/common/Error.ts:7:17)
+    at Module._compile (internal/modules/cjs/loader.js:956:30)
+    at Module.m._compile (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:493:23)
+2019-11-04T09:49:38.250Z [Logger:] [31merror[39m: 404 - Project not found - /v1/projects/13 - GET - ::1
+2019-11-04T09:50:42.880Z [Logger:] [31merror[39m: 404 - Project not found - /v1/projects/13 - GET - ::1
+{"message":"404 - Project not found - /v1/projects/13 - GET - ::ffff:127.0.0.1","level":"\u001b[31merror\u001b[39m","label":"Logger:","timestamp":"2019-11-04T09:51:21.563Z"}
+{"message":"::1 - - [04/Nov/2019:09:56:32 +0000] \"GET /v1/projects/1 HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:70.0) Gecko/20100101 Firefox/70.0\"\n","level":"\u001b[32minfo\u001b[39m","label":"Logger:","timestamp":"2019-11-04T09:56:32.324Z"}
+{"message":"::1 - - [04/Nov/2019:10:05:55 +0000] \"GET /v1/projects/1 HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:70.0) Gecko/20100101 Firefox/70.0\"\n","level":"\u001b[32minfo\u001b[39m","label":"Logger:","timestamp":"2019-11-04T10:05:55.535Z"}
+{"message":"404 - Project not found - /v1/projects/14 - GET - ::1","level":"\u001b[31merror\u001b[39m","label":"Logger:","timestamp":"2019-11-04T10:05:58.849Z"}
+{"message":"404 - Project not found - /v1/projects/14 - GET - ::1","level":"\u001b[31merror\u001b[39m","label":"Logger:","timestamp":"2019-11-04T10:09:45.693Z"}
+{"message":"404 - Project not found - /v1/projects/14 - GET - ::1","level":"\u001b[31merror\u001b[39m","label":"Logger:","timestamp":"2019-11-04T10:15:13.064Z"}
+{"message":"404 - Project not found - /v1/projects/14 - GET - ::1","level":"\u001b[31merror\u001b[39m","label":"Logger:","timestamp":"2019-11-04T10:16:54.030Z"}
+{"message":"404 - Project not found - /v1/projects/11 - GET - ::ffff:127.0.0.1","level":"\u001b[31merror\u001b[39m","label":"Logger:","timestamp":"2019-11-04T10:17:07.273Z"}
+{"message":"::ffff:127.0.0.1 - - [04/Nov/2019:10:17:11 +0000] \"GET /v1/projects/1 HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:70.0) Gecko/20100101 Firefox/70.0\"\n","level":"\u001b[32minfo\u001b[39m","label":"Logger:","timestamp":"2019-11-04T10:17:11.518Z"}

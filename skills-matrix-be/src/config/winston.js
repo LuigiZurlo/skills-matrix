@@ -1,52 +1,48 @@
-var appRoot = require('app-root-path');
-var winston = require('winston');
+const appRoot = require('app-root-path');
+const winston = require('winston');
+const {createLogger, format, transports} = require('winston');
+const {combine, timestamp, label, printf} = format;
 
-var options = {
+
+const myFormat = printf(({level, message, label, timestamp}) => {
+  return `${timestamp} [${label}] ${level}: ${message}`;
+});
+
+const options = {
   file: {
     level: 'info',
     filename: `${appRoot}/logs/app.log`,
     handleExceptions: true,
-    json: true,
-    maxsize: 5242880, // 5MB
+    maxsize: 5242880,
     maxFiles: 5,
-    colorize: true,
+    format: combine(
+      winston.format.colorize(),
+      label({label: 'Logger:'}),
+      timestamp(),
+      myFormat,
+      winston.format.json(),
+    ),
   },
   console: {
     level: 'debug',
     handleExceptions: true,
-    json: true,
-    colorize: true,
+    format: combine(
+      winston.format.colorize(),
+      label({label: 'Logger:'}),
+      timestamp(),
+      myFormat
+      ),
   },
 };
 
-/*var logger =  winston.createLogger({
-  transports: [
-    new winston.transports.File(options.file),
-    new winston.transports.Console(options.console)
-  ],
-  exitOnError: false, // do not exit on handled exceptions
-});*/
-
-const { createLogger, format, transports } = require('winston');
-const { combine, timestamp, label, printf } = format;
-
-const myFormat = printf(({ level, message, label, timestamp }) => {
-  return `${timestamp} [${label}] ${level}: ${message}`;
-});
-
-const logger = createLogger({
-  format: combine(
-    label({ label: 'Logger:' }),
-    timestamp(),
-    myFormat
-  ),
-  transports: [new transports.Console(),
-    new winston.transports.File(options.file),]
+const logger = winston.createLogger({
+  transports: [new winston.transports.Console(options.console),
+    new winston.transports.File(options.file),],
+  exitOnError: false,
 });
 logger.stream = {
-  write: function(message, encoding) {
+  write: function (message, encoding) {
     logger.info(message);
   },
 };
-
 module.exports = logger;
