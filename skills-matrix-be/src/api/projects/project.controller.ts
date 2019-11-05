@@ -137,7 +137,7 @@ export default class ProjectController {
   public createProjectTeams = async (req: Request, res: Response, next: any): Promise<any> => {
     try {
       if (req.body.project_id !== req.params.project_id) {
-          throw new ErrorHandler(409, "Conflict: project_ids are different");
+        throw new ErrorHandler(409, "Conflict: project_ids are different");
       }
       const projectTeams = await db.any("SELECT * FROM project_teams WHERE project_id = $1", [req.params.project_id]);
       if (projectTeams.length === 0) {
@@ -163,4 +163,22 @@ export default class ProjectController {
     }
   }
 
+  public updateProjects = async (req: Request, res: Response, next: any): Promise<any> => {
+    try {
+      const projectsColumnSet = new pgp.helpers.ColumnSet(
+        ["name", "project_otp_code", "?start_date", "?end_date"],
+        {table: "projects"});
+      const projectsValues = req.body;
+      const projectsQuery = pgp.helpers.update(projectsValues, projectsColumnSet) + " WHERE id = $1";
+      const proJ = await db.result(projectsQuery, [req.params.project_id]);
+      if (proJ.rowCount === 1) {
+        res.status(200).send(new ApiResponse(true, "Project updated successfully", [], 200));
+      } else {
+        throw new ErrorHandler();
+      }
+      next();
+    } catch (err) {
+      next(err);
+    }
+  }
 }
