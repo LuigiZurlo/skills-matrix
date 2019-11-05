@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { db, pgp } from "../../db/db";
-import {ErrorHandler} from "../../common/Error";
 import {ApiResponse} from "../../common/api.response.model";
+import {ErrorHandler} from "../../common/Error";
+import { db, pgp } from "../../db/db";
 
 export default class ResourceController {
 
