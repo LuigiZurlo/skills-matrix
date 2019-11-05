@@ -145,5 +145,22 @@ export default class PositionController {
     }
   }
 
-
+  public updatePositions = async (req: Request, res: Response, next: any): Promise<any> => {
+    try {
+      const positionsColumnSet = new pgp.helpers.ColumnSet(
+        ["project_id", "name", "description"],
+        {table: "positions"});
+      const positionsValues = req.body;
+      const positionsQuery = pgp.helpers.update(positionsValues, positionsColumnSet) + " WHERE id = $1";
+      const posT = await db.result(positionsQuery, [req.params.position_id]);
+      if (posT.rowCount === 1) {
+        res.status(200).send(new ApiResponse(true, "Position updated successfully", [], 200));
+      } else {
+        throw new ErrorHandler(400, "Bad request");
+      }
+      next();
+    } catch (err) {
+      next(err);
+    }
+  }
 }
