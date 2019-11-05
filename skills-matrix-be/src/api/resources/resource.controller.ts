@@ -1,5 +1,7 @@
 import { Request, Response } from "express";
 import { db, pgp } from "../../db/db";
+import {ErrorHandler} from "../../common/Error";
+import {ApiResponse} from "../../common/api.response.model";
 
 export default class ResourceController {
 
@@ -133,6 +135,22 @@ export default class ResourceController {
         success: false,
       });
 
+    }
+  }
+
+  public getResourceMissions = async (req: Request, res: Response, next: any): Promise<any> => {
+    try {
+
+      const resourceMissions = await db.any("SELECT * FROM missions WHERE resource_id = $1", [req.params.resource_id]);
+
+      if (Object.keys(resourceMissions).length === 0) {
+        throw new ErrorHandler(404, "Resource mission(s)  not found");
+      }
+
+      res.status(200).send(new ApiResponse(true, "Resource mission(s) found", resourceMissions, 200));
+      next();
+    } catch (err) {
+      next(err);
     }
   }
 
