@@ -15,7 +15,7 @@ export default class ProjectController {
       if (Object.keys(projects).length === 0) {
         throw new ErrorHandler(404, "Project(s) not found");
       }
-      res.status(200).send(new ApiResponse(true, "Project(s) found", projects, 200),);
+      res.status(200).send(new ApiResponse(true, "Project(s) found", projects, 200));
       next();
     } catch (err) {
       next(err);
@@ -102,11 +102,11 @@ export default class ProjectController {
       }
 
       res.status(200).send(new ApiResponse(true, "Project(s) team found", projectTeams, 200));
-        /*{
-        data: projectTeams,
-        data_length: projectTeams.length,
-        success: true,
-      });*/
+      /*{
+      data: projectTeams,
+      data_length: projectTeams.length,
+      success: true,
+    });*/
       next();
     } catch (err) {
       next(err);
@@ -129,6 +129,35 @@ export default class ProjectController {
       }
       res.status(200).send(new ApiResponse(true, "Project(s) team found", projectPositions, 200));
       next();
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  public createProjectTeams = async (req: Request, res: Response, next: any): Promise<any> => {
+    try {
+      if (req.body.project_id !== req.params.project_id) {
+          throw new ErrorHandler(409, "Conflict: project_ids are different");
+      }
+      const projectTeams = await db.any("SELECT * FROM project_teams WHERE project_id = $1", [req.params.project_id]);
+      if (projectTeams.length === 0) {
+        const projectTeamsColumnSet = new pgp.helpers.ColumnSet(
+          ["project_id", "name"],
+          {table: "project_teams"});
+        const projectTeamsValues = req.body;
+        const projectTeamsQuery = pgp.helpers.insert(projectTeamsValues, projectTeamsColumnSet) + " ON CONFLICT DO NOTHING RETURNING *";
+        const projectTeamsResult = await db.any(projectTeamsQuery);
+
+        if (projectTeamsResult.length !== 0) {
+          res.status(201).send(new ApiResponse(true, "Project team created", projectTeamsResult, 201));
+        } else {
+          throw new ErrorHandler(400, "Bad request");
+        }
+      } else {
+        throw new ErrorHandler(409, "Conflict: the request could not be completed due to a conflict with the current state of the resource. ");
+      }
+      next();
+
     } catch (err) {
       next(err);
     }

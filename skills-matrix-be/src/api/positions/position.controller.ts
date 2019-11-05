@@ -1,5 +1,7 @@
 import { Request, Response } from "express";
 import {db, pgp} from "../../db/db";
+import {ErrorHandler} from "../../common/Error";
+import {ApiResponse} from "../../common/api.response.model";
 
 export default class PositionController {
 
@@ -127,5 +129,21 @@ export default class PositionController {
 
     }
   }
+
+  public getPositionCompetencyGroups = async (req: Request, res: Response, next: any): Promise<any> => {
+    try {
+      const positionCompetencyGroups = await db.any("SELECT * FROM competency_groups WHERE position_id = $1",
+        [req.params.position_id]);
+
+      if (Object.keys(positionCompetencyGroups).length === 0) {
+        throw new ErrorHandler(404, "Position competency group not found");
+      }
+      res.status(200).send(new ApiResponse(true, "Position competency group found", positionCompetencyGroups, 200));
+      next();
+    } catch (err) {
+      next(err);
+    }
+  }
+
 
 }
