@@ -1,40 +1,24 @@
 import {Request, Response} from "express";
 
-import {NotFound} from "../../common/api.response.notfound";
+import {ApiResponse} from "../../common/api.response.model";
 import {ErrorHandler, handleError} from "../../common/Error";
 import {db, pgp} from "../../db/db";
-import {ProjectApiResponse} from "./project.api.response";
 
 export default class ProjectController {
 
-  public getProjects = async (req: Request, res: Response): Promise<any> => {
+  public getProjects = async (req: Request, res: Response, next: any): Promise<any> => {
 
     try {
 
       const projects = await db.any("SELECT * FROM projects", []);
 
       if (Object.keys(projects).length === 0) {
-        return res.status(404).send({
-          data: null,
-          message: "Projects not found",
-          success: false,
-        });
+        throw new ErrorHandler(404, "Project(s) not found");
       }
-      const projectResponse = new ProjectApiResponse("getProject API", true, "Project(s) found", projects, 200);
-      res.status(200).send(projectResponse,
-        /*{
-        data: projects,
-        data_length: projects.length,
-        success: true,
-      }*/);
+      res.status(200).send(new ApiResponse(true, "Project(s) found", projects, 200),);
+      next();
     } catch (err) {
-
-      res.status(500).send({
-        data: null,
-        message: err.toString(),
-        success: false,
-      });
-
+      next(err);
     }
   }
 
@@ -59,21 +43,17 @@ export default class ProjectController {
 
       if (Object.keys(infos).length === 0) {
         throw new ErrorHandler(404, "Project not found");
-        /*return res.status(404).send(new NotFound(), {
-          data: null,
-          message: "Project not found",
-          success: false,
-        });*/
       }
 
-      res.status(200).send({
-        data:
-        infos,
-        // project_teams
-        // resources,
-        // positions,
-        success: true,
-      });
+      res.status(200).send(new ApiResponse(true, "Project found", infos, 200));
+      /*{
+      data:
+      infos,
+      // project_teams
+      // resources,
+      // positions,
+      success: true,
+    });*/
       next();
     } catch (err) {
       next(err);
@@ -112,33 +92,45 @@ export default class ProjectController {
     }
   }
 
-  public getProjectTeams = async (req: Request, res: Response): Promise<any> => {
+  public getProjectTeams = async (req: Request, res: Response, next: any): Promise<any> => {
     try {
 
       const projectTeams = await db.any("SELECT * FROM project_teams WHERE project_id = $1", [req.params.project_id]);
 
       if (Object.keys(projectTeams).length === 0) {
-        return res.status(404).send({
-          data: null,
-          message: "Projects Teams not found",
-          success: false,
-        });
+        throw new ErrorHandler(404, "Project(s) teams not found");
       }
 
-      res.status(200).send({
+      res.status(200).send(new ApiResponse(true, "Project(s) team found", projectTeams, 200));
+        /*{
         data: projectTeams,
         data_length: projectTeams.length,
         success: true,
-      });
-
+      });*/
+      next();
     } catch (err) {
-
-      res.status(500).send({
+      next(err);
+      /*res.status(500).send({
         data: null,
         message: err.toString(),
         success: false,
-      });
+      });*/
 
+    }
+  }
+
+  public getProjectPositions = async (req: Request, res: Response, next: any): Promise<any> => {
+    try {
+
+      const projectPositions = await db.any("SELECT * FROM positions WHERE project_id = $1", [req.params.project_id]);
+
+      if (Object.keys(projectPositions).length === 0) {
+        throw new ErrorHandler(404, "Project(s) teams not found");
+      }
+      res.status(200).send(new ApiResponse(true, "Project(s) team found", projectPositions, 200));
+      next();
+    } catch (err) {
+      next(err);
     }
   }
 

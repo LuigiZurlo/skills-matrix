@@ -9,5 +9,6 @@ project.post("/", projectController.createProjects);
 
 project.get("/:project_id", projectController.getProject);
 project.get("/:project_id/teams", projectController.getProjectTeams);
+project.get("/:project_id/positions", projectController.getProjectPositions);
 
 export default project;

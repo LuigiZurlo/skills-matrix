@@ -31,18 +31,22 @@ const options = {
       label({label: 'Logger:'}),
       timestamp(),
       myFormat
-      ),
+    ),
   },
 };
 
 const logger = winston.createLogger({
-  transports: [new winston.transports.Console(options.console),
-    new winston.transports.File(options.file),],
+  transports: [
+    new winston.transports.Console(options.console),
+    new winston.transports.File(options.file),
+  ],
   exitOnError: false,
 });
+
 logger.stream = {
   write: function (message, encoding) {
     logger.info(message);
   },
 };
+
 module.exports = logger;
