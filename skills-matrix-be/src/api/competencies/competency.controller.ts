@@ -1,5 +1,7 @@
 import {Request, Response} from "express";
-import {db} from "../../db/db";
+import {db, pgp} from "../../db/db";
+import {ApiResponse} from "../../common/api.response.model";
+import {ErrorHandler} from "../../common/Error";
 
 export default class CompetencyController {
 
@@ -129,6 +131,26 @@ export default class CompetencyController {
         success: false,
       });
 
+    }
+  }
+
+  public updateCompetency = async (req: Request, res: Response, next: any): Promise<any> => {
+    try {
+      const positionsColumnSet = new pgp.helpers.ColumnSet(
+        ["?skill_id", "level"],
+        {table: "competencies"});
+      const competenciesValues = req.body;
+      const competenciesQuery = pgp.helpers.update(competenciesValues, positionsColumnSet) + " WHERE id = $1 RETURNING *";
+      const posT = await db.result(competenciesQuery, [req.params.competency_id]);
+      console.log(posT.rowCount);
+      if (posT.rowCount === 1) {
+        res.status(200).send(new ApiResponse(true, "Competency updated successfully", [], 200));
+      } else {
+        throw new ErrorHandler(400, "Bad request");
+      }
+      next();
+    } catch (err) {
+      next(err);
     }
   }
 
