@@ -1,16 +1,18 @@
-import { Request, Response } from "express";
-import { db, pgp } from "../../db/db";
+import {Request, Response} from "express";
+import {db, pgp} from "../../db/db";
+import {ApiResponse} from "../../common/api.response.model";
+import {ErrorHandler} from "../../common/Error";
 
 export default class TeamController {
 
   public getTeams = async (req: Request, res: Response): Promise<any> => {
     try {
 
-      const validQueryParams = [ "project_id" ];
+      const validQueryParams = ["project_id"];
 
       let teams: any;
       if (typeof req.query.project_id !== "undefined") {
-        teams = await db.any("SELECT * FROM project_teams WHERE project_id = $1", [ req.query.project_id ]);
+        teams = await db.any("SELECT * FROM project_teams WHERE project_id = $1", [req.query.project_id]);
       } else {
         teams = await db.any("SELECT * FROM project_teams", []);
       }
@@ -148,7 +150,7 @@ export default class TeamController {
         ["team_id", "resource_id"], {table: "team_memberships"});
       const teamResourcesValues = [];
       for (const resource of req.body) {
-        teamResourcesValues.push ( { team_id: req.params.team_id, resource_id: resource.id } );
+        teamResourcesValues.push({team_id: req.params.team_id, resource_id: resource.id});
       }
       const teamResourcesQuery = pgp.helpers.insert(teamResourcesValues, teamsResourcesColumnSet) + " ON CONFLICT DO NOTHING RETURNING *";
       const teamResourcesResult = await db.any(teamResourcesQuery);
@@ -169,5 +171,25 @@ export default class TeamController {
 
     }
   }
+
+  public updateTeam = async (req: Request, res: Response, next: any): Promise<any> => {
+    try {
+
+      const teamsColumnSet = new pgp.helpers.ColumnSet(["project_id", "name"], {table: "project_teams"});
+      const teamsValues = req.body;
+      const teamsQuery = pgp.helpers.update(teamsValues, teamsColumnSet) + " WHERE id = $1";
+      const teamsResult = await db.result(teamsQuery, req.params.team_id);
+
+      if (teamsResult.rowCount === 1) {
+        res.status(200).send(new ApiResponse(true, "Team updated successfully", [], 200));
+      } else {
+        throw new ErrorHandler(400, "Bad request");
+      }
+      next();
+    } catch (err) {
+      next(err);
+    }
+  }
+
 
 }

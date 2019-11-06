@@ -8,6 +8,7 @@ team.get("/", teamController.getTeams);
 team.post("/", teamController.createTeams);
 
 team.get("/:team_id", teamController.getTeam);
+team.put("/:team_id", teamController.updateTeam)
 team.delete("/:team_id", teamController.deleteTeam);
 
 team.get("/:team_id/resources", teamController.getTeamResources);
