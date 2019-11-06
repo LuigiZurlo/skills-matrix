@@ -19,4 +19,24 @@ export default class CompetencyGroupController {
       next(err);
     }
   }
+
+  public updateCompetencyGroups = async (req: Request, res: Response, next: any): Promise<any> => {
+    try {
+      const competencyGroupColumnSet = new pgp.helpers.ColumnSet(
+        ["?position_id", "name"],
+        {table: "competency_groups"});
+      const compValues = req.body;
+      const compQuery = pgp.helpers.update(compValues, competencyGroupColumnSet) + " WHERE id = $1";
+      const posT = await db.result(compQuery, [req.params.competency_group_id]);
+      if (posT.rowCount === 1) {
+        res.status(200).send(new ApiResponse(true, "CompetencyGroup updated successfully", [], 200));
+      } else {
+        throw new ErrorHandler(400, "Bad request");
+      }
+      next();
+    } catch (err) {
+      next(err);
+    }
+  }
+
 }

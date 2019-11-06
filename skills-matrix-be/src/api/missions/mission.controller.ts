@@ -1,5 +1,7 @@
 import { Request, Response } from "express";
-import { db } from "../../db/db";
+import {db, pgp} from "../../db/db";
+import {ApiResponse} from "../../common/api.response.model";
+import {ErrorHandler} from "../../common/Error";
 
 export default class MissionController {
 
@@ -125,6 +127,25 @@ export default class MissionController {
         success: false,
       });
 
+    }
+  }
+
+  public updateMissions = async (req: Request, res: Response, next: any): Promise<any> => {
+    try {
+      const missionsColumnSet = new pgp.helpers.ColumnSet(
+        ["?resource_id", "?project_id", "position_id", "?start_date", "?end_data", "is_active"],
+        {table: "missions"});
+      const missionsValues = req.body;
+      const missionsQuery = pgp.helpers.update(missionsValues, missionsColumnSet) + " WHERE id = $1";
+      const posT = await db.result(missionsQuery, [req.params.mission_id]);
+      if (posT.rowCount === 1) {
+        res.status(200).send(new ApiResponse(true, "Mission updated successfully", [], 200));
+      } else {
+        throw new ErrorHandler(400, "Bad request");
+      }
+      next();
+    } catch (err) {
+      next(err);
     }
   }
 

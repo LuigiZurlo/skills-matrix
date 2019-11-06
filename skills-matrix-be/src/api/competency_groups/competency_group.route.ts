@@ -6,5 +6,6 @@ const competencyGroups: Router = Router();
 const competencyGroupController = new CompetencyGroupController();
 
 competencyGroups.get("/:competency_group_id", competencyGroupController.getCompetencyGroups);
+competencyGroups.put("/:competency_group_id", competencyGroupController.updateCompetencyGroups);
 
 export default competencyGroups;
