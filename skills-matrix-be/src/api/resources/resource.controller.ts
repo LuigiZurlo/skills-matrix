@@ -104,6 +104,25 @@ export default class ResourceController {
     }
   }
 
+  public updateResource = async (req: Request, res: Response, next: any): Promise<any> => {
+    try {
+      const resourcesColumnSet = new pgp.helpers.ColumnSet(
+        ["?first_name", "?last_name", "employee_number", "?email"],
+        {table: "resources"});
+      const resourcetsValues = req.body;
+      const projectsQuery = pgp.helpers.update(resourcetsValues, resourcesColumnSet) + " WHERE id = $1";
+      const proJ = await db.result(projectsQuery, [req.params.resource_id]);
+      if (proJ.rowCount === 1) {
+        res.status(200).send(new ApiResponse(true, "Resource updated successfully", [], 200));
+      } else {
+        throw new ErrorHandler();
+      }
+      next();
+    } catch (err) {
+      next(err);
+    }
+  }
+
   public getResourceCompetencies = async (req: Request, res: Response): Promise<any> => {
     try {
 

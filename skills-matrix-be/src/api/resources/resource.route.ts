@@ -9,6 +9,7 @@ resource.get("/", resourceController.getResources);
 resource.post("/", resourceController.createResources);
 
 resource.get("/:resource_id", resourceController.getResource);
+resource.put("/:resource_id", resourceController.updateResource);
 
 resource.get("/:resource_id/competencies", resourceController.getResourceCompetencies);
 resource.get("/:resource_id/missions", resourceController.getResourceMissions);
