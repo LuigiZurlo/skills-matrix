@@ -12,5 +12,6 @@ project.get("/:project_id/teams", projectController.getProjectTeams);
 project.get("/:project_id/positions", projectController.getProjectPositions);
 project.post("/:project_id/teams", projectController.createProjectTeams);
 project.put("/:project_id", projectController.updateProjects);
+project.get("/:project_id/competencies", projectController.getProjectCompetencies);
 
 export default project;

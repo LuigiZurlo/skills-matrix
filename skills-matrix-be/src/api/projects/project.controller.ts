@@ -181,4 +181,25 @@ export default class ProjectController {
       next(err);
     }
   }
+
+  public getProjectCompetencies = async (req: Request, res: Response, next: any): Promise<any> => {
+    try {
+
+      const projects = await db.any(
+        'SELECT c.id "competency_id", c.skill_id, s.name, c.level' +
+      " FROM competencies c, skills s\n" +
+      " WHERE  s.id = c.skill_id AND c.id IN (SELECT cgc.competency_id" +
+      " FROM competency_group_competencies cgc, positions p, competency_groups cg" +
+      " WHERE cg.position_id = p.id AND cgc.competency_group_id = cg.id AND" +
+      " p.project_id = $1)", [req.params.project_id]);
+      if (Object.keys(projects).length === 0) {
+        throw new ErrorHandler(404, "ProjectCompetencies not found");
+      }
+
+      res.status(200).send( new ApiResponse(true, "ProjectCompetencies found", projects, 200));
+      next();
+    } catch (err) {
+      next(err);
+    }
+  }
 }
