@@ -1,5 +1,7 @@
 import { Request, Response } from "express";
 import { db, pgp } from "../../db/db";
+import {ApiResponse} from "../../common/api.response.model";
+import {ErrorHandler} from "../../common/Error";
 
 export default class SkillController {
 
@@ -140,6 +142,25 @@ export default class SkillController {
         success: false,
       });
 
+    }
+  }
+
+  public updateSkills = async (req: Request, res: Response, next: any): Promise<any> => {
+    try {
+      const skillsColumnSet = new pgp.helpers.ColumnSet(
+        ["name", "?created_at", "?updated_at"],
+        {table: "skills"});
+      const skillsValues = req.body;
+      const skillsQuery = pgp.helpers.update(skillsValues, skillsColumnSet) + " WHERE id = $1";
+      const posT = await db.result(skillsQuery, [req.params.id]);
+      if (posT.rowCount === 1) {
+        res.status(200).send(new ApiResponse(true, "Skill updated successfully", [], 200));
+      } else {
+        throw new ErrorHandler(400, "Bad request");
+      }
+      next();
+    } catch (err) {
+      next(err);
     }
   }
 

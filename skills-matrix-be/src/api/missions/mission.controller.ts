@@ -133,7 +133,7 @@ export default class MissionController {
   public updateMissions = async (req: Request, res: Response, next: any): Promise<any> => {
     try {
       const missionsColumnSet = new pgp.helpers.ColumnSet(
-        ["?resource_id", "?project_id", "position_id", "?start_date", "?end_data", "is_active"],
+        ["?resource_id", "?project_id", "?position_id", "?start_date", "?end_data", "is_active"],
         {table: "missions"});
       const missionsValues = req.body;
       const missionsQuery = pgp.helpers.update(missionsValues, missionsColumnSet) + " WHERE id = $1";

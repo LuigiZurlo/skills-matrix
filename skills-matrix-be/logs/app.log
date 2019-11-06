@@ -150,3 +150,10 @@ TypeError: logger.exitOnError is not a function
 {"message":"::1 - - [06/Nov/2019:10:29:39 +0000] \"PUT /v1/missions/1 HTTP/1.1\" 200 78 \"-\" \"PostmanRuntime/7.19.0\"\n","level":"\u001b[32minfo\u001b[39m","label":"Logger:","timestamp":"2019-11-06T10:29:39.750Z"}
 {"message":"::1 - - [06/Nov/2019:10:33:15 +0000] \"PUT /v1/missions/1 HTTP/1.1\" 200 78 \"-\" \"PostmanRuntime/7.19.0\"\n","level":"\u001b[32minfo\u001b[39m","label":"Logger:","timestamp":"2019-11-06T10:33:15.081Z"}
 {"message":"500 - Property 'position_id' doesn't exist. - /v1/missions/1 - PUT - ::1","level":"\u001b[31merror\u001b[39m","label":"Logger:","timestamp":"2019-11-06T10:33:31.128Z"}
+{"message":"500 - Property 'position_id' doesn't exist. - /v1/missions/1 - PUT - ::1","level":"\u001b[31merror\u001b[39m","label":"Logger:","timestamp":"2019-11-06T10:42:20.344Z"}
+{"message":"::1 - - [06/Nov/2019:10:42:38 +0000] \"PUT /v1/missions/1 HTTP/1.1\" 200 78 \"-\" \"PostmanRuntime/7.19.0\"\n","level":"\u001b[32minfo\u001b[39m","label":"Logger:","timestamp":"2019-11-06T10:42:38.224Z"}
+{"message":"::1 - - [06/Nov/2019:10:42:59 +0000] \"PUT /v1/missions/1 HTTP/1.1\" 200 78 \"-\" \"PostmanRuntime/7.19.0\"\n","level":"\u001b[32minfo\u001b[39m","label":"Logger:","timestamp":"2019-11-06T10:42:59.945Z"}
+{"message":"500 - Invalid column syntax: \"position_id?\". - /v1/missions/1 - PUT - ::1","level":"\u001b[31merror\u001b[39m","label":"Logger:","timestamp":"2019-11-06T10:46:39.257Z"}
+{"message":"::1 - - [06/Nov/2019:10:47:46 +0000] \"PUT /v1/missions/1 HTTP/1.1\" 200 78 \"-\" \"PostmanRuntime/7.19.0\"\n","level":"\u001b[32minfo\u001b[39m","label":"Logger:","timestamp":"2019-11-06T10:47:46.674Z"}
+{"message":"500 - Property 'position_id' doesn't exist. - /v1/missions/1 - PUT - ::1","level":"\u001b[31merror\u001b[39m","label":"Logger:","timestamp":"2019-11-06T10:47:56.882Z"}
+{"message":"::1 - - [06/Nov/2019:11:06:43 +0000] \"PUT /v1/skills/2 HTTP/1.1\" 200 76 \"-\" \"PostmanRuntime/7.19.0\"\n","level":"\u001b[32minfo\u001b[39m","label":"Logger:","timestamp":"2019-11-06T11:06:43.356Z"}
