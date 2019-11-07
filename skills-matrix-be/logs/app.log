@@ -340,3 +340,111 @@ TSError: ⨯ Unable to compile TypeScript:
 
 2019-11-07T10:16:56.037Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:10:16:56 +0000] "GET /v1/missions/6 HTTP/1.1" 200 214 "-" "PostmanRuntime/7.19.0"
 
+2019-11-07T10:39:56.344Z [Logger:] [31merror[39m: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/api/positions/position.controller.ts[0m:[93m94[0m:[93m85[0m - [91merror[0m[90m TS2304: [0mCannot find name 'competencies'.
+
+[7m94[0m       res.status(201).send(new ApiResponse(true, "Competency successfully created", competencies, 201));
+[7m  [0m [91m                                                                                    ~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/api/positions/position.controller.ts[0m:[93m94[0m:[93m85[0m - [91merror[0m[90m TS2304: [0mCannot find name 'competencies'.
+
+[7m94[0m       res.status(201).send(new ApiResponse(true, "Competency successfully created", competencies, 201));
+[7m  [0m [91m                                                                                    ~~~~~~~~~~~~[0m
+
+    at createTSError (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:245:12)
+    at reportTSError (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:249:19)
+    at getOutput (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:357:34)
+    at Object.compile (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:415:32)
+    at Module.m._compile (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:493:43)
+    at Module._extensions..js (internal/modules/cjs/loader.js:973:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:496:12)
+    at Module.load (internal/modules/cjs/loader.js:812:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:849:19)
+2019-11-07T10:40:55.877Z [Logger:] [31merror[39m: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/api/positions/position.controller.ts[0m:[93m94[0m:[93m94[0m - [91merror[0m[90m TS2552: [0mCannot find name 'positionRequirements'. Did you mean 'positionRequirement'?
+
+[7m94[0m       res.status(201).send(new ApiResponse(true, "PositionRequirement successfully created", positionRequirements, 201));
+[7m  [0m [91m                                                                                             ~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/api/positions/position.controller.ts[0m:[93m90[0m:[93m13[0m
+    [7m90[0m       const positionRequirement = await db.one("INSERT INTO position_requirements (position_id, competency_id) " +
+    [7m  [0m [96m            ~~~~~~~~~~~~~~~~~~~[0m
+    'positionRequirement' is declared here.
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/api/positions/position.controller.ts[0m:[93m94[0m:[93m94[0m - [91merror[0m[90m TS2552: [0mCannot find name 'positionRequirements'. Did you mean 'positionRequirement'?
+
+[7m94[0m       res.status(201).send(new ApiResponse(true, "PositionRequirement successfully created", positionRequirements, 201));
+[7m  [0m [91m                                                                                             ~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/api/positions/position.controller.ts[0m:[93m90[0m:[93m13[0m
+    [7m90[0m       const positionRequirement = await db.one("INSERT INTO position_requirements (position_id, competency_id) " +
+    [7m  [0m [96m            ~~~~~~~~~~~~~~~~~~~[0m
+    'positionRequirement' is declared here.
+
+    at createTSError (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:245:12)
+    at reportTSError (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:249:19)
+    at getOutput (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:357:34)
+    at Object.compile (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:415:32)
+    at Module.m._compile (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:493:43)
+    at Module._extensions..js (internal/modules/cjs/loader.js:973:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:496:12)
+    at Module.load (internal/modules/cjs/loader.js:812:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:849:19)
+2019-11-07T10:49:36.034Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:10:49:36 +0000] "GET /v1/positions/ HTTP/1.1" 200 281 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T10:49:55.450Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:10:49:55 +0000] "GET /v1/positions/1/requirements HTTP/1.1" 200 110 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T10:50:48.428Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:10:50:48 +0000] "POST /v1/positions/1/requirements HTTP/1.1" 404 167 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T10:50:52.111Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:10:50:52 +0000] "POST /v1/positions/1/requirements HTTP/1.1" 404 167 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T10:51:36.531Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:10:51:36 +0000] "POST /v1/positions/1/requirements HTTP/1.1" 404 167 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T10:51:40.569Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:10:51:40 +0000] "POST /v1/positions/1/requirements/ HTTP/1.1" 404 168 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T10:52:22.137Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:10:52:22 +0000] "POST /v1/positions/1/requirements/ HTTP/1.1" 404 168 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T10:53:11.894Z [Logger:] [31merror[39m: 409 - Conflict: position_ids differ - /v1/positions/1/requirements/ - POST - ::1
+2019-11-07T10:53:19.400Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:10:53:19 +0000] "GET /v1/positions/1/requirements/ HTTP/1.1" 200 110 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T10:53:24.920Z [Logger:] [31merror[39m: 404 - PositionRequirement not found - /v1/positions/3/requirements/ - GET - ::1
+2019-11-07T10:53:38.611Z [Logger:] [31merror[39m: 409 - Conflict: position_ids differ - /v1/positions/1/requirements/ - POST - ::1
+2019-11-07T10:53:46.301Z [Logger:] [31merror[39m: 409 - Conflict: position_ids differ - /v1/positions/1/requirements/ - POST - ::1
+2019-11-07T10:54:05.601Z [Logger:] [31merror[39m: 409 - Conflict: position_ids differ - /v1/positions/1/requirements/ - POST - ::1
+2019-11-07T10:55:32.941Z [Logger:] [31merror[39m: 409 - Conflict: position_ids differ - /v1/positions/1/requirements/ - POST - ::1
+2019-11-07T10:56:49.048Z [Logger:] [31merror[39m: 409 - Conflict: position_ids differ - /v1/positions/1/requirements/ - POST - ::1
+2019-11-07T10:57:51.035Z [Logger:] [31merror[39m: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/api/positions/position.controller.ts[0m:[93m89[0m:[93m36[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m89[0m       if ( req.params.position_id. !== req.body.position_id) {
+[7m  [0m [91m                                   ~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/api/positions/position.controller.ts[0m:[93m89[0m:[93m36[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m89[0m       if ( req.params.position_id. !== req.body.position_id) {
+[7m  [0m [91m                                   ~~~[0m
+
+    at createTSError (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:245:12)
+    at reportTSError (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:249:19)
+    at getOutput (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:357:34)
+    at Object.compile (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:415:32)
+    at Module.m._compile (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:493:43)
+    at Module._extensions..js (internal/modules/cjs/loader.js:973:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:496:12)
+    at Module.load (internal/modules/cjs/loader.js:812:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:849:19)
+2019-11-07T10:59:06.973Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:10:59:06 +0000] "POST /v1/positions/1/requirements/ HTTP/1.1" 201 123 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T10:59:34.913Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:10:59:34 +0000] "POST /v1/positions/2/requirements/ HTTP/1.1" 201 123 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T11:00:25.416Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:11:00:25 +0000] "POST /v1/positions/2/requirements/ HTTP/1.1" 201 123 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T11:00:33.942Z [Logger:] [31merror[39m: 500 - syntax error at or near "WHERE" - /v1/positions/2/requirements/ - DELETE - ::1
+2019-11-07T11:01:15.169Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:11:01:15 +0000] "DELETE /v1/positions/2/requirements/ HTTP/1.1" 200 161 "-" "PostmanRuntime/7.19.0"
+
