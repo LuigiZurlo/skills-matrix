@@ -758,3 +758,37 @@ TSError: ⨯ Unable to compile TypeScript:
 
 2019-11-07T15:29:11.731Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:15:29:11 +0000] "GET /v1/skills/ HTTP/1.1" 200 396 "-" "PostmanRuntime/7.19.0"
 
+2019-11-07T15:38:57.075Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:15:38:57 +0000] "GET /v1/teams HTTP/1.1" 200 221 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T15:39:05.672Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:15:39:05 +0000] "GET /v1/teams/1 HTTP/1.1" 200 110 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T15:39:08.559Z [Logger:] [31merror[39m: 500 - No data returned from the query. - /v1/teams/11 - GET - ::1
+2019-11-07T15:39:30.973Z [Logger:] [31merror[39m: 500 - No data returned from the query. - /v1/teams/11 - GET - ::1
+2019-11-07T15:39:51.454Z [Logger:] [31merror[39m: 404 - Team not found - /v1/teams/11 - GET - ::1
+2019-11-07T15:39:58.986Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:15:39:58 +0000] "GET /v1/teams/ HTTP/1.1" 200 221 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T15:40:22.233Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:15:40:22 +0000] "POST /v1/teams/ HTTP/1.1" 201 131 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T15:40:26.500Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:15:40:26 +0000] "GET /v1/teams/ HTTP/1.1" 200 275 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T15:40:43.281Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:15:40:43 +0000] "DELETE /v1/teams/12 HTTP/1.1" 200 128 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T15:40:49.054Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:15:40:49 +0000] "GET /v1/teams/ HTTP/1.1" 200 221 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T15:41:12.682Z [Logger:] [31merror[39m: 404 - TeamResources not found - /v1/teams/6/resources - GET - ::1
+2019-11-07T15:42:05.341Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:15:42:05 +0000] "GET /v1/resources HTTP/1.1" 200 414 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T15:42:20.121Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:15:42:20 +0000] "GET /v1/teams/ HTTP/1.1" 200 221 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T15:43:20.089Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:15:43:20 +0000] "GET /v1/teams/1/resources HTTP/1.1" 200 172 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T15:44:15.189Z [Logger:] [31merror[39m: 500 - req.body is not iterable - /v1/teams/1/resources - POST - ::1
+2019-11-07T15:44:31.345Z [Logger:] [31merror[39m: 500 - req.body is not iterable - /v1/teams/1/resources - POST - ::1
+2019-11-07T15:46:24.647Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:15:46:24 +0000] "POST /v1/teams/1/resources HTTP/1.1" 201 115 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T15:46:30.172Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:15:46:30 +0000] "GET /v1/teams/1/resources HTTP/1.1" 200 286 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T15:47:04.901Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:15:47:04 +0000] "GET /v1/teams/ HTTP/1.1" 200 221 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T15:47:40.636Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:15:47:40 +0000] "GET /v1/teams/7 HTTP/1.1" 200 113 "-" "PostmanRuntime/7.19.0"
+
