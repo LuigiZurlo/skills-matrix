@@ -242,3 +242,29 @@ TypeError: logger.exitOnError is not a function
 
 2019-11-07T09:40:12.049Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:09:40:12 +0000] "GET /v1/competencies/1 HTTP/1.1" 200 97 "-" "PostmanRuntime/7.19.0"
 
+2019-11-07T09:44:42.650Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:09:44:42 +0000] "GET /v1/competency_groups/1 HTTP/1.1" 200 119 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T09:45:01.391Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:09:45:01 +0000] "GET /v1/competency_groups/ HTTP/1.1" 404 160 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T09:46:53.752Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:09:46:53 +0000] "GET /v1/competency_groups/ HTTP/1.1" 200 165 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T09:51:35.188Z [Logger:] [31merror[39m: 500 - duplicate key value violates unique constraint "competency_groups_pk" - /v1/competency_groups/ - POST - ::1
+2019-11-07T09:52:07.290Z [Logger:] [31merror[39m: 500 - duplicate key value violates unique constraint "competency_groups_pk" - /v1/competency_groups/ - POST - ::1
+2019-11-07T09:52:35.910Z [Logger:] [31merror[39m: 500 - insert or update on table "competency_groups" violates foreign key constraint "competency_groups_positions_id_fk" - /v1/competency_groups/ - POST - ::1
+2019-11-07T09:52:57.258Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:09:52:57 +0000] "POST /v1/competency_groups/ HTTP/1.1" 201 150 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T09:53:16.474Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:09:53:16 +0000] "POST /v1/competency_groups/ HTTP/1.1" 201 134 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T09:53:21.231Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:09:53:21 +0000] "GET /v1/competency_groups/ HTTP/1.1" 200 283 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T09:54:08.630Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:09:54:08 +0000] "POST /v1/competency_groups/4 HTTP/1.1" 404 162 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T09:54:14.974Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:09:54:14 +0000] "PUT /v1/competency_groups/4 HTTP/1.1" 200 86 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T09:54:19.226Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:09:54:19 +0000] "GET /v1/competency_groups/4 HTTP/1.1" 200 119 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T09:57:12.200Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:09:57:12 +0000] "GET /v1/competency_groups/4 HTTP/1.1" 200 119 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T09:57:16.966Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:09:57:16 +0000] "DELETE /v1/competency_groups/4 HTTP/1.1" 200 133 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T09:57:22.890Z [Logger:] [31merror[39m: 404 - Competency group not found - /v1/competency_groups/4 - GET - ::1
