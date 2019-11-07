@@ -134,6 +134,24 @@ export default class PositionController {
     }
   }
 
+  public createPositionCompetencyGroup = async (req: Request, res: Response, next: any): Promise<any> => {
+    try {
+      if (Number(req.params.position_id) !== req.body.position_id) {
+        throw new ErrorHandler(409, "Conflict: position_ids differ");
+      }
+      const posCompetencyGroup = await db.one("INSERT INTO competency_groups (position_id, name) " +
+        "VALUES ($1, $2) " +
+        "RETURNING *", [req.body.position_id, req.body.name]);
+
+      res.status(201).send(new ApiResponse(true, "PositionCompetencyGroup successfully created",
+        posCompetencyGroup, 201));
+      next();
+
+    } catch (err) {
+      next(err);
+    }
+  }
+
   public updatePositions = async (req: Request, res: Response, next: any): Promise<any> => {
     try {
       const positionsColumnSet = new pgp.helpers.ColumnSet(
@@ -154,4 +172,20 @@ export default class PositionController {
       next(err);
     }
   }
+
+  public deletePosition = async (req: Request, res: Response, next: any): Promise<any> => {
+    try {
+
+      const position = await db.any("DELETE FROM positions " +
+        "WHERE id = $1 " +
+        "RETURNING *", [req.params.position_id]);
+
+      res.status(200).send(new ApiResponse(true, "Position successfully deleted", position, 200));
+      next();
+
+    } catch (err) {
+      next(err);
+    }
+  }
+
 }

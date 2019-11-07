@@ -448,3 +448,62 @@ TSError: ⨯ Unable to compile TypeScript:
 2019-11-07T11:00:33.942Z [Logger:] [31merror[39m: 500 - syntax error at or near "WHERE" - /v1/positions/2/requirements/ - DELETE - ::1
 2019-11-07T11:01:15.169Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:11:01:15 +0000] "DELETE /v1/positions/2/requirements/ HTTP/1.1" 200 161 "-" "PostmanRuntime/7.19.0"
 
+2019-11-07T12:56:45.890Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:12:56:45 +0000] "DELETE /v1/positions/2/ HTTP/1.1" 404 157 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T12:56:52.408Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:12:56:52 +0000] "GET /v1/positions/2/ HTTP/1.1" 200 132 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T12:57:16.967Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:12:57:16 +0000] "GET /v1/positions/ HTTP/1.1" 200 281 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T13:00:19.582Z [Logger:] [31merror[39m: 500 - Property 'name' doesn't exist. - /v1/positions/1 - PUT - ::1
+2019-11-07T13:00:51.538Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:13:00:51 +0000] "PUT /v1/positions/1 HTTP/1.1" 200 79 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T13:00:56.087Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:13:00:56 +0000] "GET /v1/positions/1 HTTP/1.1" 200 139 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T13:06:01.873Z [Logger:] [31merror[39m: 500 - relation "position" does not exist - /v1/positions/1 - DELETE - ::1
+2019-11-07T13:06:46.552Z [Logger:] [31merror[39m: 500 - update or delete on table "positions" violates foreign key constraint "missions_position_id_fkey" on table "missions" - /v1/positions/1 - DELETE - ::1
+2019-11-07T13:07:31.693Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:13:07:31 +0000] "DELETE /v1/positions/1 HTTP/1.1" 200 156 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T13:07:42.010Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:13:07:42 +0000] "DELETE /v1/positions/ HTTP/1.1" 404 155 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T13:07:50.720Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:13:07:50 +0000] "GET /v1/positions/ HTTP/1.1" 200 178 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T13:09:09.877Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:13:09:09 +0000] "GET /v1/positions/2/competency_groups HTTP/1.1" 200 176 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T13:11:42.294Z [Logger:] [31merror[39m: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/api/positions/position.controller.ts[0m:[93m147[0m:[93m9[0m - [91merror[0m[90m TS2304: [0mCannot find name 'positionRequirement'.
+
+[7m147[0m         positionRequirement, 201));
+[7m   [0m [91m        ~~~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/api/positions/position.controller.ts[0m:[93m147[0m:[93m9[0m - [91merror[0m[90m TS2304: [0mCannot find name 'positionRequirement'.
+
+[7m147[0m         positionRequirement, 201));
+[7m   [0m [91m        ~~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:245:12)
+    at reportTSError (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:249:19)
+    at getOutput (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:357:34)
+    at Object.compile (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:415:32)
+    at Module.m._compile (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:493:43)
+    at Module._extensions..js (internal/modules/cjs/loader.js:973:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:496:12)
+    at Module.load (internal/modules/cjs/loader.js:812:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:849:19)
+2019-11-07T13:13:14.749Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:13:13:14 +0000] "GET /v1/positions/ HTTP/1.1" 200 178 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T13:13:34.927Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:13:13:34 +0000] "POST /v1/positions/ HTTP/1.1" 201 157 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T13:13:59.160Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:13:13:59 +0000] "POST /v1/positions/2/cometency_groups HTTP/1.1" 404 171 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T13:14:02.783Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:13:14:02 +0000] "GET /v1/positions/2/cometency_groups HTTP/1.1" 404 170 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T13:14:08.667Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:13:14:08 +0000] "GET /v1/positions/2/competency_groups HTTP/1.1" 200 176 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T13:14:41.683Z [Logger:] [31merror[39m: 404 - Position competency group not found - /v1/positions/1/competency_groups - GET - ::1
+2019-11-07T13:14:48.682Z [Logger:] [31merror[39m: 409 - Conflict: position_ids differ - /v1/positions/1/competency_groups - POST - ::1
+2019-11-07T13:15:07.250Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:13:15:07 +0000] "POST /v1/positions/1/competency_groups HTTP/1.1" 201 153 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T13:15:15.042Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:13:15:15 +0000] "GET /v1/positions/1/competency_groups HTTP/1.1" 200 142 "-" "PostmanRuntime/7.19.0"
+
