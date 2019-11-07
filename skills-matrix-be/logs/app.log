@@ -268,3 +268,75 @@ TypeError: logger.exitOnError is not a function
 2019-11-07T09:57:16.966Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:09:57:16 +0000] "DELETE /v1/competency_groups/4 HTTP/1.1" 200 133 "-" "PostmanRuntime/7.19.0"
 
 2019-11-07T09:57:22.890Z [Logger:] [31merror[39m: 404 - Competency group not found - /v1/competency_groups/4 - GET - ::1
+2019-11-07T10:00:59.812Z [Logger:] [31merror[39m: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/api/missions/mission.controller.ts[0m:[93m17[0m:[93m28[0m - [91merror[0m[90m TS2554: [0mExpected 4 arguments, but got 1.
+
+[7m17[0m       res.status(200).send(new ApiResponse(true));
+[7m  [0m [91m                           ~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/common/api.response.model.ts[0m:[93m5[0m:[93m5[0m
+    [7m5[0m     public message: string,
+    [7m [0m [96m    ~~~~~~~~~~~~~~~~~~~~~~[0m
+    An argument for 'message' was not provided.
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/api/missions/mission.controller.ts[0m:[93m17[0m:[93m28[0m - [91merror[0m[90m TS2554: [0mExpected 4 arguments, but got 1.
+
+[7m17[0m       res.status(200).send(new ApiResponse(true));
+[7m  [0m [91m                           ~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/common/api.response.model.ts[0m:[93m5[0m:[93m5[0m
+    [7m5[0m     public message: string,
+    [7m [0m [96m    ~~~~~~~~~~~~~~~~~~~~~~[0m
+    An argument for 'message' was not provided.
+
+    at createTSError (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:245:12)
+    at reportTSError (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:249:19)
+    at getOutput (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:357:34)
+    at Object.compile (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:415:32)
+    at Module.m._compile (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:493:43)
+    at Module._extensions..js (internal/modules/cjs/loader.js:973:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:496:12)
+    at Module.load (internal/modules/cjs/loader.js:812:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:849:19)
+2019-11-07T10:08:56.886Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:10:08:56 +0000] "GET /v1/missions/ HTTP/1.1" 200 366 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T10:09:04.296Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:10:09:04 +0000] "GET /v1/missions/ HTTP/1.1" 200 366 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T10:09:06.742Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "!" - /v1/missions/! - GET - ::1
+2019-11-07T10:09:10.482Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:10:09:10 +0000] "GET /v1/missions/1 HTTP/1.1" 200 214 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T10:09:14.926Z [Logger:] [31merror[39m: 404 - Mission not found - /v1/missions/11 - GET - ::1
+2019-11-07T10:09:18.551Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:10:09:18 +0000] "GET /v1/missions/1 HTTP/1.1" 200 214 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T10:10:28.716Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:10:10:28 +0000] "GET /v1/missions/ HTTP/1.1" 200 366 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T10:10:38.467Z [Logger:] [31merror[39m: 500 - INSERT has more target columns than expressions - /v1/missions/ - POST - ::1
+2019-11-07T10:11:09.035Z [Logger:] [31merror[39m: 500 - INSERT has more target columns than expressions - /v1/missions/ - POST - ::1
+2019-11-07T10:12:02.194Z [Logger:] [31merror[39m: 500 - INSERT has more target columns than expressions - /v1/missions/ - POST - ::1
+2019-11-07T10:12:28.085Z [Logger:] [31merror[39m: 500 - INSERT has more target columns than expressions - /v1/missions/ - POST - ::1
+2019-11-07T10:13:30.552Z [Logger:] [31merror[39m: 500 - duplicate key value violates unique constraint "missions_pkey" - /v1/missions/ - POST - ::1
+2019-11-07T10:13:46.595Z [Logger:] [31merror[39m: 500 - duplicate key value violates unique constraint "missions_pkey" - /v1/missions/ - POST - ::1
+2019-11-07T10:14:15.116Z [Logger:] [31merror[39m: 500 - insert or update on table "missions" violates foreign key constraint "missions_resource_id_fkey" - /v1/missions/ - POST - ::1
+2019-11-07T10:14:30.784Z [Logger:] [31merror[39m: 500 - insert or update on table "missions" violates foreign key constraint "missions_position_id_fkey" - /v1/missions/ - POST - ::1
+2019-11-07T10:14:45.291Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:10:14:45 +0000] "POST /v1/missions/ HTTP/1.1" 201 226 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T10:14:51.684Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:10:14:51 +0000] "GET /v1/missions/ HTTP/1.1" 200 517 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T10:15:10.930Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:10:15:10 +0000] "DELETE /v1/missions/5 HTTP/1.1" 200 228 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T10:15:16.738Z [Logger:] [31merror[39m: 404 - Mission not found - /v1/missions/5 - GET - ::1
+2019-11-07T10:15:19.671Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:10:15:19 +0000] "GET /v1/missions/ HTTP/1.1" 200 366 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T10:15:32.295Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:10:15:32 +0000] "POST /v1/missions/ HTTP/1.1" 201 226 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T10:15:52.415Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:10:15:52 +0000] "POST /v1/missions/6 HTTP/1.1" 404 153 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T10:15:57.768Z [Logger:] [31merror[39m: 500 - Property 'end_data' doesn't exist. - /v1/missions/6 - PUT - ::1
+2019-11-07T10:16:32.949Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:10:16:32 +0000] "GET /v1/missions/6 HTTP/1.1" 200 213 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T10:16:49.324Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:10:16:49 +0000] "PUT /v1/missions/6 HTTP/1.1" 200 78 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T10:16:56.037Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:10:16:56 +0000] "GET /v1/missions/6 HTTP/1.1" 200 214 "-" "PostmanRuntime/7.19.0"
+
