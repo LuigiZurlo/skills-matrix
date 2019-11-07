@@ -20,7 +20,6 @@ const options = {
       label({label: 'Logger:'}),
       timestamp(),
       myFormat,
-      winston.format.json(),
     ),
   },
   console: {
