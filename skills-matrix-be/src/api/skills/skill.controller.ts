@@ -1,70 +1,45 @@
-import { Request, Response } from "express";
-import { db, pgp } from "../../db/db";
+import {Request, Response} from "express";
 import {ApiResponse} from "../../common/api.response.model";
 import {ErrorHandler} from "../../common/Error";
+import {db, pgp} from "../../db/db";
 
 export default class SkillController {
 
-  public getSkills = async (req: Request, res: Response): Promise<any> => {
+  public getSkills = async (req: Request, res: Response, next: any): Promise<any> => {
     try {
 
       const skills = await db.any("SELECT * FROM skills", []);
 
       if (Object.keys(skills).length === 0) {
-        return res.status(404).send({
-          data: skills,
-          message: "Skills not found",
-          success: false,
-        });
+        throw new ErrorHandler(404, "Skills not found");
       }
 
-      res.status(200).send({
-        data: skills,
-        data_length: skills.length,
-        success: true,
-      });
+      res.status(200).send(new ApiResponse(true, "Skills found", skills, 200));
+      next();
 
     } catch (err) {
-
-      res.status(500).send({
-        data: null,
-        message: err.toString(),
-        success: false,
-      });
-
+      next(err);
     }
   }
 
-  public getSkill = async (req: Request, res: Response): Promise<any> => {
+  public getSkill = async (req: Request, res: Response, next: any): Promise<any> => {
     try {
 
       const skills = await db.any("SELECT * FROM skills where id = $1", [req.params.id]);
 
       if (Object.keys(skills).length === 0) {
-        return res.status(404).send({
-          data: skills,
-          message: "Skill not found",
-          success: false,
-        });
+        throw new ErrorHandler(404, "Skill not found");
       }
 
-      res.status(200).send({
-        data: skills,
-        success: true,
-      });
+      res.status(200).send(new ApiResponse(true, "Skill found", skills, 200));
+      next();
 
     } catch (err) {
-
-      res.status(500).send({
-        data: null,
-        message: err.toString(),
-        success: false,
-      });
-
+      next(err);
     }
   }
 
-  public createSkills = async (req: Request, res: Response): Promise<any> => {
+  public createSkills = async (req: Request, res: Response, next: any): Promise<any> => {
     try {
 
       // Create Skills
@@ -76,79 +51,52 @@ export default class SkillController {
       // Create Competencies
       const competenciesColumnSet = new pgp.helpers.ColumnSet(["skill_id", "level"], {table: "competencies"});
       const competenciesValues = [];
-      for ( const skill of skillsResult ) {
+      for (const skill of skillsResult) {
         for (let j = 0; j < 5; j++) {
-          competenciesValues.push( { skill_id: skill.id, level: j });
+          competenciesValues.push({skill_id: skill.id, level: j});
         }
       }
       const competenciesQuery = pgp.helpers.insert(competenciesValues, competenciesColumnSet);
       await db.none(competenciesQuery);
 
-      res.status(201).send({
-        data: skillsResult,
-        message: "Skill(s) successfully created",
-        success: true,
-      });
-
+      res.status(201).send(new ApiResponse(true, "Skill(s) successfully created", skillsResult, 201));
+      next();
     } catch (err) {
-
-      res.status(500).send({
-        data: null,
-        message: err.toString(),
-        success: false,
-      });
-
+      next(err);
     }
   }
 
-  public deleteSkill = async (req: Request, res: Response): Promise<any> => {
+  public deleteSkill = async (req: Request, res: Response, next: any): Promise<any> => {
     try {
 
       const rows = await db.any("DELETE FROM skills WHERE id = $1 RETURNING *", [req.params.id]);
 
-      res.status(200).send({
-        data: rows,
-        message: "Skill successfully deleted",
-        success: true,
-      });
+      res.status(200).send(new ApiResponse(true, "Skill successfully deleted", rows, 200));
+      next();
 
     } catch (err) {
-
-      res.status(500).send({
-        data: null,
-        message: err.toString(),
-        success: false,
-      });
-
+      next(err);
     }
   }
 
-  public deleteSkills = async (req: Request, res: Response): Promise<any> => {
+  public deleteSkills = async (req: Request, res: Response, next: any): Promise<any> => {
     try {
 
       const skills = await db.any("DELETE FROM skills RETURNING *", []);
 
-      res.status(200).send({
-        data: skills,
-        message: "Skills successfully deleted",
-        success: true,
-      });
+      res.status(200).send(new ApiResponse(true, "Skills successfully deleted", skills, 200));
+      next();
 
     } catch (err) {
-
-      res.status(500).send({
-        data: null,
-        message: err.toString(),
-        success: false,
-      });
-
+      next(err);
     }
+
   }
 
   public updateSkills = async (req: Request, res: Response, next: any): Promise<any> => {
     try {
       const skillsColumnSet = new pgp.helpers.ColumnSet(
-        ["name", "?created_at", "?updated_at"],
+        ["name", "created_at", "updated_at"],
         {table: "skills"});
       const skillsValues = req.body;
       const skillsQuery = pgp.helpers.update(skillsValues, skillsColumnSet) + " WHERE id = $1";

@@ -711,3 +711,50 @@ TSError: ⨯ Unable to compile TypeScript:
 
 2019-11-07T14:47:13.039Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:47:13 +0000] "GET /v1/resources/3/missions HTTP/1.1" 200 222 "-" "PostmanRuntime/7.19.0"
 
+2019-11-07T15:23:24.302Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:15:23:24 +0000] "GET /v1/skills HTTP/1.1" 200 396 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T15:23:50.489Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:15:23:50 +0000] "GET /v1/skills/1 HTTP/1.1" 200 166 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T15:23:54.354Z [Logger:] [31merror[39m: 404 - Skill not found - /v1/skills/11 - GET - ::1
+2019-11-07T15:27:05.923Z [Logger:] [31merror[39m: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/api/skills/skill.route.ts[0m:[93m13[0m:[93m35[0m - [91merror[0m[90m TS2339: [0mProperty 'updateSkills' does not exist on type 'SkillController'.
+
+[7m13[0m skill.put("/:id", skillController.updateSkills);
+[7m  [0m [91m                                  ~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/api/skills/skill.route.ts[0m:[93m13[0m:[93m35[0m - [91merror[0m[90m TS2339: [0mProperty 'updateSkills' does not exist on type 'SkillController'.
+
+[7m13[0m skill.put("/:id", skillController.updateSkills);
+[7m  [0m [91m                                  ~~~~~~~~~~~~[0m
+
+    at createTSError (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:245:12)
+    at reportTSError (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:249:19)
+    at getOutput (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:357:34)
+    at Object.compile (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:415:32)
+    at Module.m._compile (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:493:43)
+    at Module._extensions..js (internal/modules/cjs/loader.js:973:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:496:12)
+    at Module.load (internal/modules/cjs/loader.js:812:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:849:19)
+2019-11-07T15:27:34.661Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:15:27:34 +0000] "GET /v1/skills/ HTTP/1.1" 200 396 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T15:27:43.324Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:15:27:43 +0000] "GET /v1/skills/1 HTTP/1.1" 200 166 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T15:27:46.061Z [Logger:] [31merror[39m: 404 - Skill not found - /v1/skills/11 - GET - ::1
+2019-11-07T15:28:00.125Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:15:28:00 +0000] "GET /v1/skills/ HTTP/1.1" 200 396 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T15:28:24.389Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:15:28:24 +0000] "POST /v1/skills/ HTTP/1.1" 201 187 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T15:28:29.089Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:15:28:29 +0000] "GET /v1/skills/ HTTP/1.1" 200 505 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T15:28:41.085Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:15:28:41 +0000] "DELETE /v1/skills/6 HTTP/1.1" 200 184 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T15:28:44.947Z [Logger:] [31merror[39m: 404 - Skill not found - /v1/skills/6 - GET - ::1
+2019-11-07T15:28:48.932Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:15:28:48 +0000] "GET /v1/skills/ HTTP/1.1" 200 396 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T15:29:06.712Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:15:29:06 +0000] "GET /v1/skills/5 HTTP/1.1" 200 174 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T15:29:11.731Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:15:29:11 +0000] "GET /v1/skills/ HTTP/1.1" 200 396 "-" "PostmanRuntime/7.19.0"
+
