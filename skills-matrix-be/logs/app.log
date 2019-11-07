@@ -568,3 +568,146 @@ TSError: ⨯ Unable to compile TypeScript:
 2019-11-07T14:01:31.094Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:01:31 +0000] "DELETE /v1/projects/3/teams HTTP/1.1" 200 368 "-" "PostmanRuntime/7.19.0"
 
 2019-11-07T14:01:35.174Z [Logger:] [31merror[39m: 404 - Project(s) teams not found - /v1/projects/3/teams - GET - ::1
+2019-11-07T14:09:20.121Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:09:20 +0000] "GET /v1/resources HTTP/1.1" 200 389 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:10:05.941Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:10:05 +0000] "POST /v1/resources HTTP/1.1" 201 212 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:10:12.462Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:10:12 +0000] "GET /v1/resources HTTP/1.1" 200 520 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:10:32.055Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:10:32 +0000] "GET /v1/resources/4 HTTP/1.1" 200 235 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:10:53.360Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:10:53 +0000] "GET /v1/resources/4 HTTP/1.1" 200 234 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:11:11.967Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:11:11 +0000] "PUT /v1/resources/4 HTTP/1.1" 200 79 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:11:16.624Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:11:16 +0000] "GET /v1/resources/4 HTTP/1.1" 200 233 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:11:42.996Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:11:42 +0000] "PUT /v1/resources/4 HTTP/1.1" 200 79 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:11:47.930Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:11:47 +0000] "GET /v1/resources/4 HTTP/1.1" 200 235 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:13:59.569Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:13:59 +0000] "GET /v1/resources/1 HTTP/1.1" 200 269 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:14:05.152Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:14:05 +0000] "GET /v1/resources/2 HTTP/1.1" 200 207 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:14:08.957Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:14:08 +0000] "GET /v1/resources/3 HTTP/1.1" 200 217 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:14:12.141Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:14:12 +0000] "GET /v1/resources/1 HTTP/1.1" 200 269 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:16:08.556Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:16:08 +0000] "GET /v1/resources/1 HTTP/1.1" 200 379 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:16:14.875Z [Logger:] [31merror[39m: 500 - update or delete on table "resources" violates foreign key constraint "missions_resource_id_fkey" on table "missions" - /v1/resources/1 - DELETE - ::1
+2019-11-07T14:16:43.888Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:16:43 +0000] "DELETE /v1/resources/1 HTTP/1.1" 200 185 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:16:49.792Z [Logger:] [31merror[39m: 500 - No data returned from the query. - /v1/resources/1 - GET - ::1
+2019-11-07T14:17:42.460Z [Logger:] [31merror[39m: 500 - No data returned from the query. - /v1/resources/1 - GET - ::1
+2019-11-07T14:18:13.503Z [Logger:] [31merror[39m: 404 - Resource not found - /v1/resources/1 - GET - ::1
+2019-11-07T14:26:50.891Z [Logger:] [31merror[39m: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/api/resources/resource.route.ts[0m:[93m17[0m:[93m66[0m - [91merror[0m[90m TS2551: [0mProperty 'deleteResourceCompetencies' does not exist on type 'ResourceController'. Did you mean 'createResourceCompetencies'?
+
+[7m17[0m resource.delete("/:resource_id/competencies", resourceController.deleteResourceCompetencies);
+[7m  [0m [91m                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/api/resources/resource.controller.ts[0m:[93m124[0m:[93m10[0m
+    [7m124[0m   public createResourceCompetencies = async (req: Request, res: Response, next: any): Promise<any> => {
+    [7m   [0m [96m         ~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    'createResourceCompetencies' is declared here.
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/api/resources/resource.route.ts[0m:[93m17[0m:[93m66[0m - [91merror[0m[90m TS2551: [0mProperty 'deleteResourceCompetencies' does not exist on type 'ResourceController'. Did you mean 'createResourceCompetencies'?
+
+[7m17[0m resource.delete("/:resource_id/competencies", resourceController.deleteResourceCompetencies);
+[7m  [0m [91m                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/api/resources/resource.controller.ts[0m:[93m124[0m:[93m10[0m
+    [7m124[0m   public createResourceCompetencies = async (req: Request, res: Response, next: any): Promise<any> => {
+    [7m   [0m [96m         ~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    'createResourceCompetencies' is declared here.
+
+    at createTSError (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:245:12)
+    at reportTSError (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:249:19)
+    at getOutput (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:357:34)
+    at Object.compile (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:415:32)
+    at Module.m._compile (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:493:43)
+    at Module._extensions..js (internal/modules/cjs/loader.js:973:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:496:12)
+    at Module.load (internal/modules/cjs/loader.js:812:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:849:19)
+2019-11-07T14:27:51.272Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:27:51 +0000] "GET /v1/resources/2 HTTP/1.1" 200 209 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:27:52.989Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:27:52 +0000] "GET /v1/resources/ HTTP/1.1" 200 414 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:28:00.725Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:28:00 +0000] "GET /v1/resources/2 HTTP/1.1" 200 209 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:28:23.246Z [Logger:] [31merror[39m: 404 - ResourceCompetencies not found - /v1/resources/2/competencies - GET - ::1
+2019-11-07T14:30:15.802Z [Logger:] [31merror[39m: 500 - column "resource_id" does not exist - /v1/resources/2/competencies - POST - ::1
+2019-11-07T14:30:55.116Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:30:55 +0000] "POST /v1/resources/2/competencies HTTP/1.1" 201 2048 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:32:24.732Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:32:24 +0000] "POST /v1/resources/2/competencies HTTP/1.1" 201 973 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:32:40.285Z [Logger:] [31merror[39m: 409 - Conflict: resource_ids differ - /v1/resources/3/competencies - POST - ::1
+2019-11-07T14:32:50.123Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:32:50 +0000] "DELETE /v1/resources/2/competencies HTTP/1.1" 200 91 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:32:54.103Z [Logger:] [31merror[39m: 404 - ResourceCompetencies not found - /v1/resources/2/competencies - GET - ::1
+2019-11-07T14:34:07.569Z [Logger:] [31merror[39m: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/api/resources/resource.controller.ts[0m:[93m187[0m:[93m65[0m - [91merror[0m[90m TS2304: [0mCannot find name 'resourceCompetenciesColumnSet'.
+
+[7m187[0m       const projectsQuery = pgp.helpers.update(resourcesValues, resourceCompetenciesColumnSet) + " WHERE resource_id = $1 RETURNING *";
+[7m   [0m [91m                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/api/resources/resource.controller.ts[0m:[93m187[0m:[93m65[0m - [91merror[0m[90m TS2304: [0mCannot find name 'resourceCompetenciesColumnSet'.
+
+[7m187[0m       const projectsQuery = pgp.helpers.update(resourcesValues, resourceCompetenciesColumnSet) + " WHERE resource_id = $1 RETURNING *";
+[7m   [0m [91m                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:245:12)
+    at reportTSError (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:249:19)
+    at getOutput (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:357:34)
+    at Object.compile (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:415:32)
+    at Module.m._compile (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:493:43)
+    at Module._extensions..js (internal/modules/cjs/loader.js:973:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/luigizurlo/Desktop/skills-matrix/skills-matrix/skills-matrix-be/node_modules/ts-node/src/index.ts:496:12)
+    at Module.load (internal/modules/cjs/loader.js:812:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:849:19)
+2019-11-07T14:35:43.664Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:35:43 +0000] "GET /v1/resources/2/ HTTP/1.1" 200 209 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:35:48.563Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:35:48 +0000] "GET /v1/resources/3 HTTP/1.1" 200 219 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:37:14.009Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:37:14 +0000] "POST /v1/resources/3 HTTP/1.1" 404 154 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:37:22.119Z [Logger:] [31merror[39m: 409 - Conflict: resource_ids differ - /v1/resources/3/missions - POST - ::1
+2019-11-07T14:37:32.811Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:37:32 +0000] "POST /v1/resources/3/missions HTTP/1.1" 201 935 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:37:43.472Z [Logger:] [31merror[39m: 404 - ResourceMissions not found - /v1/resources/3/missions - GET - ::1
+2019-11-07T14:38:13.122Z [Logger:] [31merror[39m: 404 - ResourceMissions not found - /v1/resources/3/missions - GET - ::1
+2019-11-07T14:38:16.261Z [Logger:] [31merror[39m: 404 - ResourceMissions not found - /v1/resources/3/missions - GET - ::1
+2019-11-07T14:38:21.677Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:38:21 +0000] "GET /v1/resources/3 HTTP/1.1" 200 219 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:38:49.647Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:38:49 +0000] "POST /v1/resources/3/missions HTTP/1.1" 201 935 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:39:30.183Z [Logger:] [31merror[39m: 500 - syntax error at or near "WHERE" - /v1/resources/3/missions - POST - ::1
+2019-11-07T14:40:18.651Z [Logger:] [31merror[39m: 500 - syntax error at or near "WHERE" - /v1/resources/3/missions - POST - ::1
+2019-11-07T14:42:07.327Z [Logger:] [31merror[39m: 404 - ResourceCompetencies not found - /v1/resources/3/competencies - GET - ::1
+2019-11-07T14:42:11.927Z [Logger:] [31merror[39m: 409 - Conflict: resource_ids differ - /v1/resources/3/competencies - POST - ::1
+2019-11-07T14:42:17.331Z [Logger:] [31merror[39m: 500 - syntax error at or near "WHERE" - /v1/resources/3/competencies - POST - ::1
+2019-11-07T14:43:14.863Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:43:14 +0000] "POST /v1/resources/3/competencies HTTP/1.1" 201 973 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:43:50.450Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:43:50 +0000] "POST /v1/resources/3/competencies HTTP/1.1" 201 279 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:43:57.379Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:43:57 +0000] "POST /v1/resources/3/ HTTP/1.1" 404 155 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:44:00.455Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:44:00 +0000] "POST /v1/resources/3/ HTTP/1.1" 404 155 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:44:05.001Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:44:05 +0000] "GET /v1/resources/3/ HTTP/1.1" 200 346 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:46:19.640Z [Logger:] [31merror[39m: 404 - ResourceMissions not found - /v1/resources/3/missions - GET - ::1
+2019-11-07T14:46:24.726Z [Logger:] [31merror[39m: 500 - insert or update on table "missions" violates foreign key constraint "missions_position_id_fkey" - /v1/resources/3/missions - POST - ::1
+2019-11-07T14:46:56.555Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:46:56 +0000] "POST /v1/resources/3/missions HTTP/1.1" 201 237 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:47:05.685Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:47:05 +0000] "GET /v1/resources/3/ HTTP/1.1" 200 463 "-" "PostmanRuntime/7.19.0"
+
+2019-11-07T14:47:13.039Z [Logger:] [32minfo[39m: ::1 - - [07/Nov/2019:14:47:13 +0000] "GET /v1/resources/3/missions HTTP/1.1" 200 222 "-" "PostmanRuntime/7.19.0"
+
