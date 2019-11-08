@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Observable} from "rxjs";
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -32,7 +32,7 @@ export class SkillService {
     const skill = {
       name: name
     };
-    console.log("added Skill", skill);
+    console.log('added Skill', skill);
     return this.http.post(`${this.uri}/skills`, skill);
   }
 

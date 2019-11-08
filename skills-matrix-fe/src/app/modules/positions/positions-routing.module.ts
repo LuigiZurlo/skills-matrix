@@ -8,15 +8,15 @@ import {PositionsListComponent} from "./pages/positions-list/positions-list.comp
 
 const positionsRoutes: Routes = [
 
-  { path: 'positions', component: PositionsListComponent },
-  { path: 'positions/:id', component: PositionsViewComponent },
-  { path: 'positions/:id/edit', component: PositionsEditComponent },
-  { path: 'positions/create', component: PositionsCreateComponent }
-
+  {path: 'positions/create', component: PositionsCreateComponent},
+  {path: 'positions', component: PositionsListComponent},
+  {path: 'positions/:id', component: PositionsViewComponent},
+  {path: 'positions/:id/edit', component: PositionsEditComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(positionsRoutes)],
   exports: [RouterModule]
 })
-export class PositionsRoutingModule { }
+export class PositionsRoutingModule {
+}

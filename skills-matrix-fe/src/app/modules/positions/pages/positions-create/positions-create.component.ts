@@ -31,7 +31,9 @@ export class PositionsCreateComponent implements OnInit {
   }
 
   addPosition(name, description) {
-    this._positionService.createPosition(this.projectId, name, description);
+    this._positionService.createPosition(this.projectId, name, description).subscribe( () => {
+      this._router.navigate(['/positions']);
+    });
   }
 
   ngOnInit() {
