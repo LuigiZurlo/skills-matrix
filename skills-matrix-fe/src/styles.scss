@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+@import "app/core/themes/alten-material.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* flex */
+.flex-spacer {
+  flex-grow:1;
+}
+
+.active {
+  background-color: #b3dcf2;
+}
+
+/* mat-card */
+.header-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: unset;
+}
+
+.resource-header-image { background-image: url("/assets/img/icons/544498-teamwork/png/031-worldwide-1.png"); }
+.skills-summary-header-image { background-image: url("/assets/img/icons/1351428-infographic/png/020-list.png"); }
+.top-skills-header-image { background-image: url("/assets/img/icons/1584520-job-promotion/png/046-star.png"); }
+.competency-header-image { background-image: url("/assets/img/icons/1584520-job-promotion/png/013-stats.png"); }
+.project-header-image { background-image: url("/assets/img/icons/1584316-delivery/png/013-delivery-service.png"); }
+.teams-header-image { background-image: url("/assets/img/icons/1039326-strategy-and-management/png/018-hierarchy.png"); }
+.network-header-image { background-image: url("/assets/img/icons/1039326-strategy-and-management/png/010-communications.png"); }
+.assessment-header-image { background-image: url("/assets/img/icons/544498-teamwork/png/012-test.png"); }
+.position-header-image { background-image: url("/assets/img/icons/1039326-strategy-and-management/png/033-strategy.png"); }
+.resources-header-image { background-image: url("/assets/img/icons/1256627-teamwork/png/009-teamwork.png"); }
+
+mat-sidenav {
+  min-width: 200px !important;
+  width: 85vw !important;
+  max-width: 304px !important;
+}
+
+.full-width-table {
+  width: 100%;
+}

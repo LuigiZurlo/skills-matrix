@@ -1,0 +1,69 @@
+<div>
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <h2>Create Project</h2>
+      <div class="flex-spacer"></div>
+      <button mat-raised-button color="primary" routerLink="/missions">CANCEL</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+
+<div class="mat-elevation-z3" id="project-create-form-container">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <h3>Create New Mission</h3>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <form [formGroup]="createForm" id="mission-create-form">
+
+
+    <mat-form-field class="mission-create-form-field">
+    <mat-select aria-label="Mission Resource" placeholder="Mission Resource" formControlName="missionResource" #missionResource>
+      <mat-option *ngFor="let res of resources" [value]="res.id">
+        {{ res.first_name +  res.last_name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+    <mat-form-field class="mission-create-form-field">
+      <mat-select aria-label="Mission Project" placeholder="Mission Project" formControlName="missionProject" #missionProject>
+        <mat-option *ngFor="let pro of projects" [value]="pro.id">
+          {{ pro.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="mission-create-form-field">
+      <mat-select aria-label="Mission Position" placeholder="Mission Position" formControlName="missionPosition" #missionPosition>
+        <mat-option *ngFor="let pos of positions" [value]="pos.id">
+          {{ pos.description }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <mat-form-field class="mission-create-form-field">
+      <label>
+        <input matInput placeholder="Planned Start Date" formControlName="start_date" [matDatepicker]="start_date_picker" #start_date>
+      </label>
+      <mat-datepicker-toggle matSuffix [for]="start_date_picker"></mat-datepicker-toggle>
+      <mat-datepicker touchUi #start_date_picker></mat-datepicker>
+      <!--input type="Date" matInput placeholder="Planned Start Date" formControlName="start_date" #start_date-->
+    </mat-form-field>
+
+    <mat-form-field class="project-create-form-field">
+      <label>
+        <input matInput placeholder="Planned End Date" formControlName="end_date" [matDatepicker]="end_date_picker" #end_date>
+      </label>
+      <mat-datepicker-toggle matSuffix [for]="end_date_picker"></mat-datepicker-toggle>
+      <mat-datepicker touchUi #end_date_picker></mat-datepicker>
+      <!--input type="Date" matInput placeholder="Planned Start Date" formControlName="start_date" #start_date-->
+    </mat-form-field>
+
+    <div class="flex">
+      <button class="flex-right" type="submit" (click)="addMission(missionResource.value, missionProject.value, missionPosition.value,  start_date.value, end_date.value)" [disabled]="false" mat-raised-button color="accent">Save</button>
+    </div>
+
+  </form>
+</div>

@@ -1,0 +1,157 @@
+<div>
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <h2 *ngIf="project">{{project.name}} &mdash; {{project.project_otp_code}}</h2>
+      <div class="flex-spacer"></div>
+      <button mat-button color="primary" routerLink="/skills/create">Summary</button>
+      <button mat-button color="primary" routerLink="/skills/create">Detail</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-md-8 my-3" *ngIf="project">
+      <mat-card>
+        <mat-card-header>
+          <div mat-card-avatar class="header-image project-header-image"></div>
+          <mat-card-title>General</mat-card-title>
+          <mat-card-subtitle>Information about {{project.name}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Information to be retrieved from SMART later.</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-md-4 my-3">
+      <mat-card>
+        <mat-card-header>
+          <div mat-card-avatar class="header-image competency-header-image"></div>
+          <mat-card-title>Competency Coverage</mat-card-title>
+          <mat-card-subtitle>Global competency coverage index</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 mb-3">
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>Positions</mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <mat-toolbar>
+            <mat-toolbar-row>
+              <div class="flex-spacer"></div>
+              <button mat-raised-button color="primary" [routerLink]="['/positions/create']" [queryParams]="{ project_id: [projectId] }">CREATE</button>
+            </mat-toolbar-row>
+          </mat-toolbar>
+
+<!--          <div class="container-fluid">
+            <div class="row">
+              <mat-card *ngFor="let element of positions" class="col-md-2">
+                <mat-card-header>
+                  <mat-card-subtitle>{{element.name}}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-actions>
+                  <button mat-button color="primary" (click)="viewPosition(element.id)">VIEW</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+          </div>-->
+
+          <table mat-table [dataSource]="positions">
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef> ID </th>
+              <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+            <ng-container matColumnDef="actions">
+              <th mat-header-cell *matHeaderCellDef class="mat-column-right"> Actions </th>
+              <td mat-cell *matCellDef="let element" class="mat-column-right">
+                <button mat-button color="primary" (click)="viewPosition(element.id)">VIEW</button>
+                <!--button mat-button color="primary" (click)="editResource(element.id)">EDIT</button-->
+                <!--button mat-button color="warn" (click)="deleteResource(element.id)">DELETE</button-->
+              </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumnsForPositions"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumnsForPositions;"></tr>
+          </table>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel *ngIf="teams">
+          <mat-expansion-panel-header>
+            <mat-panel-title>Teams</mat-panel-title>
+          </mat-expansion-panel-header>
+          <table mat-table [dataSource]="teams">
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef> ID </th>
+              <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+            <ng-container matColumnDef="actions">
+              <th mat-header-cell *matHeaderCellDef class="mat-column-right"> Actions </th>
+              <td mat-cell *matCellDef="let element" class="mat-column-right">
+                <button mat-button color="primary">VIEW</button>
+                <!--button mat-button color="primary" (click)="editResource(element.id)">EDIT</button-->
+                <!--button mat-button color="warn" (click)="deleteResource(element.id)">DELETE</button-->
+              </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumnsForProjectTeams"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumnsForProjectTeams;"></tr>
+          </table>
+
+        </mat-expansion-panel>
+        <mat-expansion-panel *ngIf="resources">
+
+        <mat-expansion-panel-header>
+          <mat-panel-title>Resources</mat-panel-title>
+        </mat-expansion-panel-header>
+
+       < <table mat-table [dataSource]="resources">
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+          </ng-container>
+          <ng-container matColumnDef="last_name">
+            <th mat-header-cell *matHeaderCellDef> Last Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.last_name}} </td>
+          </ng-container>
+          <ng-container matColumnDef="first_name">
+            <th mat-header-cell *matHeaderCellDef> First Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.first_name}} </td>
+          </ng-container>
+          <ng-container matColumnDef="employee_number">
+            <th mat-header-cell *matHeaderCellDef> Employee ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.employee_number}} </td>
+          </ng-container>
+
+          <!--<ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef class="mat-column-right"> Actions </th>
+            <td mat-cell *matCellDef="let element" class="mat-column-right">
+              <button mat-button color="primary" (click)="viewResource(element.id)">VIEW</button>
+              &lt;!&ndash;button mat-button color="primary" (click)="editResource(element.id)">EDIT</button&ndash;&gt;
+              &lt;!&ndash;button mat-button color="warn" (click)="deleteResource(element.id)">DELETE</button&ndash;&gt;
+            </td>
+          </ng-container>-->
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumnsForResources"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumnsForResources;"></tr>
+        </table>
+
+      </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </div>
+
+</div>
+

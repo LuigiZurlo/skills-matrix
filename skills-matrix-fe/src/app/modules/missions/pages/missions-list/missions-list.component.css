@@ -1,0 +1,8 @@
+.info-section {
+  display: flex;
+}
+
+.info-container {
+  flex-grow: 1;
+  margin: 18px;
+}

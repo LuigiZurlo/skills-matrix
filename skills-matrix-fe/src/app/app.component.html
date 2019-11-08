@@ -1,0 +1,46 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav mode="side">
+    <mat-nav-list>
+      <h3 mat-subheader>GENERAL</h3>
+      <mat-divider></mat-divider>
+      <a mat-list-item routerLink="/home" routerLinkActive="active">Home</a>
+      <mat-divider></mat-divider>
+      <h3 mat-subheader>ADMINISTRATION</h3>
+      <mat-divider></mat-divider>
+      <a mat-list-item routerLink="/skills" routerLinkActive="active">Skills</a>
+      <a mat-list-item routerLink="/resources" routerLinkActive="active">Resources</a>
+      <a mat-list-item routerLink="/projects" routerLinkActive="active">Projects</a>
+      <a mat-list-item routerLink="/positions" routerLinkActive="active">Positions</a>
+      <a mat-list-item routerLink="/missions" routerLinkActive="active">Missions</a>
+      <mat-divider></mat-divider>
+      <h3 mat-subheader>EXPERIMENTS</h3>
+      <mat-divider></mat-divider>
+      <a mat-list-item routerLink="/matrices" routerLinkActive="active">Graphs</a>
+      <a mat-list-item routerLink="/form" routerLinkActive="active">Forms</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+
+      <mat-toolbar color="primary" role="navigation" id="app-navbar">
+
+        <span>
+          <button mat-icon-button mat-raised-button (click)="sidenav.toggle()" matTooltip="Toggle Menu" id="main-menu-button">
+            <mat-icon>menu</mat-icon>
+          </button>
+        </span>
+            <span>SKILLS MANAGEMENT SUITE</span>
+            <span class="flex-spacer"></span>
+            <span>
+          <button mat-icon-button mat-raised-button>
+            <mat-icon matTooltip="Help">help</mat-icon>
+          </button>&nbsp;
+          <button mat-icon-button mat-raised-button>
+            <mat-icon matTooltip="Profile">person</mat-icon>
+          </button>
+        </span>
+
+      </mat-toolbar>
+
+      <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,41 @@
+<div>
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <h2>Create Position</h2>
+      <div class="flex-spacer"></div>
+      <button mat-raised-button matTooltip="Go to previous page" color="primary" (click)="goBack()">CANCEL</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+
+<div class="mat-elevation-z3" id="position-create-form-container">
+
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <h3>Create New Position</h3>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <form [formGroup]="positionCreateForm" id="position-create-form">
+
+    <mat-form-field class="position-create-form-field">
+      <label>
+        <input matInput placeholder="Position Name" formControlName="name" #name>
+      </label>
+    </mat-form-field>
+
+    <mat-form-field class="position-create-form-field">
+      <label>
+        <textarea matInput placeholder="Position Description" formControlName="description" #description></textarea>
+      </label>
+    </mat-form-field>
+
+  </form>
+
+  <mat-toolbar>
+    <div class="flex">
+      <button class="flex-right" type="submit" (click)="addPosition(name.value, description.value)" [disabled]="positionCreateForm.pristine || positionCreateForm.invalid" mat-raised-button color="primary">Save</button>
+    </div>
+  </mat-toolbar>
+
+</div>

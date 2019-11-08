@@ -1,0 +1,38 @@
+<div>
+
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <h2>Skills</h2>
+      <div class="flex-spacer"></div>
+      <button mat-raised-button color="primary" routerLink="/skills/create">CREATE</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <table mat-table class="full-width-table" [dataSource]="skills">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Lowercase Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+    <ng-container matColumnDef="display_name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.display_name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef class="mat-column-right"> Actions </th>
+      <td mat-cell *matCellDef="let element" class="mat-column-right">
+        <button mat-button color="primary" (click)="viewSkill(element.id)">VIEW</button>
+        <button mat-button color="primary" (click)="editSkill(element.id)">EDIT</button>
+        <button mat-button color="warn" (click)="deleteSkill(element.id)">DELETE</button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+</div>

@@ -1,0 +1,49 @@
+<div>
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <h2>Create Resource</h2>
+      <div class="flex-spacer"></div>
+      <button mat-raised-button color="primary" routerLink="/resources">CANCEL</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+
+<div class="mat-elevation-z3" id="resource-create-form-container">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <h3>Create New Resource</h3>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <form [formGroup]="createForm" id="resource-create-form">
+
+    <mat-form-field class="resource-create-form-field">
+      <label>
+        <input matInput placeholder="Resource First Name" formControlName="first_name" #first_name>
+      </label>
+    </mat-form-field>
+
+    <mat-form-field class="resource-create-form-field">
+      <label>
+        <input matInput placeholder="Resource Last Name" formControlName="last_name" #last_name>
+      </label>
+    </mat-form-field>
+
+    <mat-form-field class="resource-create-form-field">
+      <label>
+        <input matInput placeholder="Employee Number" formControlName="employee_number" #employee_number>
+      </label>
+    </mat-form-field>
+
+    <mat-form-field class="resource-create-form-field">
+      <label>
+        <input matInput placeholder="Email" formControlName="email" #email>
+      </label>
+    </mat-form-field>
+
+    <div class="flex">
+      <button class="flex-right" type="submit" (click)="addResource(first_name.value, last_name.value, employee_number.value, email.value)" [disabled]="createForm.pristine || createForm.invalid" mat-raised-button color="accent">Save</button>
+    </div>
+
+  </form>
+</div>
