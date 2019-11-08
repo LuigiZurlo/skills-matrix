@@ -1,0 +1,29 @@
+.flex-spacer {
+  flex-grow: 1;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-left {
+  align-self: flex-start;
+}
+
+.flex-right {
+  align-self: flex-end;
+}
+
+#skill-create-form-container {
+  width: 66%;
+  margin: 28px auto;
+  padding-bottom: 28px;
+}
+
+#skill-create-form {
+  margin: 28px;
+}
+
+.skill-create-form-field {
+  width: 100%;
+}

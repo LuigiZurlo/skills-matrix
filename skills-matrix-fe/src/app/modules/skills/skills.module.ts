@@ -10,6 +10,7 @@ import {SkillsListComponent} from './pages/skills-list/skills-list.component';
 import {SkillsViewComponent} from './pages/skills-view/skills-view.component';
 
 import {SkillsRoutingModule} from "./skills-routing.module";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {SkillsRoutingModule} from "./skills-routing.module";
   imports: [
     CommonModule,
     MaterialModule,
-    SkillsRoutingModule
+    SkillsRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class SkillsModule { }

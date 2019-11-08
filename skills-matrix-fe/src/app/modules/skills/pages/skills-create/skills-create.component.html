@@ -1,3 +1,31 @@
-<p>
-  skills-create works!
-</p>
+<div>
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <h2>Create Resource</h2>
+      <div class="flex-spacer"></div>
+      <button mat-raised-button color="primary" routerLink="/skills">CANCEL</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+
+<div class="mat-elevation-z3" id="skill-create-form-container">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <h3>Create New Skill</h3>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <form [formGroup]="createForm" id="skill-create-form">
+
+    <mat-form-field class="skill-create-form-field">
+      <label>
+        <input matInput placeholder="Skill Name" formControlName="name" #name>
+      </label>
+    </mat-form-field>
+
+    <div class="flex">
+      <button class="flex-right" type="submit" (click)="addSkill(name.value)" [disabled]="createForm.pristine || createForm.invalid" mat-raised-button color="accent">Save</button>
+    </div>
+
+  </form>
+</div>
