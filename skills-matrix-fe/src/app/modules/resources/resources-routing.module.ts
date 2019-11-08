@@ -7,12 +7,10 @@ import {ResourcesListComponent} from './pages/resources-list/resources-list.comp
 import {ResourcesViewComponent} from './pages/resources-view/resources-view.component';
 
 const resourcesRoutes: Routes = [
-
+  { path: 'resources/create', component: ResourcesCreateComponent },
   { path: 'resources', component: ResourcesListComponent },
   { path: 'resources/:id', component: ResourcesViewComponent },
-  { path: 'resources/:id/edit', component: ResourcesEditComponent },
-  { path: 'resources/create', component: ResourcesCreateComponent }
-
+  { path: 'resources/:id/edit', component: ResourcesEditComponent }
 ];
 
 @NgModule({

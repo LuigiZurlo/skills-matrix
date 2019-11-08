@@ -18,5 +18,4 @@ resource.delete("/:resource_id/competencies", resourceController.deleteResourceC
 resource.get("/:resource_id/missions", resourceController.getResourceMissions);
 resource.post("/:resource_id/missions", resourceController.createResourceMissions);
 
-
 export default resource;

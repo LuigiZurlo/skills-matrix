@@ -812,3 +812,730 @@ TSError: ⨯ Unable to compile TypeScript:
 
 2019-11-07T16:02:24.129Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [07/Nov/2019:16:02:24 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
 
+2019-11-07T16:05:30.955Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [07/Nov/2019:16:05:30 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-07T16:05:33.949Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [07/Nov/2019:16:05:33 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-07T16:05:34.376Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [07/Nov/2019:16:05:34 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-07T16:05:35.250Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [07/Nov/2019:16:05:35 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-07T16:05:35.860Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [07/Nov/2019:16:05:35 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-07T16:05:36.108Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [07/Nov/2019:16:05:36 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-07T16:06:02.121Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [07/Nov/2019:16:06:02 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-07T16:06:03.014Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [07/Nov/2019:16:06:03 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-07T16:06:04.436Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [07/Nov/2019:16:06:04 +0000] "GET /v1/missions HTTP/1.1" 304 - "http://localhost:4200/missions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-07T16:06:04.933Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [07/Nov/2019:16:06:04 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-07T16:06:05.307Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [07/Nov/2019:16:06:05 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-07T16:06:05.680Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [07/Nov/2019:16:06:05 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-07T16:06:06.651Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [07/Nov/2019:16:06:06 +0000] "GET /v1/skills/1 HTTP/1.1" 200 166 "http://localhost:4200/skills/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-07T16:06:08.090Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [07/Nov/2019:16:06:08 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-07T16:06:08.545Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [07/Nov/2019:16:06:08 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-07T16:06:09.799Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [07/Nov/2019:16:06:09 +0000] "GET /v1/skills/1 HTTP/1.1" 304 - "http://localhost:4200/skills/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-07T16:06:10.862Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [07/Nov/2019:16:06:10 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-07T16:06:12.997Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [07/Nov/2019:16:06:12 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-07T16:08:05.085Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [07/Nov/2019:16:08:05 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-07T16:08:21.334Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [07/Nov/2019:16:08:21 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-07T16:08:21.800Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [07/Nov/2019:16:08:21 +0000] "GET /v1/missions HTTP/1.1" 304 - "http://localhost:4200/missions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-07T16:08:22.254Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [07/Nov/2019:16:08:22 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-07T16:08:22.692Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [07/Nov/2019:16:08:22 +0000] "GET /v1/missions HTTP/1.1" 304 - "http://localhost:4200/missions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-07T16:08:23.784Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [07/Nov/2019:16:08:23 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:02:17.060Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:02:17 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:02:17.426Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:02:17 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:02:18.210Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:02:18 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:02:18.862Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:02:18 +0000] "GET /v1/missions HTTP/1.1" 304 - "http://localhost:4200/missions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:02:20.758Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:02:20 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:02:22.146Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:02:22 +0000] "GET /v1/missions HTTP/1.1" 304 - "http://localhost:4200/missions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:02:22.671Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:02:22 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:02:23.299Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:02:23 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:02:25.129Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:02:25 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:02:25.918Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:02:25 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:02:26.333Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:02:26 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:05:40.805Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:05:40 +0000] "GET /v1/missions HTTP/1.1" 304 - "http://localhost:4200/missions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:05:41.299Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:05:41 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:05:42.111Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:05:42 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:05:42.639Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:05:42 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:05:43.093Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:05:43 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:08:30.003Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:08:30 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:10:46.312Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:10:46 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:10:47.264Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:10:47 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:10:48.219Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:10:48 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:10:50.920Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:10:50 +0000] "GET /v1/missions HTTP/1.1" 304 - "http://localhost:4200/missions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:10:54.358Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:10:54 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:10:56.172Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:10:56 +0000] "GET /v1/projects/1 HTTP/1.1" 200 191 "http://localhost:4200/projects/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:10:56.180Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:10:56 +0000] "GET /v1/positions?project_id=1 HTTP/1.1" 200 160 "http://localhost:4200/projects/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:10:56.195Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:10:56 +0000] "GET /v1/teams?project_id=1 HTTP/1.1" 200 221 "http://localhost:4200/projects/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:10:59.420Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:10:59 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/positions/3" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:10:59.426Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:10:59 +0000] "GET /v1/positions/3 HTTP/1.1" 200 157 "http://localhost:4200/positions/3" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:11:01.647Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:11:01 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:11:02.440Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:11:02 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:11:03.431Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:11:03 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:11:04.829Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:11:04 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:11:10.297Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:11:10 +0000] "GET /v1/projects/1 HTTP/1.1" 304 - "http://localhost:4200/projects/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:11:10.306Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:11:10 +0000] "GET /v1/teams?project_id=1 HTTP/1.1" 304 - "http://localhost:4200/projects/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:11:10.314Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:11:10 +0000] "GET /v1/positions?project_id=1 HTTP/1.1" 304 - "http://localhost:4200/projects/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:12:52.246Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:12:52 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:12:54.275Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:12:54 +0000] "GET /v1/projects/1 HTTP/1.1" 304 - "http://localhost:4200/projects/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:12:54.292Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:12:54 +0000] "GET /v1/positions?project_id=1 HTTP/1.1" 304 - "http://localhost:4200/projects/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:12:54.309Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:12:54 +0000] "GET /v1/teams?project_id=1 HTTP/1.1" 304 - "http://localhost:4200/projects/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:12:57.769Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:12:57 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:12:58.169Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:12:58 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:12:58.554Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:12:58 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:13:00.045Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:13:00 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:13:00.529Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:13:00 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:13:01.334Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:13:01 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:13:02.408Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:13:02 +0000] "GET /v1/positions?project_id=1 HTTP/1.1" 304 - "http://localhost:4200/projects/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:13:02.412Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:13:02 +0000] "GET /v1/teams?project_id=1 HTTP/1.1" 304 - "http://localhost:4200/projects/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:13:02.417Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:13:02 +0000] "GET /v1/projects/1 HTTP/1.1" 304 - "http://localhost:4200/projects/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:25:37.977Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:25:37 +0000] "GET /v1/resources HTTP/1.1" 200 414 "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:25:40.831Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:25:40 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:25:41.278Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:25:41 +0000] "GET /v1/positions HTTP/1.1" 200 192 "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:25:42.233Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:25:42 +0000] "GET /v1/missions HTTP/1.1" 200 214 "http://localhost:4200/missions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:25:42.627Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:25:42 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:25:43.015Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:25:43 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:25:43.448Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:25:43 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:27:31.103Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:27:31 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:27:34.225Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:27:34 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:27:36.118Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:27:36 +0000] "GET /v1/projects/1 HTTP/1.1" 304 - "http://localhost:4200/projects/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:27:36.157Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:27:36 +0000] "GET /v1/positions?project_id=1 HTTP/1.1" 304 - "http://localhost:4200/projects/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:27:36.166Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:27:36 +0000] "GET /v1/teams?project_id=1 HTTP/1.1" 304 - "http://localhost:4200/projects/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:27:36.175Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=1 - GET - ::ffff:127.0.0.1
+2019-11-08T09:30:53.080Z [Logger:] [32minfo[39m: ::1 - - [08/Nov/2019:09:30:53 +0000] "GET /v1/resources HTTP/1.1" 200 414 "-" "PostmanRuntime/7.19.0"
+
+2019-11-08T09:32:58.738Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:32:58 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:33:01.176Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:33:01 +0000] "GET /v1/projects/3 HTTP/1.1" 200 203 "http://localhost:4200/projects/3" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:33:01.194Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=3 - GET - ::ffff:127.0.0.1
+2019-11-08T09:33:01.195Z [Logger:] [31merror[39m: 404 - Teams not found - /v1/teams?project_id=3 - GET - ::ffff:127.0.0.1
+2019-11-08T09:33:01.196Z [Logger:] [31merror[39m: 404 - Positions not found - /v1/positions?project_id=3 - GET - ::ffff:127.0.0.1
+2019-11-08T09:33:27.155Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:33:27 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:33:38.244Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:33:38 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:33:40.062Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:33:40 +0000] "GET /v1/projects/3 HTTP/1.1" 304 - "http://localhost:4200/projects/3" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:33:40.086Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=3 - GET - ::ffff:127.0.0.1
+2019-11-08T09:33:40.087Z [Logger:] [31merror[39m: 404 - Teams not found - /v1/teams?project_id=3 - GET - ::ffff:127.0.0.1
+2019-11-08T09:33:40.097Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:33:40 +0000] "GET /v1/positions?project_id=3 HTTP/1.1" 200 160 "http://localhost:4200/projects/3" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:33:43.035Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:33:43 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/positions/3" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:33:43.036Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:33:43 +0000] "GET /v1/positions/3 HTTP/1.1" 200 157 "http://localhost:4200/positions/3" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:33:44.191Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:33:44 +0000] "GET /v1/positions HTTP/1.1" 200 199 "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:33:44.852Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:33:44 +0000] "GET /v1/missions HTTP/1.1" 200 365 "http://localhost:4200/missions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:33:46.170Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:33:46 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:33:47.884Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:33:47 +0000] "GET /v1/projects/1 HTTP/1.1" 304 - "http://localhost:4200/projects/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:33:47.885Z [Logger:] [31merror[39m: 404 - Positions not found - /v1/positions?project_id=1 - GET - ::ffff:127.0.0.1
+2019-11-08T09:33:47.886Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=1 - GET - ::ffff:127.0.0.1
+2019-11-08T09:33:47.891Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:33:47 +0000] "GET /v1/teams?project_id=1 HTTP/1.1" 304 - "http://localhost:4200/projects/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:33:50.719Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:33:50 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:35:43.460Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:35:43 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:35:45.242Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:35:45 +0000] "GET /v1/projects/3 HTTP/1.1" 304 - "http://localhost:4200/projects/3" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:35:45.258Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:35:45 +0000] "GET /v1/positions?project_id=3 HTTP/1.1" 304 - "http://localhost:4200/projects/3" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:35:45.270Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:35:45 +0000] "GET /v1/teams?project_id=3 HTTP/1.1" 200 114 "http://localhost:4200/projects/3" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:35:45.276Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=3 - GET - ::ffff:127.0.0.1
+2019-11-08T09:35:50.316Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:35:50 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:36:13.208Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=1 - GET - ::1
+2019-11-08T09:36:16.373Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=3 - GET - ::1
+2019-11-08T09:36:19.261Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=3 - GET - ::1
+2019-11-08T09:38:14.364Z [Logger:] [32minfo[39m: ::1 - - [08/Nov/2019:09:38:14 +0000] "GET /v1/resources?project_name=%22%20prova%20UPdate%20%22 HTTP/1.1" 200 414 "-" "PostmanRuntime/7.19.0"
+
+2019-11-08T09:38:52.910Z [Logger:] [32minfo[39m: ::1 - - [08/Nov/2019:09:38:52 +0000] "GET /v1/resources?project_name=ppp HTTP/1.1" 200 414 "-" "PostmanRuntime/7.19.0"
+
+2019-11-08T09:39:55.045Z [Logger:] [32minfo[39m: ::1 - - [08/Nov/2019:09:39:55 +0000] "GET /v1/resources?mission_id=8 HTTP/1.1" 200 414 "-" "PostmanRuntime/7.19.0"
+
+2019-11-08T09:39:58.036Z [Logger:] [32minfo[39m: ::1 - - [08/Nov/2019:09:39:58 +0000] "GET /v1/resources?mission_id=88 HTTP/1.1" 200 414 "-" "PostmanRuntime/7.19.0"
+
+2019-11-08T09:40:09.316Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=88 - GET - ::1
+2019-11-08T09:40:17.007Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=3 - GET - ::1
+2019-11-08T09:40:19.583Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=4 - GET - ::1
+2019-11-08T09:40:22.163Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=12 - GET - ::1
+2019-11-08T09:41:08.755Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=1 - GET - ::1
+2019-11-08T09:41:10.434Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=2 - GET - ::1
+2019-11-08T09:41:11.544Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=3 - GET - ::1
+2019-11-08T09:41:12.570Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=4 - GET - ::1
+2019-11-08T09:41:13.905Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=5 - GET - ::1
+2019-11-08T09:41:15.794Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=6 - GET - ::1
+2019-11-08T09:41:19.343Z [Logger:] [32minfo[39m: ::1 - - [08/Nov/2019:09:41:19 +0000] "GET /v1/resources HTTP/1.1" 200 414 "-" "PostmanRuntime/7.19.0"
+
+2019-11-08T09:41:29.374Z [Logger:] [32minfo[39m: ::1 - - [08/Nov/2019:09:41:29 +0000] "GET /v1/resources/3 HTTP/1.1" 200 454 "-" "PostmanRuntime/7.19.0"
+
+2019-11-08T09:41:50.770Z [Logger:] [32minfo[39m: ::1 - - [08/Nov/2019:09:41:50 +0000] "GET /v1/resources/3?skill_id=1 HTTP/1.1" 200 454 "-" "PostmanRuntime/7.19.0"
+
+2019-11-08T09:42:00.194Z [Logger:] [32minfo[39m: ::1 - - [08/Nov/2019:09:42:00 +0000] "GET /v1/resources/3?project_id=1 HTTP/1.1" 200 454 "-" "PostmanRuntime/7.19.0"
+
+2019-11-08T09:42:03.992Z [Logger:] [32minfo[39m: ::1 - - [08/Nov/2019:09:42:03 +0000] "GET /v1/resources/3?project_id=13232 HTTP/1.1" 200 454 "-" "PostmanRuntime/7.19.0"
+
+2019-11-08T09:42:07.408Z [Logger:] [32minfo[39m: ::1 - - [08/Nov/2019:09:42:07 +0000] "GET /v1/resources/3 HTTP/1.1" 200 454 "-" "PostmanRuntime/7.19.0"
+
+2019-11-08T09:43:15.486Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=3 - GET - ::ffff:127.0.0.1
+2019-11-08T09:43:15.506Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:15 +0000] "GET /v1/projects/3 HTTP/1.1" 200 194 "http://localhost:4200/projects/3" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:15.509Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:15 +0000] "GET /v1/teams?project_id=3 HTTP/1.1" 304 - "http://localhost:4200/projects/3" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:15.511Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:15 +0000] "GET /v1/positions?project_id=3 HTTP/1.1" 304 - "http://localhost:4200/projects/3" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:17.727Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:17 +0000] "GET /v1/projects HTTP/1.1" 200 757 "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:18.523Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:18 +0000] "GET /v1/projects/3 HTTP/1.1" 304 - "http://localhost:4200/projects/3" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:18.526Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:18 +0000] "GET /v1/positions?project_id=3 HTTP/1.1" 304 - "http://localhost:4200/projects/3" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:18.536Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=3 - GET - ::ffff:127.0.0.1
+2019-11-08T09:43:18.537Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:18 +0000] "GET /v1/teams?project_id=3 HTTP/1.1" 304 - "http://localhost:4200/projects/3" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:19.526Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:19 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:20.211Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=6 - GET - ::ffff:127.0.0.1
+2019-11-08T09:43:20.216Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:20 +0000] "GET /v1/projects/6 HTTP/1.1" 304 - "http://localhost:4200/projects/6" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:20.220Z [Logger:] [31merror[39m: 404 - Positions not found - /v1/positions?project_id=6 - GET - ::ffff:127.0.0.1
+2019-11-08T09:43:20.229Z [Logger:] [31merror[39m: 404 - Teams not found - /v1/teams?project_id=6 - GET - ::ffff:127.0.0.1
+2019-11-08T09:43:21.222Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:21 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:22.109Z [Logger:] [31merror[39m: 404 - Positions not found - /v1/positions?project_id=4 - GET - ::ffff:127.0.0.1
+2019-11-08T09:43:22.111Z [Logger:] [31merror[39m: 404 - Teams not found - /v1/teams?project_id=4 - GET - ::ffff:127.0.0.1
+2019-11-08T09:43:22.112Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=4 - GET - ::ffff:127.0.0.1
+2019-11-08T09:43:22.114Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:22 +0000] "GET /v1/projects/4 HTTP/1.1" 200 199 "http://localhost:4200/projects/4" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:22.871Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:22 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:23.601Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:23 +0000] "GET /v1/teams?project_id=1 HTTP/1.1" 200 167 "http://localhost:4200/projects/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:23.601Z [Logger:] [31merror[39m: 404 - Positions not found - /v1/positions?project_id=1 - GET - ::ffff:127.0.0.1
+2019-11-08T09:43:23.628Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:23 +0000] "GET /v1/projects/1 HTTP/1.1" 304 - "http://localhost:4200/projects/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:23.637Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=1 - GET - ::ffff:127.0.0.1
+2019-11-08T09:43:24.437Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:24 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:25.778Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:25 +0000] "GET /v1/projects/6 HTTP/1.1" 200 201 "http://localhost:4200/projects/6" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:25.785Z [Logger:] [31merror[39m: 404 - Positions not found - /v1/positions?project_id=6 - GET - ::ffff:127.0.0.1
+2019-11-08T09:43:25.789Z [Logger:] [31merror[39m: 404 - Teams not found - /v1/teams?project_id=6 - GET - ::ffff:127.0.0.1
+2019-11-08T09:43:25.799Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=6 - GET - ::ffff:127.0.0.1
+2019-11-08T09:43:28.311Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:28 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:29.340Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:29 +0000] "GET /v1/projects/11 HTTP/1.1" 200 217 "http://localhost:4200/projects/11" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:29.343Z [Logger:] [31merror[39m: 404 - Positions not found - /v1/positions?project_id=11 - GET - ::ffff:127.0.0.1
+2019-11-08T09:43:29.348Z [Logger:] [31merror[39m: 404 - Teams not found - /v1/teams?project_id=11 - GET - ::ffff:127.0.0.1
+2019-11-08T09:43:29.350Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=11 - GET - ::ffff:127.0.0.1
+2019-11-08T09:43:30.690Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:30 +0000] "GET /v1/positions HTTP/1.1" 200 190 "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:31.087Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:31 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:31.961Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:31 +0000] "GET /v1/projects/6 HTTP/1.1" 304 - "http://localhost:4200/projects/6" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:31.968Z [Logger:] [31merror[39m: 404 - Positions not found - /v1/positions?project_id=6 - GET - ::ffff:127.0.0.1
+2019-11-08T09:43:31.976Z [Logger:] [31merror[39m: 404 - Teams not found - /v1/teams?project_id=6 - GET - ::ffff:127.0.0.1
+2019-11-08T09:43:31.979Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=6 - GET - ::ffff:127.0.0.1
+2019-11-08T09:43:32.879Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:32 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:34.627Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:34 +0000] "GET /v1/projects/1 HTTP/1.1" 304 - "http://localhost:4200/projects/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:34.627Z [Logger:] [31merror[39m: 404 - Positions not found - /v1/positions?project_id=1 - GET - ::ffff:127.0.0.1
+2019-11-08T09:43:34.630Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=1 - GET - ::ffff:127.0.0.1
+2019-11-08T09:43:34.631Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:34 +0000] "GET /v1/teams?project_id=1 HTTP/1.1" 304 - "http://localhost:4200/projects/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:35.896Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:35 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:36.999Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:36 +0000] "GET /v1/positions?project_id=3 HTTP/1.1" 304 - "http://localhost:4200/projects/3" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:37.006Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:37 +0000] "GET /v1/teams?project_id=3 HTTP/1.1" 304 - "http://localhost:4200/projects/3" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:37.013Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:43:37 +0000] "GET /v1/projects/3 HTTP/1.1" 304 - "http://localhost:4200/projects/3" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:43:37.020Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=3 - GET - ::ffff:127.0.0.1
+2019-11-08T09:44:41.305Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:44:41 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:44:42.310Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:44:42 +0000] "GET /v1/skills/1 HTTP/1.1" 304 - "http://localhost:4200/skills/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:44:43.960Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:44:43 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:45:38.301Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:45:38 +0000] "GET /v1/skills/1 HTTP/1.1" 304 - "http://localhost:4200/skills/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:45:39.341Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:45:39 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:46:19.167Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:46:19 +0000] "GET /v1/resources HTTP/1.1" 200 414 "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:46:20.658Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:46:20 +0000] "GET /v1/resources/2 HTTP/1.1" 200 317 "http://localhost:4200/resources/2" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:46:27.835Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:46:27 +0000] "GET /v1/projects HTTP/1.1" 200 757 "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:46:28.448Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:46:28 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:46:28.935Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:46:28 +0000] "GET /v1/missions HTTP/1.1" 304 - "http://localhost:4200/missions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:46:29.446Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:46:29 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:46:29.906Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:46:29 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:46:30.390Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:46:30 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:46:33.558Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:46:33 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:46:35.249Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:46:35 +0000] "GET /v1/resources/2 HTTP/1.1" 304 - "http://localhost:4200/resources/2" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:46:39.621Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:46:39 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:46:43.201Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:46:43 +0000] "GET /v1/skills/1 HTTP/1.1" 304 - "http://localhost:4200/skills/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:46:44.326Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:46:44 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:46:46.767Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:46:46 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:46:47.699Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:46:47 +0000] "GET /v1/resources/2 HTTP/1.1" 304 - "http://localhost:4200/resources/2" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:46:49.280Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:46:49 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:46:50.282Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:46:50 +0000] "GET /v1/projects/1 HTTP/1.1" 304 - "http://localhost:4200/projects/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:46:50.305Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:46:50 +0000] "GET /v1/teams?project_id=1 HTTP/1.1" 304 - "http://localhost:4200/projects/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:46:50.307Z [Logger:] [31merror[39m: 404 - Positions not found - /v1/positions?project_id=1 - GET - ::ffff:127.0.0.1
+2019-11-08T09:46:50.314Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=1 - GET - ::ffff:127.0.0.1
+2019-11-08T09:46:51.180Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:46:51 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:46:52.480Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:46:52 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:46:54.418Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:46:54 +0000] "GET /v1/missions HTTP/1.1" 304 - "http://localhost:4200/missions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:46:54.957Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:46:54 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:46:55.451Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:46:55 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:46:56.764Z [Logger:] [31merror[39m: 404 - Positions not found - /v1/positions?project_id=1 - GET - ::ffff:127.0.0.1
+2019-11-08T09:46:56.765Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=1 - GET - ::ffff:127.0.0.1
+2019-11-08T09:46:56.766Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:46:56 +0000] "GET /v1/teams?project_id=1 HTTP/1.1" 304 - "http://localhost:4200/projects/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:46:56.773Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:46:56 +0000] "GET /v1/projects/1 HTTP/1.1" 304 - "http://localhost:4200/projects/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:46:58.948Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T09:46:58.967Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:46:58 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/positions/create?project_id=1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:47:00.959Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:47:00 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/form" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:47:20.169Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:47:20 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:47:25.007Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:47:25 +0000] "GET /v1/skills/1 HTTP/1.1" 304 - "http://localhost:4200/skills/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:47:25.930Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:47:25 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:48:58.958Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T09:53:08.094Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:53:08 +0000] "GET /v1/skills HTTP/1.1" 200 396 "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:53:08.885Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:53:08 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:53:11.251Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:53:11 +0000] "GET /v1/skills/1 HTTP/1.1" 304 - "http://localhost:4200/skills/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:53:14.265Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:53:14 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:53:17.294Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:53:17 +0000] "GET /v1/skills/1 HTTP/1.1" 304 - "http://localhost:4200/skills/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:53:19.174Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:53:19 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:53:53.419Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:53:53 +0000] "DELETE /v1/skills/1 HTTP/1.1" 200 181 "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:53:53.426Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:53:53 +0000] "GET /v1/skills HTTP/1.1" 200 290 "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:00.530Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:00 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:01.019Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:01 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:01.818Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:01 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:02.304Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:02 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:03.144Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:03 +0000] "GET /v1/missions HTTP/1.1" 304 - "http://localhost:4200/missions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:03.577Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:03 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:03.969Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:03 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:04.410Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:04 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:04.806Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:04 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:05.475Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:05 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:06.384Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:06 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:10.682Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:10 +0000] "DELETE /v1/projects/11 HTTP/1.1" 200 232 "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:10.689Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:10 +0000] "GET /v1/projects HTTP/1.1" 200 602 "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:12.159Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:12 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:12.773Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:12 +0000] "GET /v1/missions HTTP/1.1" 304 - "http://localhost:4200/missions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:13.576Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:13 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:14.767Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:14 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:15.834Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:15 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:19.818Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:19 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:21.084Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:21 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:24.269Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:24 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:24.867Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:24 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:25.851Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:25 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:26.315Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:26 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:26.740Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:26 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:27.331Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:27 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:28.268Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:28 +0000] "GET /v1/missions HTTP/1.1" 304 - "http://localhost:4200/missions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:32.288Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:32 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/form" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:42.766Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:42 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:44.416Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T09:54:44.429Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:44 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/positions/create" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:54:47.308Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:54:47 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:55:22.820Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:55:22 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:55:23.683Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:55:23 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:55:24.154Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:55:24 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:55:25.085Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:55:25 +0000] "GET /v1/projects/1 HTTP/1.1" 304 - "http://localhost:4200/projects/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:55:25.107Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:55:25 +0000] "GET /v1/teams?project_id=1 HTTP/1.1" 304 - "http://localhost:4200/projects/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:55:25.107Z [Logger:] [31merror[39m: 404 - Positions not found - /v1/positions?project_id=1 - GET - ::ffff:127.0.0.1
+2019-11-08T09:55:25.113Z [Logger:] [31merror[39m: 404 - Resources not found - /v1/resources?project_id=1 - GET - ::ffff:127.0.0.1
+2019-11-08T09:55:42.433Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T09:55:42.435Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:55:42 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/positions/create?project_id=1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:55:43.638Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:55:43 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:55:44.373Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:55:44 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:55:45.460Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:55:45 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:55:45.917Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:55:45 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:55:57.945Z [Logger:] [32minfo[39m: ::1 - - [08/Nov/2019:09:55:57 +0000] "GET /v1/skills HTTP/1.1" 200 290 "-" "PostmanRuntime/7.19.0"
+
+2019-11-08T09:56:03.695Z [Logger:] [32minfo[39m: ::1 - - [08/Nov/2019:09:56:03 +0000] "GET /v1/skills?id=1 HTTP/1.1" 200 290 "-" "PostmanRuntime/7.19.0"
+
+2019-11-08T09:56:06.089Z [Logger:] [32minfo[39m: ::1 - - [08/Nov/2019:09:56:06 +0000] "GET /v1/skills?id=5 HTTP/1.1" 200 290 "-" "PostmanRuntime/7.19.0"
+
+2019-11-08T09:56:17.243Z [Logger:] [31merror[39m: 404 - Skill not found - /v1/skills/1 - GET - ::1
+2019-11-08T09:56:19.473Z [Logger:] [32minfo[39m: ::1 - - [08/Nov/2019:09:56:19 +0000] "GET /v1/skills/5 HTTP/1.1" 200 174 "-" "PostmanRuntime/7.19.0"
+
+2019-11-08T09:56:23.508Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:56:23 +0000] "GET /v1/skills/5 HTTP/1.1" 200 174 "http://localhost:4200/skills/5" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:56:24.482Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:56:24 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:56:28.582Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:56:28 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:56:30.378Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:56:30 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:56:30.784Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:56:30 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:56:31.168Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:09:56:31 +0000] "GET /v1/missions HTTP/1.1" 304 - "http://localhost:4200/missions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T09:56:44.417Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T09:57:42.453Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T09:58:44.494Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T09:59:42.453Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:00:44.444Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:01:42.462Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:01:54.397Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:01:54 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:01:55.138Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:01:55 +0000] "GET /v1/missions HTTP/1.1" 200 365 "http://localhost:4200/missions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:01:55.841Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:01:55 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:01:56.570Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:01:56 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:02:02.861Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:02:02 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:02:04.001Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:02:04 +0000] "GET /v1/missions HTTP/1.1" 304 - "http://localhost:4200/missions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:02:04.594Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:02:04 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/form" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:02:44.435Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:02:52.344Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:02:52 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:02:54.010Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:02:54 +0000] "GET /v1/resources/2 HTTP/1.1" 304 - "http://localhost:4200/resources/2" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:03:06.926Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:03:06 +0000] "GET /v1/projects HTTP/1.1" 200 602 "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:03:10.853Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:03:10 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:03:13.934Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:03:17.004Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:03:17 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:03:17.613Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:03:17 +0000] "GET /v1/projects HTTP/1.1" 200 602 "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:03:18.488Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:03:18 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:03:19.806Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:03:19 +0000] "GET /v1/missions HTTP/1.1" 304 - "http://localhost:4200/missions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:03:22.547Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:03:22 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:03:23.345Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:03:23.347Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:03:23 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/positions/create" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:03:24.404Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:03:24 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:03:25.996Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:03:26.012Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:03:26 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/positions/create" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:03:26.941Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:03:26 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:03:42.456Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:04:44.441Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:05:13.939Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:05:23.347Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:05:25.999Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:05:42.461Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:06:44.449Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:07:13.942Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:07:23.349Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:07:26.005Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:07:42.463Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:08:44.450Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:09:13.945Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:09:23.350Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:09:26.014Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:09:42.467Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:10:44.462Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:11:13.952Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:11:23.355Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:11:26.016Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:11:42.497Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:12:44.463Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:13:13.966Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:13:23.359Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:13:26.018Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:13:42.475Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/positions/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:20:21.586Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:20:21 +0000] "GET /v1/missions HTTP/1.1" 304 - "http://localhost:4200/missions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:20:24.152Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:20:24 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:20:25.395Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:20:28.919Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:20:28 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:20:30.887Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:20:32.687Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:20:32 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:20:38.308Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:20:38 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:21:25.204Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:21:25 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:21:26.438Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:22:03.473Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:22:03 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:22:06.348Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:22:06 +0000] "GET /v1/resources/2 HTTP/1.1" 304 - "http://localhost:4200/resources/2" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:22:08.757Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:22:08 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:22:09.922Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:22:13.851Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:22:13 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:22:14.763Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:22:14 +0000] "GET /v1/resources/2 HTTP/1.1" 304 - "http://localhost:4200/resources/2" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:22:16.686Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:22:16 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:22:17.482Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:22:20.967Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:22:20 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:22:25.324Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:22:30.888Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:23:26.451Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:24:09.944Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:24:15.529Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:24:17.497Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:24:18.516Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:24:18 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:24:22.062Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:24:30.378Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:24:34.805Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:24:34 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:24:36.278Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:24:57.947Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:24:57 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:24:59.439Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:24:59 +0000] "GET /v1/resources/2 HTTP/1.1" 304 - "http://localhost:4200/resources/2" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:25:00.319Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:25:00 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:25:33.362Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:25:39.783Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:26:15.513Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:26:16.892Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:27:24.104Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:27:25.308Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:27:31.240Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:27:31 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:27:32.597Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:27:33.930Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:27:33 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:27:34.464Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:27:34 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:27:35.770Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:27:36.738Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:27:36 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:27:37.247Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:27:37 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:27:55.780Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:27:55 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:27:56.598Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:28:00.474Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:29:24.066Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:29:25.309Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:29:32.601Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:29:35.771Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:29:56.602Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:30:00.480Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:31:24.067Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:31:25.312Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:31:32.605Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:31:35.777Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:31:56.605Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:32:00.485Z [Logger:] [31merror[39m: 500 - invalid input syntax for type integer: "create" - /v1/resources/create - GET - ::ffff:127.0.0.1
+2019-11-08T10:33:24.529Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:33:24 +0000] "POST /v1/resources HTTP/1.1" 201 187 "http://localhost:4200/resources/create" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:33:24.575Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:33:24 +0000] "GET /v1/resources HTTP/1.1" 200 520 "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:34:08.678Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:34:08 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:34:09.502Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:34:09 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:34:12.680Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:34:12 +0000] "GET /v1/resources/5 HTTP/1.1" 200 211 "http://localhost:4200/resources/5" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:34:14.238Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:34:14 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:34:15.356Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:34:15 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:34:16.472Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:34:16 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:34:17.109Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:34:17 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:34:17.618Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:34:17 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:34:18.716Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:34:18 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:34:19.287Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:34:19 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:34:20.352Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:34:20 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:34:20.784Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:34:20 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:34:21.682Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:34:21 +0000] "GET /v1/resources HTTP/1.1" 304 - "http://localhost:4200/resources" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:34:22.869Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:34:22 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:34:23.427Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:34:23 +0000] "GET /v1/positions HTTP/1.1" 304 - "http://localhost:4200/positions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:34:25.129Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:34:25 +0000] "GET /v1/missions HTTP/1.1" 304 - "http://localhost:4200/missions" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:34:25.596Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:34:25 +0000] "GET /v1/projects HTTP/1.1" 304 - "http://localhost:4200/projects" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:34:26.111Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:34:26 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
+2019-11-08T10:35:06.931Z [Logger:] [32minfo[39m: ::ffff:127.0.0.1 - - [08/Nov/2019:10:35:06 +0000] "GET /v1/skills HTTP/1.1" 304 - "http://localhost:4200/skills" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0"
+
