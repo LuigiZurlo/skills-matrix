@@ -11,6 +11,7 @@ import {ProjectsDeleteComponent} from './pages/projects-delete/projects-delete.c
 import {ProjectsEditComponent} from './pages/projects-edit/projects-edit.component';
 import {ProjectsListComponent} from './pages/projects-list/projects-list.component';
 import {ProjectsViewComponent} from './pages/projects-view/projects-view.component';
+import { ProjectsStepperComponent } from './pages/projects-stepper/projects-stepper.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {ProjectsViewComponent} from './pages/projects-view/projects-view.compone
     ProjectsDeleteComponent,
     ProjectsEditComponent,
     ProjectsListComponent,
-    ProjectsViewComponent
+    ProjectsViewComponent,
+    ProjectsStepperComponent
   ],
   imports: [
     CommonModule,

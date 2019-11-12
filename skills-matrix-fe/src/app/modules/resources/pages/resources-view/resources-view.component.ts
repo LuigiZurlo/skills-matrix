@@ -4,6 +4,7 @@ import {ResourceService} from '../../../../core/services/resource/resource.servi
 import {ActivatedRoute, Router} from '@angular/router';
 
 import { Chart } from 'chart.js';
+import {resource_competencies} from "../../../../../../../skills-matrix-be/src/db/models/ALL";
 
 @Component({
   selector: 'app-resources-view',
@@ -15,6 +16,7 @@ export class ResourcesViewComponent implements OnInit {
   resourceId: string;
   resource: any;
   lineChart: any;
+  competencies: resource_competencies[];
 
   constructor(private resourceService: ResourceService, private router: Router, private route: ActivatedRoute) { }
 

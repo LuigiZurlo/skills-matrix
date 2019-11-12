@@ -1,0 +1,22 @@
+<mat-vertical-stepper [linear]="true" #stepper>
+  <mat-step [stepControl]="projectForm">
+    <ng-template matStepLabel>Create a project</ng-template>
+    <app-projects-create></app-projects-create>
+
+  </mat-step>
+
+  <mat-step [stepControl]="projectForm">
+    <ng-template matStepLabel>Create a Position</ng-template>
+    <app-projects-create></app-projects-create>
+
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    You are now done.
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-vertical-stepper>
+
