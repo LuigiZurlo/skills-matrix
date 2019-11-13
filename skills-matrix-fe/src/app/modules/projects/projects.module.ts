@@ -12,6 +12,7 @@ import {ProjectsEditComponent} from './pages/projects-edit/projects-edit.compone
 import {ProjectsListComponent} from './pages/projects-list/projects-list.component';
 import {ProjectsViewComponent} from './pages/projects-view/projects-view.component';
 import { ProjectsStepperComponent } from './pages/projects-stepper/projects-stepper.component';
+import {PositionsModule} from "../positions/positions.module";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ProjectsStepperComponent } from './pages/projects-stepper/projects-step
     FormsModule,
     ReactiveFormsModule,
 
-    ProjectsRoutingModule
+    ProjectsRoutingModule,
+    PositionsModule
   ]
 })
 export class ProjectsModule { }

@@ -1,7 +1,8 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
+import {FormBuilder} from "@angular/forms";
 import {ProjectsCreateComponent} from "../projects-create/projects-create.component";
-import {PositionsCreateComponent} from "../../../positions/pages/positions-create/positions-create.component";
+import {PositionsStepperCreateComponent} from "../../../positions/pages/positions-stepper-create/positions-stepper-create.component";
+import {PositionsRequirementComponent} from "../../../positions/pages/positions-requirement/positions-requirement.component";
 
 @Component({
   selector: 'app-projects-stepper',
@@ -11,9 +12,12 @@ import {PositionsCreateComponent} from "../../../positions/pages/positions-creat
 export class ProjectsStepperComponent implements OnInit {
 
   @ViewChild(ProjectsCreateComponent, {static: true}) createProject: ProjectsCreateComponent;
-  @ViewChild(PositionsCreateComponent, {static: true}) createPosition: PositionsCreateComponent;
+  @ViewChild(PositionsStepperCreateComponent, {static: true}) createPosition: PositionsStepperCreateComponent;
+  @ViewChild(PositionsRequirementComponent, {static: true}) createPositionRequirement: PositionsRequirementComponent;
 
-  project_id: string;
+
+  @Input() projectId: string;
+  @Input() positionID: string;
 
   constructor(private fb: FormBuilder) {
   }
@@ -27,6 +31,20 @@ export class ProjectsStepperComponent implements OnInit {
 
   get positionForm() {
     return this.createPosition.positionCreateForm;
+  }
+
+  get positionRequirementForm() {
+    return this.createPositionRequirement.positionForms;
+  }
+
+  onNotify(projectId: any): void {
+    const k = JSON.parse(JSON.stringify(projectId));
+    this.projectId = k.id;
+  }
+
+  getPositionName(positionName: any): void {
+    const k = JSON.parse(JSON.stringify(positionName));
+    this.positionID = k.body.data[0].id;
   }
 
 }

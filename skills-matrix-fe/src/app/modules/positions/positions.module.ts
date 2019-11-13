@@ -14,6 +14,8 @@ import { PositionsListComponent } from './pages/positions-list/positions-list.co
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { PositionsStepperCreateComponent } from './pages/positions-stepper-create/positions-stepper-create.component';
+import { PositionsRequirementComponent } from './pages/positions-requirement/positions-requirement.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,13 @@ import { MatSortModule } from '@angular/material/sort';
     PositionsDeleteComponent,
     PositionsEditComponent,
     PositionsViewComponent,
-    PositionsListComponent
+    PositionsListComponent,
+    PositionsStepperCreateComponent,
+    PositionsRequirementComponent
+  ],
+  exports: [
+    PositionsStepperCreateComponent,
+    PositionsRequirementComponent
   ],
   imports: [
     CommonModule,

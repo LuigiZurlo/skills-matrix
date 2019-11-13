@@ -1,15 +1,20 @@
-<mat-vertical-stepper [linear]="true" #stepper>
+<mat-vertical-stepper [linear]="false" #stepper>
   <mat-step [stepControl]="projectForm">
     <ng-template matStepLabel>Create a project</ng-template>
-    <app-projects-create></app-projects-create>
-
+    <app-projects-create (notify)= 'onNotify($event)' ></app-projects-create>
   </mat-step>
 
-  <mat-step [stepControl]="projectForm">
+  <mat-step [stepControl]="positionForm">
     <ng-template matStepLabel>Create a Position</ng-template>
-    <app-projects-create></app-projects-create>
-
+    <app-positions-stepper-create [projectId]='projectId' (notify)= 'getPositionName($event)'></app-positions-stepper-create>
   </mat-step>
+
+ <mat-step [stepControl]="positionRequirementForm">
+    <ng-template matStepLabel>Create Position Requirements</ng-template>
+    <app-positions-requirement [positionId]="positionID"></app-positions-requirement>
+  </mat-step>
+
+
   <mat-step>
     <ng-template matStepLabel>Done</ng-template>
     You are now done.

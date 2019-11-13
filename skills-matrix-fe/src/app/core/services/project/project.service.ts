@@ -23,7 +23,7 @@ export class ProjectService {
       end_date: end_date
     };
     console.log("added Project", project);
-    return this.http.post(`${this.uri}/projects`, project);
+    return this.http.post(`${this.uri}/projects`, project, {responseType: 'json', observe: 'response'});
   }
 
   getProjectById(id): Observable<any> {

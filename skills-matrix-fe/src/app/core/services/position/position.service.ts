@@ -25,7 +25,7 @@ export class PositionService {
       description: description
     };
     console.log("added Position", position);
-    return this.http.post(`${this.uri}/positions`, position);
+    return this.http.post(`${this.uri}/positions`, position, {responseType: 'json', observe: 'response'});
   }
 
   getPositionsByProjectId(project_id) {
