@@ -53,6 +53,7 @@ export class MissionsCreateComponent implements OnInit {
     this.missionService.createMission(resource_id, project_id, position_id, start_date, end_date).subscribe(() => {
       this.router.navigate(['/missions']);
     });
-  }
 
+
+  }
 }

@@ -12,3 +12,8 @@ export class Competency {
   }
 
 }
+
+export interface GetCompetenciesServiceResponse {
+  success: boolean;
+  data: any;
+}

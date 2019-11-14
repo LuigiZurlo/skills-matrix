@@ -3,9 +3,10 @@ import {GetProjectsServiceResponse} from "../../../../core/models/project/projec
 import {ActivatedRoute, Router} from "@angular/router";
 import {ProjectService} from "../../../../core/services/project/project.service";
 import {PositionService} from "../../../../core/services/position/position.service";
-import {GetPositionsServiceResponse} from "../../../../core/models/position/position.model";
-import {TeamService} from "../../../../core/services/team/team.service";
+import {GetPositionsServiceResponse} from '../../../../core/models/position/position.model';
+import {TeamService} from '../../../../core/services/team/team.service';
 import {ResourceService} from '../../../../core/services/resource/resource.service';
+import {projects} from "../../../../../../../skills-matrix-be/src/db/models/ALL";
 
 @Component({
   selector: 'app-projects-view',
@@ -15,8 +16,7 @@ import {ResourceService} from '../../../../core/services/resource/resource.servi
 export class ProjectsViewComponent implements OnInit {
 
   projectId: string;
-
-  project: any;
+  project: projects;
   positions: any[];
   teams: any;
   resources: any;
@@ -31,14 +31,15 @@ export class ProjectsViewComponent implements OnInit {
               private teamService: TeamService,
               private router: Router,
               private activatedRoute: ActivatedRoute) {
-  }
-
-  ngOnInit() {
     this.projectId = this.activatedRoute.snapshot.paramMap.get('id');
     this.fetchProject(this.projectId);
     this.fetchPositions(this.projectId);
     this.fetchTeams(this.projectId);
     this.fetchResources(this.projectId);
+  }
+
+  ngOnInit() {
+
   }
 
   fetchTeams(id) {
@@ -56,7 +57,7 @@ export class ProjectsViewComponent implements OnInit {
       .getResourcesByProjectId(id)
       .subscribe((response: any) => {
         this.resources = response.data;
-        console.log('Data requested: Teams infos');
+        console.log('Data requested: Resources infos');
         console.log(this.resources);
       });
   }
@@ -65,7 +66,7 @@ export class ProjectsViewComponent implements OnInit {
     this.projectService
       .getProjectById(id)
       .subscribe((getProjectByIdResponse: GetProjectsServiceResponse) => {
-        this.project = getProjectByIdResponse.data;
+        this.project = getProjectByIdResponse.data[0];
         console.log('Data requested: Project infos');
         console.log(this.project);
       });

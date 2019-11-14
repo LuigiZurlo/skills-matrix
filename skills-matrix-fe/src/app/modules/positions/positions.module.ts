@@ -29,7 +29,8 @@ import { PositionsRequirementComponent } from './pages/positions-requirement/pos
   ],
   exports: [
     PositionsStepperCreateComponent,
-    PositionsRequirementComponent
+    PositionsRequirementComponent,
+    PositionsListComponent
   ],
   imports: [
     CommonModule,

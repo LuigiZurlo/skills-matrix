@@ -8,8 +8,10 @@ export class MissionService {
 
   uri = 'http://localhost:3000/v1';
 
+
   constructor(private http: HttpClient) {
   }
+
 
   getMissions() {
     return this.http.get(`${this.uri}/missions`);

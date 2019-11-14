@@ -1,7 +1,7 @@
 <div>
   <mat-toolbar>
     <mat-toolbar-row>
-      <h2>{{resource.infos.last_name}}, {{resource.infos.first_name}} &mdash; {{resource.infos.employee_number}}</h2>
+      <h2>{{resource.infos[0].last_name}}, {{resource.infos[0].first_name}} &mdash; {{resource.infos[0].employee_number}}</h2>
       <div class="flex-spacer"></div>
       <button mat-button color="primary" routerLink="/skills/create">Summary</button>
       <button mat-button color="primary" routerLink="/skills/create">Detail</button>
@@ -19,7 +19,7 @@
         <mat-card-header>
           <div mat-card-avatar class="header-image resource-header-image"></div>
           <mat-card-title>About</mat-card-title>
-          <mat-card-subtitle>Information about {{resource.infos.first_name}}.</mat-card-subtitle>
+          <mat-card-subtitle>Information about {{resource.infos[0].first_name}}.</mat-card-subtitle>
         </mat-card-header>
       </mat-card>
     </div>

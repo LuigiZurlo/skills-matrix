@@ -1,5 +1,5 @@
 <mat-vertical-stepper [linear]="false" #stepper>
-  <mat-step [stepControl]="projectForm">
+  <mat-step [stepControl]="projectForm" [editable]="false">
     <ng-template matStepLabel>Create a project</ng-template>
     <app-projects-create (notify)= 'onNotify($event)' ></app-projects-create>
   </mat-step>

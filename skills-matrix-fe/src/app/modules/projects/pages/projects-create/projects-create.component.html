@@ -1,3 +1,4 @@
+<!--
 <div>
   <mat-toolbar>
     <mat-toolbar-row>
@@ -7,6 +8,7 @@
     </mat-toolbar-row>
   </mat-toolbar>
 </div>
+-->
 
 <div class="mat-elevation-z3" id="project-create-form-container">
   <mat-toolbar color="primary">
@@ -47,11 +49,10 @@
       <!--input type="Date" matInput placeholder="Planned Start Date" formControlName="start_date" #start_date-->
     </mat-form-field>
 
-  <!--  <div class="flex">
-      <button class="flex-right" type="submit" (click)="addProject(name.value, project_otp_code.value, start_date.value, end_date.value)" [disabled]="createForm.pristine || createForm.invalid" mat-raised-button color="accent">Save</button>
-    </div>-->
+
     <div class="flex">
       <button mat-raised-button matStepperNext (click)="addProject(name.value, project_otp_code.value, start_date.value, end_date.value)" [disabled]="createForm.pristine || createForm.invalid" mat-raised-button color="accent">Next</button>
     </div>
+
   </form>
 </div>

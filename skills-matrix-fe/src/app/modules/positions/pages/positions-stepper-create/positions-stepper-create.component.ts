@@ -27,7 +27,7 @@ export class PositionsStepperCreateComponent implements OnInit {
   }
 
   addPosition(name, description) {
-    this.positionService.createPosition(this.projectId, name, description).subscribe(pid=> {
+    this.positionService.createPosition(this.projectId, name, description).subscribe(pid => {
       this.notify.emit(JSON.parse(JSON.stringify(pid)));
     });
   }

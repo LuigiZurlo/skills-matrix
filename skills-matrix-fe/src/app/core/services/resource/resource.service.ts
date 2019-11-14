@@ -43,4 +43,8 @@ export class ResourceService {
     return this.http.post(`${this.uri}/resources`, resource);
   }
 
+  getResourceCompetencies(id) {
+    return this.http.get('${this.uri}/resources/${id}/competencies');
+  }
+
 }

@@ -14,6 +14,7 @@ import {ProjectsViewComponent} from './pages/projects-view/projects-view.compone
 import { ProjectsStepperComponent } from './pages/projects-stepper/projects-stepper.component';
 import {PositionsModule} from "../positions/positions.module";
 
+
 @NgModule({
   declarations: [
     ProjectsCreateComponent,
@@ -28,9 +29,9 @@ import {PositionsModule} from "../positions/positions.module";
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-
     ProjectsRoutingModule,
     PositionsModule
+
   ]
 })
 export class ProjectsModule { }

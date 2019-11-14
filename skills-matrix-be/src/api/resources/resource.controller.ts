@@ -5,6 +5,30 @@ import {db, pgp} from "../../db/db";
 
 export default class ResourceController {
 
+  /* public getResources = async (req: Request, res: Response, next: any): Promise<any> => {
+     try {
+
+       const validQueryParams = ["resource_id"];
+
+       let resources: any;
+       if (typeof req.query.project_id !== "undefined") {
+         resources = await db.any("SELECT * FROM resources WHERE id = $1", [req.query.resource_id]);
+       } else {
+         resources = await db.any("SELECT * FROM resources", []);
+       }
+
+       if (Object.keys(resources).length === 0) {
+         throw new ErrorHandler(404, "Resources not found");
+       }
+
+       res.status(200).send(new ApiResponse(true, "Resources found", resources, 200));
+       next();
+
+     } catch (err) {
+       next(err);
+     }
+   }*/
+
   public getResources = async (req: Request, res: Response, next: any): Promise<any> => {
     try {
 
@@ -12,7 +36,7 @@ export default class ResourceController {
 
       let resources: any;
       if (typeof req.query.project_id !== "undefined") {
-        resources = await db.any("SELECT * FROM resources WHERE id = $1", [req.query.resource_id]);
+        resources = await db.any("SELECT * FROM resources WHERE id IN(SELECT m.resource_id FROM missions m WHERE project_id = $1)", [req.query.project_id]);
       } else {
         resources = await db.any("SELECT * FROM resources", []);
       }
@@ -113,7 +137,7 @@ export default class ResourceController {
         throw new ErrorHandler(404, "ResourceCompetencies not found");
       }
 
-      res.status(200).send(new ApiResponse(true, "ResourceCompetencies found", resources , 200));
+      res.status(200).send(new ApiResponse(true, "ResourceCompetencies found", resources, 200));
       next();
 
     } catch (err) {
@@ -142,6 +166,8 @@ export default class ResourceController {
       next(err);
     }
   }
+
+
 
   public deleteResourceCompetencies = async (req: Request, res: Response, next: any): Promise<any> => {
     try {
