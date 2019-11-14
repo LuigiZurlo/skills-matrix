@@ -8,8 +8,15 @@ export default class CompetencyController {
   public getCompetencies = async (req: Request, res: Response, next: any): Promise<any> => {
     try {
 
-      const competencies = await db.any("SELECT * FROM competencies", []);
+      const validQueryParams = ["skill_id", "level"];
+      let competencies: any;
 
+      if (typeof req.query.skill_id !== "undefined" && req.query.level !== "undefined") {
+        competencies = await db.any("SELECT * FROM competencies WHERE skill_id=$1 AND level=$2",
+          [req.query.skill_id, req.query.level]);
+      } else {
+        competencies = await db.any("SELECT * FROM competencies", []);
+      }
       if (Object.keys(competencies).length === 0) {
         throw new ErrorHandler(404, "Competencies not found");
       }
