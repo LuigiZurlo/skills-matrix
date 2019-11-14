@@ -1,7 +1,8 @@
 <div>
   <mat-toolbar>
     <mat-toolbar-row>
-      <h2>{{resource.infos[0].last_name}}, {{resource.infos[0].first_name}} &mdash; {{resource.infos[0].employee_number}}</h2>
+      <h2 *ngIf="resource">{{resource.infos[0].last_name}}, {{resource.infos[0].first_name}}
+        &mdash; {{resource.infos[0].employee_number}}</h2>
       <div class="flex-spacer"></div>
       <button mat-button color="primary" routerLink="/skills/create">Summary</button>
       <button mat-button color="primary" routerLink="/skills/create">Detail</button>
@@ -11,7 +12,7 @@
   </mat-toolbar>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid" *ngIf="resource">
 
   <div class="row">
     <div class="col-md-12 my-3">
@@ -31,7 +32,8 @@
         <mat-card-header>
           <div mat-card-avatar class="header-image position-header-image"></div>
           <mat-card-title>Current Position</mat-card-title>
-          <mat-card-subtitle>{{resource.missions[0].position_name}} @ {{resource.missions[0].project_name}}</mat-card-subtitle>
+          <mat-card-subtitle *ngIf="resource.mission">{{resource.missions[0].position_name}}
+            @ {{resource.missions[0].project_name}}</mat-card-subtitle>
         </mat-card-header>
       </mat-card>
     </div>
@@ -56,7 +58,7 @@
         </mat-card-header>
         <mat-card-content>
           <div [hidden]="!lineChart" style="position: relative; margin:auto; width:50vw;">
-            <canvas id="lineChart" >{{ lineChart }}</canvas>
+            <canvas id="lineChart">{{ lineChart }}</canvas>
           </div>
         </mat-card-content>
       </mat-card>
@@ -64,3 +66,9 @@
   </div>
 
 </div>
+<mat-toolbar>
+  <mat-toolbar-row>
+    <div class="flex"></div>
+    <button mat-raised-button color="primary" (click)="goToAddCompetency(resourceId)">ADD COMPETENCY</button>
+  </mat-toolbar-row>
+</mat-toolbar>

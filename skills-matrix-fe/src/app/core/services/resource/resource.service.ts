@@ -47,4 +47,18 @@ export class ResourceService {
     return this.http.get('${this.uri}/resources/${id}/competencies');
   }
 
+  createResourceCompetency(resource_id, competency_id, assessed_on, validation_date, validator_id) {
+    const res = {
+      resource_id: Number(resource_id),
+      competency_id: competency_id,
+      assessed_on: assessed_on,
+      validation_date: validation_date,
+      validator_id: validator_id,
+      is_validated: 'false',
+      is_pending_validation: 'true'
+    };
+    console.log('added ResourceCompetency', res);
+    return this.http.post(`${this.uri}/resources/${resource_id}/competencies`, res);
+  }
+
 }

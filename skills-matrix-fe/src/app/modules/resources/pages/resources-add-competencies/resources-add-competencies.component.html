@@ -1,0 +1,80 @@
+<div>
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <h2>Add Resource Competency</h2>
+      <div class="flex-spacer"></div>
+      <button mat-raised-button color="primary" routerLink="/resource/{{resourceId}}}">CANCEL</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+
+<div class="mat-elevation-z3" id="mission-create-form-container">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <h3>Add a Competency</h3>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <form [formGroup]="createForm" id="mission-create-form" *ngIf="skills">
+    <div class="row">
+      <div class="col">
+      <mat-form-field class="mission-create-form-field">
+        <mat-select aria-label="Skill Name" placeholder="Skill Name" #skill_id>
+          <mat-option *ngFor="let ski of skills" [value]="ski.id">
+            {{ ski.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      </div>
+      <div class="col">
+        <div class="flex"></div>
+      <button mat-raised-button color="primary" routerLink="/skills/create">CREATE SKILL</button>
+      </div>
+    </div>
+
+      <mat-form-field>
+        <mat-select aria-label="Level" placeholder="Level" #level>
+          <mat-option *ngFor="let requiredLevel of requiredLevels" [value]="requiredLevel.value">
+            {{ requiredLevel.displayValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
+    <mat-form-field class="mission-create-form-field">
+      <label>
+        <input matInput placeholder="Validator ID" formControlName="validator_id" #validator_id>
+      </label>
+    </mat-form-field>
+
+
+    <mat-form-field class="mission-create-form-field">
+      <label>
+        <input matInput placeholder="Assessed on" formControlName="assessed_on"
+               [matDatepicker]="assessed_on_picker" #assessed_on>
+      </label>
+      <mat-datepicker-toggle matSuffix [for]="assessed_on_picker"></mat-datepicker-toggle>
+      <mat-datepicker touchUi #assessed_on_picker></mat-datepicker>
+      <!--input type="Date" matInput placeholder="Planned Start Date" formControlName="start_date" #start_date-->
+    </mat-form-field>
+
+    <mat-form-field class="mission-create-form-field">
+      <label>
+        <input matInput placeholder="Validation Date" formControlName="validation_date"
+               [matDatepicker]="validation_date_picker"
+               #validation_date>
+      </label>
+      <mat-datepicker-toggle matSuffix [for]="validation_date_picker"></mat-datepicker-toggle>
+      <mat-datepicker touchUi #validation_date_picker></mat-datepicker>
+      <!--input type="Date" matInput placeholder="Planned Start Date" formControlName="start_date" #start_date-->
+    </mat-form-field>
+
+    <div class="flex">
+      <button class="flex-right" type="submit" (click)="addCompetency(skill_id.value, level.value, assessed_on.value, validation_date.value, validator_id.value)"  mat-raised-button color="accent">Save
+      </button>
+    </div>
+
+  </form>
+</div>
+
+

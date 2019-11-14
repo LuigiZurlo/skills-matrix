@@ -19,24 +19,24 @@ export class ResourcesViewComponent implements OnInit {
 
   // competencies: resource_competencies[];
 
-
   constructor(private resourceService: ResourceService, private router: Router, private route: ActivatedRoute) {
-    this.resourceId = this.route.snapshot.paramMap.get('id');
-    this.fetchResource(this.resourceId);
+
   }
 
   ngOnInit() {
-    //  this.resourceId = this.route.snapshot.paramMap.get('id');
-
+    this.resourceId = this.route.snapshot.paramMap.get('id');
+    this.fetchResource(this.resourceId);
     this.lineChart = new Chart('lineChart', {
       type: 'bar',
       data: {
+        // labels: this.getLabels().values(),
+        // tslint:disable-next-line:max-line-length
         labels: ['Programming Languages & DB', 'Technologies', 'Amadeus Tools', 'Software & Tools', 'Methodologies & Processes', 'TNT Topics'],
         datasets: [{
           label: 'actual',
           backgroundColor: "rgba(200,0,0,0.2)",
           lineTension: 0,
-          data: [2, 4, 3, 2, 3.5, 1]
+          data: [2, 4, 3, 2, 3.5, 1],
         }]
       },
       options: {
@@ -70,6 +70,13 @@ export class ResourcesViewComponent implements OnInit {
       });
   }
 
+  getLabels(): string[] {
+    let chartLabels = [];
+    this.resource.competencies.forEach(f => {
+      chartLabels.push(f.name);
+    });
+    return chartLabels;
+  }
 
   editResource(id) {
     this.router.navigate([`/resources/${id}/edit`]);
@@ -81,6 +88,10 @@ export class ResourcesViewComponent implements OnInit {
       .subscribe(() => {
         this.router.navigate([`/resources`]);
       });
+  }
+
+  goToAddCompetency(id) {
+    this.router.navigate([`/resources/${id}/competencies`]);
   }
 
 }
